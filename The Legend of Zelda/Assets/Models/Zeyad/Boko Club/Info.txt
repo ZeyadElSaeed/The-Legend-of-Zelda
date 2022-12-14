@@ -1,0 +1,11 @@
+Boko Club extracted from Breath of the Wild.
+
+Moderator note:
+.dae model and textures saved from Switch Toolbox. Model checked in Blender. Only one UV map seen in Blender.
+
+Tools
+Switch Toolbox by KillzXGaming
+Blender 2.78c
+
+AJD-262
+Jan 26 2021
