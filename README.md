@@ -35,6 +35,11 @@ ACL Project: The Legend of Zelda
 • Boko Club Model: https://www.models-resource.com/wii_u/thelegendofzeldabreathofthewild/model/43490/?source=genre
 
 • Standing W_Briefcase Idle animation --> Enemy_Standing_Idle
+• standing melee attack
+• Standing React Large From Front
+• Stable Sword Outward Slash
+• Sword And Shield Death
+• Sword and Shield Power Up
 
 • Walking animation --> Enemy_walking
 
