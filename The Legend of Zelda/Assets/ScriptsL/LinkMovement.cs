@@ -5,49 +5,50 @@ using UnityEngine;
 public class LinkMovement : MonoBehaviour
 {
     public GameObject plane;
-    public GameObject cube; //to try as a wall to glide from
+    // public GameObject cube; //to try as a wall to glide from
     public float y_pos;
 
-    private float m_FallSpeed = 0.7f;
+    public float m_FallSpeed = 0.7f;
     private Rigidbody rb;
-    float moveSpeed = 4; //Speed for moving the player
-
-    bool isFalling;
+    public float defaultMoveSpeed = 4; //Speed for moving the player
+    private float currentMoveSpeed; //this changes depending whether the player is walking or sprinitng
+    public float jumpMultiplier = 500; // multplies the up jump force
+    public bool isFalling;
     // Start is called before the first frame update
 
     void MoveAllDirections()
     {
         if (Input.GetKey("up"))
         {
-            transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.forward * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("down"))
         {
-            transform.position += Vector3.back * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.back * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("right"))
         {
-            transform.position += Vector3.right * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.right * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("left"))
         {
-            transform.position += Vector3.left * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.left * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("w"))
         {
-            transform.position += Vector3.forward * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.forward * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("s"))
         {
-            transform.position += Vector3.back * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.back * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("d"))
         {
-            transform.position += Vector3.right * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.right * Time.deltaTime * currentMoveSpeed;
         }
         if (Input.GetKey("a"))
         {
-            transform.position += Vector3.left * Time.deltaTime * moveSpeed;
+            transform.position += Vector3.left * Time.deltaTime * currentMoveSpeed;
         }
     }
 
@@ -59,8 +60,8 @@ public class LinkMovement : MonoBehaviour
 
                 if (Input.GetKeyDown("space"))
                 {
-                    transform.position += Vector3.up * Time.deltaTime * 500;
-
+                rb.AddForce(Vector3.up * jumpMultiplier);
+                //transform.position += Vector3.up * Time.deltaTime * jumpMultiplier;
                 }
             }
         
@@ -69,11 +70,11 @@ public class LinkMovement : MonoBehaviour
     {
         if (Input.GetKeyDown("left shift"))
         {
-            moveSpeed = moveSpeed * 2;
+            currentMoveSpeed = currentMoveSpeed * 2;
         }
         if (Input.GetKeyUp("left shift"))
         {
-            moveSpeed = 3;
+            currentMoveSpeed = defaultMoveSpeed;
         }
     }
 
@@ -94,6 +95,7 @@ public class LinkMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody>(); //calling rigidbody for the gliding
+        currentMoveSpeed = defaultMoveSpeed;
     }
 
     // Update is called once per frame
@@ -109,12 +111,16 @@ public class LinkMovement : MonoBehaviour
         }
         else
             isFalling = false;
+        Debug.Log(isFalling);
     }
     //Used to controll jumping when gliding
     void OnCollisionEnter(Collision c)
     {
-
-        if (c.gameObject.CompareTag("Climbable"))
+        Debug.Log(LayerMask.LayerToName(c.gameObject.layer));
+        if (LayerMask.LayerToName(c.gameObject.layer).Equals("Climbable"))
+        {
             y_pos = c.gameObject.transform.position.y;
+            
+        }
     }
 }
