@@ -15,6 +15,7 @@ public class LinkMovement : MonoBehaviour
     public float jumpMultiplier = 500; // multplies the up jump force
     public bool isFalling;
 
+
     [SerializeField] private Vector3 moveDirection;
     [SerializeField] private Vector3 velocity;
     
@@ -24,6 +25,30 @@ public class LinkMovement : MonoBehaviour
     [SerializeField] private float gravity;
     private CharacterController controller;
     [SerializeField] private float jumpHeigt;
+
+
+
+    [Header("References")]
+    public Transform orientation;
+    public LayerMask whatIsWall;
+
+
+    [Header("Climbing")]
+    public float climbSpeed;
+    public float maxClimbTime;
+    // public float climbTimer;
+    private bool climbing;
+    private bool attached;
+    [Header("Detection")]
+    public float detectionLength;
+    public float sphereCastRadius;
+    public float maxWallLookAngle;
+    private float wallLookAngle;
+
+    private RaycastHit frontWallHit;
+    private bool wallFront;
+
+
     void MoveAllDirections()
     {
         // groundCheckDistance is the radius of a sphere draw at transform.position of the player that checks if the sphere is
@@ -75,8 +100,17 @@ public class LinkMovement : MonoBehaviour
             
         }
         //controller.Move();
-        velocity.y += gravity * Time.deltaTime;
-        controller.Move((moveDirection +velocity) * Time.deltaTime);
+        if(!wallFront || !attached || wallLookAngle >= maxWallLookAngle){
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move((moveDirection +velocity) * Time.deltaTime);
+        }
+        else{
+            if(climbing)
+                moveDirection = new Vector3(moveX*2, climbSpeed, 0);
+            else
+                moveDirection = new Vector3(moveX*2, 0, 0);
+            controller.Move((moveDirection) * Time.deltaTime);
+        }
         //that's how we add gravity since the player is kinematic (check rb of the player)
 
     }
@@ -118,6 +152,11 @@ public class LinkMovement : MonoBehaviour
     void Update()
     {
         MoveAllDirections();
+        
+        Debug.Log("climbing: "+climbing);
+        Debug.Log("attached: "+attached);
+        WallCheck();
+        StateMachine();
         //Sprint();
         //Glide();
 
@@ -138,6 +177,72 @@ public class LinkMovement : MonoBehaviour
             y_pos = c.gameObject.transform.position.y;
 
         }
+    }
+    private void StateMachine()
+    {
+        // State 1 - attaching to wall
+        if(Input.GetKeyDown(KeyCode.LeftShift)){
+            attached = true;
+        }
+        if(Input.GetKeyUp(KeyCode.LeftShift)){
+            attached = false;
+        }
+        if (wallFront && attached && wallLookAngle < maxWallLookAngle)
+        {
+            attachToWall();
+        }
+        else{
+            detachFromWall();
+        }
+
+        //state 2 - climbing
+
+        if(attached && Input.GetKeyDown(KeyCode.W)){
+            climbing = true;
+            climbSpeed = Mathf.Abs(climbSpeed);
+        }
+        if(attached && Input.GetKeyUp(KeyCode.W)){
+            climbing = false;
+        }
+        if(attached && Input.GetKeyDown(KeyCode.S)){
+            climbing = true;
+            climbSpeed = -climbSpeed;
+        }
+        if(attached && Input.GetKeyUp(KeyCode.S)){
+            climbing = false;
+        }
+        if(attached && climbing) ClimbingMovement();
+        if(!climbing && attached) rb.velocity = Vector3.zero;
+        
+
+        // State 3 - None
+        
+        // if (wallFront && Input.GetKeyDown(jumpKey) && climbJumpsLeft > 0) ClimbJump();
+    }
+
+
+    private void WallCheck()
+    {
+        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, whatIsWall);
+        wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+    }
+
+
+    private void attachToWall()
+    {
+        velocity.y=0;
+        
+    }
+
+    private void ClimbingMovement()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
+        /// idea - sound effect
+    }
+
+    private void detachFromWall()
+    {
+        rb.useGravity = true;
     }
 }
 

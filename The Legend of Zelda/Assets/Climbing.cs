@@ -53,13 +53,7 @@ public class Climbing : MonoBehaviour
         }
         if (wallFront && attached && wallLookAngle < maxWallLookAngle)
         {
-            // Debug.Log(climbTimer);
-            // if (!climbing && climbTimer > 0) StartClimbing();
             attachToWall();
-            Debug.Log("state1");
-            // timer
-            // if (climbTimer > 0) climbTimer -= Time.deltaTime;
-            // if (climbTimer < 0) StopClimbing();
         }
         else{
             detachFromWall();
@@ -77,22 +71,10 @@ public class Climbing : MonoBehaviour
         }
         if(attached && climbing) ClimbingMovement();
         if(!climbing && attached) rb.velocity = Vector3.zero;
-        // State 2 - Exiting
-        // else  if (exitingWall)
-        // {
-        //     if (climbing) StopClimbing();
-
-        //     // if (exitWallTimer > 0) exitWallTimer -= Time.deltaTime;
-        //     // if (exitWallTimer < 0) exitingWall = false;
-        // }
+        
 
         // State 3 - None
-        // else
-        // {
-        //     if (attached) detachFromWall();
-        //     Debug.Log("state3");
-        // }
-
+        
         // if (wallFront && Input.GetKeyDown(jumpKey) && climbJumpsLeft > 0) ClimbJump();
     }
 
@@ -107,9 +89,6 @@ public class Climbing : MonoBehaviour
     private void attachToWall()
     {
         rb.useGravity = false;
-        // attached = true;
-        // climbSpeed=0;
-        // climbing = true;
         
     }
 
@@ -122,9 +101,6 @@ public class Climbing : MonoBehaviour
     private void detachFromWall()
     {
         rb.useGravity = true;
-        // attached = false;
-        // climbing = false;
-
     }
 
 }
