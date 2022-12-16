@@ -10,12 +10,12 @@ public class LinkMovement : MonoBehaviour
 
     public float m_FallSpeed = 0.7f;
     private Rigidbody rb;
-    public float walkSpeed = 4; //Speed for moving the player
+    public float walkSpeed = 5; //Speed for moving the player
     private float currentMoveSpeed; //this changes depending whether the player is walking or sprinitng
     public float jumpMultiplier = 500; // multplies the up jump force
     public bool isFalling;
 
-    private Vector3 moveDirection;
+    [SerializeField] private Vector3 moveDirection;
     [SerializeField] private Vector3 velocity;
     
     [SerializeField] private bool isGrounded;
@@ -44,28 +44,25 @@ public class LinkMovement : MonoBehaviour
         if (isGrounded)
         {
 
-            //you can walk, run or jump only if you're grounded
-            if (velocity == Vector3.zero)
+           if(moveDirection!= Vector3.zero && !Input.GetKey(KeyCode.LeftShift))
             {
-                //idle
+                //Walk();
+                currentMoveSpeed = walkSpeed;
             }
-            else
+           else if(moveDirection!= Vector3.zero && Input.GetKey(KeyCode.LeftShift))
             {
-                if (Input.GetKeyDown("left shift"))
-                {
-                    //sprinting
-                    currentMoveSpeed = walkSpeed * 2;
-                }
-                if (Input.GetKeyUp("left shift"))
-                {
-                    //walking
-                    currentMoveSpeed = walkSpeed;
-                }
+                //Run();
+                currentMoveSpeed = walkSpeed * 2;
             }
+           else if(moveDirection == Vector3.zero)
+            {
+                //Idle();
+            }
+            
+                
 
-            velocity = moveDirection * currentMoveSpeed;
-            Debug.Log(velocity.y);
-            controller.Move(velocity * Time.deltaTime);
+
+            moveDirection *= currentMoveSpeed;
             
             if (Input.GetKeyDown("space"))
             {
@@ -77,8 +74,9 @@ public class LinkMovement : MonoBehaviour
             //not grounded
             
         }
+        //controller.Move();
         velocity.y += gravity * Time.deltaTime;
-        controller.Move(velocity * Time.deltaTime);
+        controller.Move((moveDirection +velocity) * Time.deltaTime);
         //that's how we add gravity since the player is kinematic (check rb of the player)
 
     }
