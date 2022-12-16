@@ -2091,8 +2091,6 @@ GameObject:
   - component: {fileID: 1836114670961107493}
   - component: {fileID: 1836114670961107489}
   - component: {fileID: 1836114670961107512}
-  - component: {fileID: 1836114670961107492}
-  - component: {fileID: 1836114670961107494}
   - component: {fileID: 1836114670961107488}
   m_Layer: 0
   m_Name: Link
@@ -2234,60 +2232,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6dc308fd655e284b8843df73d710ff6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  plane: {fileID: 0}
-  y_pos: 0
   m_FallSpeed: 0.7
-  defaultMoveSpeed: 4
-  jumpMultiplier: 500
-  isFalling: 0
---- !u!114 &1836114670961107492
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4234396859919480265}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a2b432a93c97b55448ec9fecfeba0aff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  orientation: {fileID: 7069292517571945524}
-  rb: {fileID: 1836114670961107515}
+  walkSpeed: 5
+  moveDirection: {x: 0, y: 0, z: 0}
+  velocity: {x: 0, y: 0, z: 0}
+  isGrounded: 0
+  groundCheckDistance: 0
+  groundMask:
+    serializedVersion: 2
+    m_Bits: 0
+  gravity: 0
+  jumpHeigt: 0
+  orientation: {fileID: 0}
   whatIsWall:
     serializedVersion: 2
-    m_Bits: 64
-  climbSpeed: 20
-  maxClimbTime: 0.75
-  detectionLength: 0.7
-  sphereCastRadius: 0.25
-  maxWallLookAngle: 30
---- !u!114 &1836114670961107494
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4234396859919480265}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 43e93dca15b571b44936d3d07f7244e8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  moveSpeed: 5
-  rotationSpeed: 0
-  groundDrag: 0
-  jumpForce: 10
-  jumpCooldown: 2
-  airMultiplier: 1
-  walkSpeed: 0
-  sprintSpeed: 0
-  jumpKey: 32
-  playerHeight: 1.7
-  whatIsGround:
-    serializedVersion: 2
-    m_Bits: 128
-  orientation: {fileID: 7069292517571945524}
+    m_Bits: 0
+  climbSpeed: 0
+  maxClimbTime: 0
+  detectionLength: 0
+  sphereCastRadius: 0
+  maxWallLookAngle: 0
 --- !u!114 &1836114670961107488
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2308,8 +2272,18 @@ MonoBehaviour:
   groundMask:
     serializedVersion: 2
     m_Bits: 128
-  gravity: -0.81
+  gravity: -9.81
   jumpHeight: 0.2
+  m_FallSpeed: 0.7
+  orientation: {fileID: 0}
+  whatIsWall:
+    serializedVersion: 2
+    m_Bits: 0
+  climbSpeed: 0
+  maxClimbTime: 0
+  detectionLength: 0
+  sphereCastRadius: 0
+  maxWallLookAngle: 0
 --- !u!1 &4307167248123596368
 GameObject:
   m_ObjectHideFlags: 0
