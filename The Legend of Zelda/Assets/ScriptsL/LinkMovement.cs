@@ -172,7 +172,7 @@ public class LinkMovement : MonoBehaviour
     void OnCollisionEnter(Collision c)
     {
         //Debug.Log(LayerMask.LayerToName(c.gameObject.layer));
-        if (LayerMask.LayerToName(c.gameObject.layer).Equals("Climbable"))
+        if (LayerMask.LayerToName(c.gameObject.layer).Equals("Climable"))
         {
             y_pos = c.gameObject.transform.position.y;
 
@@ -231,7 +231,6 @@ public class LinkMovement : MonoBehaviour
     private void attachToWall()
     {
         velocity.y=0;
-        
     }
 
     private void ClimbingMovement()
