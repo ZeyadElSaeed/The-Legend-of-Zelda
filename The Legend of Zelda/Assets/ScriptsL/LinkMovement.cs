@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class LinkMovement : MonoBehaviour
 {
-    public GameObject plane;
+    //public GameObject plane;
     // public GameObject cube; //to try as a wall to glide from
     public float y_pos;
 
