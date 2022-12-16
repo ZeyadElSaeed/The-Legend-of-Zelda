@@ -21,6 +21,28 @@ public class rsnew : MonoBehaviour
     private CharacterController controller;
     private Rigidbody rb;
     private Animator anim;
+
+    [Header("References")]
+    public Transform orientation;
+    public LayerMask whatIsWall;
+
+
+    [Header("Climbing")]
+    public float climbSpeed;
+    public float maxClimbTime;
+    // public float climbTimer;
+    private bool climbing;
+    private bool attached;
+    [Header("Detection")]
+    public float detectionLength;
+    public float sphereCastRadius;
+    public float maxWallLookAngle;
+    private float wallLookAngle;
+
+    private RaycastHit frontWallHit;
+    private bool wallFront;
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,6 +55,8 @@ public class rsnew : MonoBehaviour
     void Update()
     {
         Move();
+        WallCheck();
+        StateMachine();
     }
 
     private void Move()
@@ -90,6 +114,20 @@ public class rsnew : MonoBehaviour
         {
             Glide();
         }
+        //
+        if (!wallFront || !attached || wallLookAngle >= maxWallLookAngle)
+        {
+            velocity.y += gravity * Time.deltaTime;
+            controller.Move((moveDirection + velocity) * Time.deltaTime);
+        }
+        else
+        {
+            if (climbing)
+                moveDirection = new Vector3(moveX * 2, climbSpeed, 0);
+            else
+                moveDirection = new Vector3(moveX * 2, 0, 0);
+            controller.Move((moveDirection) * Time.deltaTime);
+        }
 
 
 
@@ -127,5 +165,78 @@ public class rsnew : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, Mathf.Sign(rb.velocity.y) * m_FallSpeed, rb.velocity.z);//falling with slope depending on the falling direction
         anim.SetTrigger("Glide");
+    }
+
+    private void StateMachine()
+    {
+        // State 1 - attaching to wall
+        if (Input.GetKeyDown(KeyCode.LeftShift))
+        {
+            attached = true;
+        }
+        if (Input.GetKeyUp(KeyCode.LeftShift))
+        {
+            attached = false;
+        }
+        if (wallFront && attached && wallLookAngle < maxWallLookAngle)
+        {
+            attachToWall();
+        }
+        else
+        {
+            detachFromWall();
+        }
+
+        //state 2 - climbing
+
+        if (attached && Input.GetKeyDown(KeyCode.W))
+        {
+            climbing = true;
+            climbSpeed = Mathf.Abs(climbSpeed);
+        }
+        if (attached && Input.GetKeyUp(KeyCode.W))
+        {
+            climbing = false;
+        }
+        if (attached && Input.GetKeyDown(KeyCode.S))
+        {
+            climbing = true;
+            climbSpeed = -climbSpeed;
+        }
+        if (attached && Input.GetKeyUp(KeyCode.S))
+        {
+            climbing = false;
+        }
+        if (attached && climbing) ClimbingMovement();
+        if (!climbing && attached) rb.velocity = Vector3.zero;
+
+
+        // State 3 - None
+
+        // if (wallFront && Input.GetKeyDown(jumpKey) && climbJumpsLeft > 0) ClimbJump();
+    }
+
+
+    private void WallCheck()
+    {
+        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, whatIsWall);
+        wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+    }
+
+
+    private void attachToWall()
+    {
+        velocity.y = 0;
+    }
+
+    private void ClimbingMovement()
+    {
+        rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
+        /// idea - sound effect
+    }
+
+    private void detachFromWall()
+    {
+        rb.useGravity = true;
     }
 }

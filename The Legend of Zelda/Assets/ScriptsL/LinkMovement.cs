@@ -6,14 +6,13 @@ public class LinkMovement : MonoBehaviour
 {
     //public GameObject plane;
     // public GameObject cube; //to try as a wall to glide from
-    public float y_pos;
+
 
     public float m_FallSpeed = 0.7f;
     private Rigidbody rb;
     public float walkSpeed = 5; //Speed for moving the player
     private float currentMoveSpeed; //this changes depending whether the player is walking or sprinitng
-    public float jumpMultiplier = 500; // multplies the up jump force
-    public bool isFalling;
+   
 
 
     [SerializeField] private Vector3 moveDirection;
@@ -169,15 +168,7 @@ public class LinkMovement : MonoBehaviour
         //Debug.Log(isFalling);
     }
     //Used to controll jumping when gliding
-    void OnCollisionEnter(Collision c)
-    {
-        //Debug.Log(LayerMask.LayerToName(c.gameObject.layer));
-        if (LayerMask.LayerToName(c.gameObject.layer).Equals("Climable"))
-        {
-            y_pos = c.gameObject.transform.position.y;
-
-        }
-    }
+    
     private void StateMachine()
     {
         // State 1 - attaching to wall
