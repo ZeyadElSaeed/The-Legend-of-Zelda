@@ -494,7 +494,7 @@ GameObject:
   - component: {fileID: 48770449581551264}
   - component: {fileID: 48770449581551266}
   m_Layer: 0
-  m_Name: Link_high_n_c00
+  m_Name: Link early prefap
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
