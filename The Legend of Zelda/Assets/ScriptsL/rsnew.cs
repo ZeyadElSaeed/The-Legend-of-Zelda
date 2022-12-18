@@ -14,7 +14,6 @@ public class rsnew : MonoBehaviour
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
-    [SerializeField] private float m_FallSpeed = 0.7f;
 
     private Vector3 moveDirection;
     private Vector3 moveDirectionX;
@@ -79,7 +78,7 @@ public class rsnew : MonoBehaviour
         moveDirectionX = transform.TransformDirection(moveDirectionX);
 
         if (isGrounded)
-        {
+        {            
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
                 Walk();
@@ -113,11 +112,15 @@ public class rsnew : MonoBehaviour
                 Jump();
             }
         }
-        if (Input.GetKey("space") && rb.velocity.y < 0f && Mathf.Abs(rb.velocity.y) > m_FallSpeed)
+        if ( !isGrounded && Input.GetKey("space") && rb.velocity.y < 0f)
         {
             Glide();
         }
-        //
+        else
+        {
+            NoGlide();
+        }
+        
         if (!wallFront || !attached || wallLookAngle >= maxWallLookAngle)
         {
             velocity.y += gravity * Time.deltaTime;
@@ -167,10 +170,14 @@ public class rsnew : MonoBehaviour
     }
     private void Glide()
     {
-        rb.velocity = new Vector3(rb.velocity.x, Mathf.Sign(rb.velocity.y) * m_FallSpeed, rb.velocity.z);//falling with slope depending on the falling direction
-        anim.SetTrigger("Glide");
+        gravity = -1;
+        anim.SetBool("Gliding", true);
     }
-
+    private void NoGlide()
+    {
+        anim.SetBool("Gliding", false);
+        gravity = -9.81f;
+    }
     private void StateMachine()
     {
         // State 1 - attaching to wall
@@ -225,8 +232,6 @@ public class rsnew : MonoBehaviour
         }
 
         // State 3 - None
-
-        // if (wallFront && Input.GetKeyDown(jumpKey) && climbJumpsLeft > 0) ClimbJump();
     }
 
 
@@ -241,16 +246,15 @@ public class rsnew : MonoBehaviour
     {
         velocity.y = 0;
         anim.SetBool("Attached", true);
-        //anim.speed = 0;
 
     }
 
     private void ClimbingMovement()
     {
         rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
-        anim.SetFloat("ClimbUpSpeed", climbSpeed);
+        anim.SetFloat("ClimbUpDirection", climbSpeed);
         int climbDirection = (climbSpeed == 0 ? 0 :1);
-        //Debug.Log(climbDirection);
+
         anim.speed = climbDirection;
         /// idea - sound effect
     }
