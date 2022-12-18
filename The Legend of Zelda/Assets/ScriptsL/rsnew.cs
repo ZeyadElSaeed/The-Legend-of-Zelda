@@ -4,15 +4,16 @@ using UnityEngine;
 
 public class rsnew : MonoBehaviour
 {
+    [Header("Movement")]
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
+    [Header("Jumping")]
     [SerializeField] private bool isGrounded;
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask groundMask;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
-    public float m_FallSpeed = 0.7f;
 
     private Vector3 moveDirection;
     private Vector3 moveDirectionX;
@@ -23,16 +24,17 @@ public class rsnew : MonoBehaviour
     private Animator anim;
 
     [Header("References")]
-    public Transform orientation;
-    public LayerMask whatIsWall;
+    [SerializeField] private Transform orientation;
+    [SerializeField] private LayerMask whatIsWall;
 
 
     [Header("Climbing")]
+
     public float climbSpeed;
     public float maxClimbTime;
-    // public float climbTimer;
-    private bool climbing;
-    private bool attached;
+
+    [SerializeField] private bool climbing;
+    [SerializeField] private bool attached;
     [Header("Detection")]
     public float detectionLength;
     public float sphereCastRadius;
@@ -76,7 +78,7 @@ public class rsnew : MonoBehaviour
         moveDirectionX = transform.TransformDirection(moveDirectionX);
 
         if (isGrounded)
-        {
+        {            
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
                 Walk();
@@ -110,11 +112,15 @@ public class rsnew : MonoBehaviour
                 Jump();
             }
         }
-        if (Input.GetKey("space") && rb.velocity.y < 0f && Mathf.Abs(rb.velocity.y) > m_FallSpeed)
+        if ( !isGrounded && Input.GetKey("space") && rb.velocity.y < 0f)
         {
             Glide();
         }
-        //
+        else
+        {
+            NoGlide();
+        }
+        
         if (!wallFront || !attached || wallLookAngle >= maxWallLookAngle)
         {
             velocity.y += gravity * Time.deltaTime;
@@ -127,6 +133,7 @@ public class rsnew : MonoBehaviour
             else
                 moveDirection = new Vector3(moveX * 2, 0, 0);
             controller.Move((moveDirection) * Time.deltaTime);
+            Idle();
         }
 
 
@@ -163,14 +170,18 @@ public class rsnew : MonoBehaviour
     }
     private void Glide()
     {
-        rb.velocity = new Vector3(rb.velocity.x, Mathf.Sign(rb.velocity.y) * m_FallSpeed, rb.velocity.z);//falling with slope depending on the falling direction
-        anim.SetTrigger("Glide");
+        gravity = -1;
+        anim.SetBool("Gliding", true);
     }
-
+    private void NoGlide()
+    {
+        anim.SetBool("Gliding", false);
+        gravity = -9.81f;
+    }
     private void StateMachine()
     {
         // State 1 - attaching to wall
-        if (Input.GetKeyDown(KeyCode.LeftShift))
+        if (Input.GetKeyDown(KeyCode.LeftShift) && wallFront && wallLookAngle < maxWallLookAngle)
         {
             attached = true;
         }
@@ -192,28 +203,35 @@ public class rsnew : MonoBehaviour
         if (attached && Input.GetKeyDown(KeyCode.W))
         {
             climbing = true;
-            climbSpeed = Mathf.Abs(climbSpeed);
+            //climbSpeed = Mathf.Abs(climbSpeed);
+            climbSpeed = 3;
         }
         if (attached && Input.GetKeyUp(KeyCode.W))
         {
+            
             climbing = false;
+            climbSpeed = 0;
         }
         if (attached && Input.GetKeyDown(KeyCode.S))
         {
             climbing = true;
-            climbSpeed = -climbSpeed;
+            //climbSpeed = -climbSpeed;
+            climbSpeed = -3;
         }
         if (attached && Input.GetKeyUp(KeyCode.S))
         {
             climbing = false;
+            climbSpeed = 0;
         }
         if (attached && climbing) ClimbingMovement();
-        if (!climbing && attached) rb.velocity = Vector3.zero;
-
+        if (!climbing && attached)
+        {
+            rb.velocity = Vector3.zero;
+            climbSpeed = 0;
+            anim.speed = climbSpeed;
+        }
 
         // State 3 - None
-
-        // if (wallFront && Input.GetKeyDown(jumpKey) && climbJumpsLeft > 0) ClimbJump();
     }
 
 
@@ -227,16 +245,25 @@ public class rsnew : MonoBehaviour
     private void attachToWall()
     {
         velocity.y = 0;
+        anim.SetBool("Attached", true);
+
     }
 
     private void ClimbingMovement()
     {
         rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
+        anim.SetFloat("ClimbUpDirection", climbSpeed);
+        int climbDirection = (climbSpeed == 0 ? 0 :1);
+
+        anim.speed = climbDirection;
         /// idea - sound effect
     }
 
     private void detachFromWall()
     {
         rb.useGravity = true;
+        anim.SetBool("Attached", false);
+        anim.speed = 1;
+
     }
 }
