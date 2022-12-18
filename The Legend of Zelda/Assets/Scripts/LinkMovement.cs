@@ -116,7 +116,7 @@ public class LinkMovement : MonoBehaviour
                 Jump();
             }
         }
-        if ( !isGrounded && Input.GetKey("space") && rb.velocity.y < 0f)
+        if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
             Glide();
         }
