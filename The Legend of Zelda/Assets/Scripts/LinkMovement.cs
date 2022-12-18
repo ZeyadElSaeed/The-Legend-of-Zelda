@@ -8,41 +8,45 @@ public class LinkMovement : MonoBehaviour
     [SerializeField] private float moveSpeed;
     [SerializeField] private float walkSpeed;
     [SerializeField] private float runSpeed;
+    private Vector3 moveDirection;
+    private Vector3 moveDirectionX;
+    [SerializeField] private Vector3 velocity;
     [Header("Jumping")]
-    [SerializeField] private bool isGrounded;
+    
     [SerializeField] private float groundCheckDistance;
-    [SerializeField] private LayerMask groundMask;
+    [SerializeField] private LayerMask walkOnTopMask;
     [SerializeField] private float gravity;
     [SerializeField] private float jumpHeight;
 
-    private Vector3 moveDirection;
-    private Vector3 moveDirectionX;
-    private Vector3 velocity;
-
-    private CharacterController controller;
-    private Rigidbody rb;
-    private Animator anim;
-
-    [Header("References")]
-    [SerializeField] private Transform orientation;
-    [SerializeField] private LayerMask whatIsWall;
-
-
     [Header("Climbing")]
-
     public float climbSpeed;
     public float maxClimbTime;
 
+    
+    [Header("Detection")]
+    [SerializeField] private bool isGrounded;
     [SerializeField] private bool climbing;
     [SerializeField] private bool attached;
-    [Header("Detection")]
     public float detectionLength;
     public float sphereCastRadius;
     public float maxWallLookAngle;
     private float wallLookAngle;
-
     private RaycastHit frontWallHit;
     private bool wallFront;
+
+
+
+
+
+    [Header("References")]
+    [SerializeField] private Transform orientation;
+    [SerializeField] private LayerMask climbMask;
+    private CharacterController controller;
+    private Rigidbody rb;
+    private Animator anim;
+
+
+    
 
 
     // Start is called before the first frame update
@@ -63,7 +67,7 @@ public class LinkMovement : MonoBehaviour
 
     private void Move()
     {
-        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, groundMask);
+        isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, walkOnTopMask);
         if(isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
@@ -237,7 +241,7 @@ public class LinkMovement : MonoBehaviour
 
     private void WallCheck()
     {
-        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, whatIsWall);
+        wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, climbMask);
         wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
     }
 
