@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class rsnew : MonoBehaviour
+public class LinkMovement : MonoBehaviour
 {
     [Header("Movement")]
     [SerializeField] private float moveSpeed;
@@ -263,6 +263,8 @@ public class rsnew : MonoBehaviour
     {
         rb.useGravity = true;
         anim.SetBool("Attached", false);
+        attached = false;
+        climbing = false;
         anim.speed = 1;
 
     }
