@@ -9,7 +9,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 583260993510852683}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LHandN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -43,7 +43,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4444748609563944665}
   - component: {fileID: 4982698268271000997}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_EyeU_mh_9_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -160,7 +160,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2675540161803584060}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LShoulderJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -192,7 +192,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1773254888076292017}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RShoulderN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -225,7 +225,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2225888449941949446}
   - component: {fileID: 1659889336000343679}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body_mh_4_1_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -342,7 +342,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4309821650477806200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SayaN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -376,7 +376,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9205021893873876039}
   - component: {fileID: 5039675106744650200}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lhand_4_VIS_O_OBJ_20_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -493,7 +493,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8975234346859589967}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: BustN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -528,7 +528,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2184640001933092950}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RHandN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -560,7 +560,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7250601562231829642}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: NeckN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -592,7 +592,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2333625449396467507}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HeadN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -624,7 +624,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1722280582269117736}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SayaTateN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -656,7 +656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 734107617239516379}
   - component: {fileID: 3121529779402031127}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rhand_3_VIS_O_OBJ_23_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -774,7 +774,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2102123835493694673}
   - component: {fileID: 1576473467436804197}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Eye_mh_13_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -891,7 +891,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1751352536896953865}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RFootJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -923,7 +923,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3245807004082908730}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KenJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -956,7 +956,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3738410010275068592}
   - component: {fileID: 2519908350486528989}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: link_kenb_VIS_O_OBJ_1_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1074,7 +1074,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2467127077901412279}
   - component: {fileID: 3166121322445200160}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lhand_1_VIS_O_OBJ_17_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1191,7 +1191,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2316344640330322448}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RLegJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1224,7 +1224,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3930900553087718170}
   - component: {fileID: 6136804068112184402}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: link_ken_VIS_O_OBJ_0_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1341,7 +1341,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1194819596266686961}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: HipN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1379,9 +1379,9 @@ GameObject:
   - component: {fileID: 4473275961072985411}
   - component: {fileID: 4473275961072985437}
   - component: {fileID: 4473275961072985433}
-  - component: {fileID: 4473275961072985408}
   - component: {fileID: 4473275961072985432}
-  m_Layer: 0
+  - component: {fileID: 6691312059164628149}
+  m_Layer: 8
   m_Name: Link_animations1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1454,7 +1454,7 @@ Animator:
   m_Controller: {fileID: 9100000, guid: fddb21e059ad3364da671b44dac25cc6, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
-  m_ApplyRootMotion: 1
+  m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
   m_WarningMessage: 
@@ -1509,38 +1509,6 @@ CharacterController:
   m_SkinWidth: 0.0001
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &4473275961072985408
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2138345450263950001}
-  m_Enabled: 0
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b6dc308fd655e284b8843df73d710ff6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  m_FallSpeed: 0.7
-  walkSpeed: 5
-  moveDirection: {x: 0, y: 0, z: 0}
-  velocity: {x: 0, y: 0, z: 0}
-  isGrounded: 0
-  groundCheckDistance: 0.3
-  groundMask:
-    serializedVersion: 2
-    m_Bits: 192
-  gravity: -9.81
-  jumpHeigt: 5
-  orientation: {fileID: 5004722181716468556}
-  whatIsWall:
-    serializedVersion: 2
-    m_Bits: 64
-  climbSpeed: 3
-  maxClimbTime: 0.75
-  detectionLength: 0.4
-  sphereCastRadius: 0.25
-  maxWallLookAngle: 20
 --- !u!114 &4473275961072985432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1562,17 +1530,31 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 192
   gravity: -9.82
-  jumpHeight: 5
-  m_FallSpeed: 0.7
+  jumpHeight: 10
   orientation: {fileID: 5004722181716468556}
   whatIsWall:
     serializedVersion: 2
     m_Bits: 64
   climbSpeed: 3
   maxClimbTime: 0.75
+  climbing: 0
+  attached: 0
   detectionLength: 0.4
   sphereCastRadius: 0.25
   maxWallLookAngle: 20
+--- !u!114 &6691312059164628149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2138345450263950001}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c28bfe71fc077c84d930502428922ee4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
 --- !u!1 &2342549181097302264
 GameObject:
   m_ObjectHideFlags: 0
@@ -1583,7 +1565,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8296442413701351663}
   - component: {fileID: 6470326245858865102}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Eye_furafura_mh_12_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1701,7 +1683,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6075066460585276571}
   - component: {fileID: 3748593639361757229}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Blink_mh_5_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1819,7 +1801,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7171619421006206034}
   - component: {fileID: 7978872931325247162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth_default_mh_32_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1937,7 +1919,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8775070569993604067}
   - component: {fileID: 2026813548151836709}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: link_tate_VIS_O_OBJ_2_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2054,7 +2036,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 497781650658910710}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LToeN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2085,7 +2067,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7974150773454943540}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LFootJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2118,7 +2100,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1947786588621670059}
   - component: {fileID: 3641156555629665139}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rhand_2_VIS_O_OBJ_22_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2235,7 +2217,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5167374921727223637}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: WaistN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2267,7 +2249,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 263062809548705365}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RKneeJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2300,7 +2282,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9170496111522332452}
   - component: {fileID: 2877319802111522959}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Harfblink_mh_14_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2418,7 +2400,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7211580797243397184}
   - component: {fileID: 2707850400806995092}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_HeavyAttack_mh_28_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2535,7 +2517,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6694203080584317370}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RHaveN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2566,7 +2548,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3403838132412007317}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LArmJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2601,7 +2583,7 @@ GameObject:
   - component: {fileID: 4473275961230371492}
   - component: {fileID: 4473275961230371499}
   - component: {fileID: 2841617819031454076}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -2696,7 +2678,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5971870768313219222}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: ThrowN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2728,7 +2710,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8655645317350808908}
   - component: {fileID: 7513896229317634438}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: link_tateb_VIS_O_OBJ_3_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2846,7 +2828,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3003051894676306725}
   - component: {fileID: 7085776668126603039}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rhand_4_VIS_O_OBJ_24_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2963,7 +2945,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5126846663728287358}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RShoulderJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2996,7 +2978,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6719144440385657198}
   - component: {fileID: 757827726089512328}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_Ottotto_mh_30_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3114,7 +3096,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7388306560874080409}
   - component: {fileID: 7912411938770326578}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: body_mh_4_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3232,7 +3214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9062009644156436164}
   - component: {fileID: 3502611455241531716}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_Furafura_mh_27_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3349,7 +3331,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6387325295514470818}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RArmJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3381,7 +3363,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4335966574164037734}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LShoulderN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3414,7 +3396,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9193300872799300893}
   - component: {fileID: 1301842465407211009}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_Capture_mh_25_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3532,7 +3514,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5222490042432962324}
   - component: {fileID: 4575503655069561486}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth_down_mh_33_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3649,7 +3631,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 9067327111605561449}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LLegJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3681,7 +3663,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5680275016893262062}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: KenModelN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3713,7 +3695,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8259629896170778653}
   - component: {fileID: 8964819668773432806}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth_open_mh_34_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3830,7 +3812,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 6516820787316013999}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RToeN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3862,7 +3844,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7737354773288275637}
   - component: {fileID: 7051848155841214687}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Eye_Ottotto_mh_11_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -3980,7 +3962,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7012532501566983650}
   - component: {fileID: 3582510764459734529}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Rhand_1_VIS_O_OBJ_21_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4098,7 +4080,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3747232138575743974}
   - component: {fileID: 1444518250804119490}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eye_damage_mh_15_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4216,7 +4198,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8829512097389906200}
   - component: {fileID: 8221726022415395988}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_Hot_mh_29_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4334,7 +4316,7 @@ GameObject:
   m_Component:
   - component: {fileID: 141512412800365838}
   - component: {fileID: 7802368851196284441}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_Eye_HeavyAttack_mh_10_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4451,7 +4433,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3360291361208260068}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: RotN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4484,7 +4466,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 7709328901784275057}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SWG_cap1__swing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4517,7 +4499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 9024299794693630100}
   - component: {fileID: 2145791548330414162}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_mouth_Escape_mh_26_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4635,7 +4617,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6441058015509147113}
   - component: {fileID: 1909807492186224258}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_EyeR_mh_8_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4753,7 +4735,7 @@ GameObject:
   m_Component:
   - component: {fileID: 8698282289507622614}
   - component: {fileID: 5713332610891618860}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: mouth_damage_mh_31_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4870,7 +4852,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1582006300681458454}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SayaTukaN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4901,7 +4883,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 3384711804898037632}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LHaveN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -4933,7 +4915,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1739950898229072375}
   - component: {fileID: 3759677103983986452}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: eye_down_mh_16_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5051,7 +5033,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4084404541823382114}
   - component: {fileID: 8145374147632023276}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lhand_3_VIS_O_OBJ_19_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5168,7 +5150,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2420925380195356653}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TransN
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5200,7 +5182,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8326039098947970065}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: SWG_cap2__swing
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5232,7 +5214,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5128576157151988416}
   - component: {fileID: 925488153356227397}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_EyeL_mh_7_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5350,7 +5332,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6406514121241316693}
   - component: {fileID: 4699756914847297740}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Lhand_2_VIS_O_OBJ_18_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5467,7 +5449,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8246154456632237232}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: LKneeJ
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5500,7 +5482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4062029165892412081}
   - component: {fileID: 1858686503999314273}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Link_EyeD_mh_6_0_node
   m_TagString: Untagged
   m_Icon: {fileID: 0}
