@@ -29,6 +29,9 @@ ACL Project: The Legend of Zelda
 
 • Dying animation:
 
+Bomb Explosion
+Unity Particle Pack:
+
 
 ## Team-Enemies:
 • Bokoblin Model: https://www.models-resource.com/wii_u/thelegendofzeldabreathofthewild/model/22293/?source=genre

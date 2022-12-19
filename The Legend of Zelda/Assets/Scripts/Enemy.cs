@@ -7,7 +7,7 @@ using UnityEngine.UI;
 
 public class Enemy : MonoBehaviour
 {
-    [SerializeField] float health ;
+    [SerializeField] public float health ;
     [Tooltip("1 for Boko, 2 for Mo")]
     [SerializeField] int enemyType;
     [SerializeField] GameObject player;
@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     [Header("Combat")]
     [SerializeField] float attackCD = 3f;
     [SerializeField] float attackRange = 1f;
-    [SerializeField] float aggroRange = 4f;
+    // [SerializeField] float aggroRange = 4f;
 
     
     NavMeshAgent agent;
@@ -44,6 +44,9 @@ public class Enemy : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // if(health == 0){
+        //     Destroy(gameObject);
+        // }
         healthBar.value = health;
         // Put here the main camera that follows the player to be able always to see healthbar
         canvas.transform.LookAt(this.transform);
