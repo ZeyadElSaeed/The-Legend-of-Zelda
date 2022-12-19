@@ -5,15 +5,17 @@ ACL Project: The Legend of Zelda
 ## Team-Link:
 • Link Model: https://www.models-resource.com/3ds/supersmashbrosfornintendo3ds/model/36853/
 
-• Idle animation:
+• Idle animation: Maximo
 
-• Walking animation:
+• Walking animation: Maximo
 
-• Sprinting animation:
+• Sprinting animation:  Maximo
 
-• Jumping animation:
+• Jumping animation: Maximo
 
-• Gliding animation:
+• Gliding animation: Maximo
+
+• Climbing animation: Maximo
 
 • Drawing Bow animation:
 
@@ -21,7 +23,7 @@ ACL Project: The Legend of Zelda
 
 • Swinging Sword animation:
 
-• Blocking with Sword/Shield animation:
+• Blocking with Shield animation:
 
 • Throwing Bomb animation:
 
