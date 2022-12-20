@@ -30,15 +30,21 @@ public class ProjectileAddon : MonoBehaviour
         // check if Boss hit The Player
         if( collision.gameObject.tag == "Player")
         {
-
+            HealthSystem playerHealth = collision.gameObject.GetComponent<HealthSystem>();
             // Make Damage to the player
-            if ( transform.localScale.Equals(new Vector3(0.25f, 0.25f, 0.25f)) )
+            if (transform.localScale.Equals(new Vector3(0.25f, 0.25f, 0.25f)))
+            {
                 Debug.Log("I'm in phase 1 Throwing a SMALL fire ball to the player");
+                playerHealth.TakeDamage(2);
+            }
             else
+            {
                 Debug.Log("I'm in phase 2 Throwing a LARGE fire ball to the player");
+                playerHealth.TakeDamage(5);
+            }
 
             // player.TakeDamage(damage);
-
+            
             // destroy projectile
             Destroy(gameObject);
         }

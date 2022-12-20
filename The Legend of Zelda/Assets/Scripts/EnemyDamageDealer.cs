@@ -31,7 +31,7 @@ public class EnemyDamageDealer : MonoBehaviour
               
                 if (hit.transform.TryGetComponent(out HealthSystem health))
                 {
-                    //health.TakeDamage(weaponDamage);
+                    health.TakeDamage(weaponDamage);
                     if (enemyType == 1) {
                         if ( attackType == 1 )
                             Debug.Log("Boko has dealt horizontal damage 1");
