@@ -26,7 +26,7 @@ public class EnemyDamageDealer : MonoBehaviour
         {
             RaycastHit hit;
             int layerMask = 1 << 8;
-            if (Physics.Raycast(transform.position, transform.up, out hit, weaponLength, layerMask))
+            if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
               
                 if (hit.transform.TryGetComponent(out HealthSystem health))

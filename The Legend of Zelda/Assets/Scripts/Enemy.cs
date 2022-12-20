@@ -124,28 +124,6 @@ public class Enemy : MonoBehaviour
     public void StartDealDamage()
     {
         GetComponentInChildren<EnemyDamageDealer>().StartDealDamage(enemyType, attackType);
-        if(enemyType == 1)
-        {
-            if (attackType == 1)
-            {
-                player.GetComponent<LinkMovement>().TakeDamage(1);
-            }
-            else
-            {
-                player.GetComponent<LinkMovement>().TakeDamage(3);
-            }
-        }
-        else
-        {
-            if (attackType == 1)
-            {
-                player.GetComponent<LinkMovement>().TakeDamage(2);
-            }
-            else
-            {
-                player.GetComponent<LinkMovement>().TakeDamage(4);
-            }
-        }
     }
     public void EndDealDamage()
     {
