@@ -132,10 +132,18 @@ public class LinkMovement : MonoBehaviour
         }
         else
         {
+
+            float climbX = Input.GetAxis("Horizontal");
             if (climbing)
-                moveDirection = new Vector3(moveX * 2, climbSpeed, 0);
+            {
+                
+                moveDirection = new Vector3(climbX * 2, climbSpeed, 0);
+                moveDirection = transform.TransformDirection(moveDirection);
+            }
             else
-                moveDirection = new Vector3(moveX * 2, 0, 0);
+                moveDirection = new Vector3(climbX * 2, 0, 0);
+                moveDirection = transform.TransformDirection(moveDirection);
+
             controller.Move((moveDirection) * Time.deltaTime);
             Idle();
         }
@@ -243,6 +251,7 @@ public class LinkMovement : MonoBehaviour
     {
         wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, climbMask);
         wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+        Debug.Log("Wall look angle"+ wallLookAngle);
     }
 
 
