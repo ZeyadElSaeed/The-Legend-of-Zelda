@@ -6,6 +6,8 @@ TagManager:
   tags:
   - Climable
   - Camp_1
+  - Bokoblin
+  - Moblin
   layers:
   - Default
   - TransparentFX

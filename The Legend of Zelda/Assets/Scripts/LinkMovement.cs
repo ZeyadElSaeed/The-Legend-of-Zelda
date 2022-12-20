@@ -46,7 +46,11 @@ public class LinkMovement : MonoBehaviour
     private Animator anim;
 
 
-    
+    public int healthPoints;
+    private bool hasShield;
+    private float timeremaining = 10;
+    private float waitTime = 5;
+
 
 
     // Start is called before the first frame update
@@ -55,6 +59,8 @@ public class LinkMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        healthPoints = 24;
+        hasShield = false;
     }
 
     // Update is called once per frame
@@ -63,6 +69,8 @@ public class LinkMovement : MonoBehaviour
         Move();
         WallCheck();
         StateMachine();
+        Shield();
+        Death();
     }
 
     private void Move()
@@ -271,5 +279,48 @@ public class LinkMovement : MonoBehaviour
         climbing = false;
         anim.speed = 1;
 
+    }
+
+    private void Shield()
+    {
+        if(Input.GetKey(KeyCode.Mouse1) && timeremaining > 0)
+        {
+            anim.SetBool("Shield", true);
+            hasShield = true;
+            timeremaining = timeremaining - Time.deltaTime;
+            Debug.Log(timeremaining);
+        }
+        
+        if(Input.GetKeyUp(KeyCode.Mouse1) || timeremaining <= 0)
+        {
+            anim.SetBool("Shield", false);
+            hasShield = false;
+            if(timeremaining <= 0 && waitTime > 0)
+            {
+                waitTime = waitTime - Time.deltaTime;
+            }
+            else
+            {
+                timeremaining = 10;
+                waitTime = 5;
+            }
+        }
+    }
+
+    public void TakeDamage(int Damage)
+    {
+        if(!hasShield)
+        {
+            healthPoints = healthPoints - Damage;
+            Debug.Log("Health Points" + healthPoints);
+        }
+    }
+
+    private void Death()
+    {
+        if(healthPoints <= 0)
+        {
+            anim.SetTrigger("Death");
+        }
     }
 }
