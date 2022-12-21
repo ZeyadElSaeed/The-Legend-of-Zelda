@@ -321,6 +321,7 @@ public class LinkMovement : MonoBehaviour
         if(!hasShield)
         {
             healthPoints = healthPoints - Damage;
+            anim.SetTrigger("Damage");
             Debug.Log("Health Points" + healthPoints);
         }
     }
