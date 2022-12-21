@@ -54,6 +54,8 @@ public class BowScript : MonoBehaviour
     public Image centerCircle;
     private Vector2 originalImage;
 
+    private Animator anim;
+
     private void Start()
     {
         camOriginalPos = Camera.main.transform.localPosition;
@@ -64,6 +66,8 @@ public class BowScript : MonoBehaviour
 
         originalImage = reticle.sizeDelta;
         ShowReticle(false, 0);
+
+        anim = transform.parent.GetComponent<Animator>();
     }
 
     // Update is called once per frame
@@ -77,7 +81,7 @@ public class BowScript : MonoBehaviour
             {
                 canShoot = false;
                 isAiming = true;
-
+                anim.SetBool("Aiming", true);
                 StopCoroutine(PrepareSequence());
                 StartCoroutine(PrepareSequence());
 
@@ -95,6 +99,9 @@ public class BowScript : MonoBehaviour
         {
             if (!shootRest && isAiming)
             {
+                
+                anim.SetTrigger("Shoot");
+                anim.SetBool("Aiming", false);
                 StopCoroutine(ShootSequence());
                 StartCoroutine(ShootSequence());
             }
