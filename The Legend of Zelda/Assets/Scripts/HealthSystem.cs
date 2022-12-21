@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class HealthSystem : MonoBehaviour
 {
-    [SerializeField] float health = 100;
 
 
 
@@ -68,7 +67,7 @@ public class HealthSystem : MonoBehaviour
             hasShield = true;
             timeremaining = timeremaining - Time.deltaTime;
             //Debug.Log(timeremaining);
-            Debug.Log(healthPoints);
+            //Debug.Log(healthPoints);
         }
 
         if (Input.GetKeyUp(KeyCode.Mouse1) || timeremaining <= 0)
@@ -92,7 +91,7 @@ public class HealthSystem : MonoBehaviour
         if (!hasShield)
         {
             healthPoints = healthPoints - Damage;
-            animator.SetTrigger("damage");
+            animator.SetTrigger("Damage");
             Debug.Log("Health Points" + healthPoints);
         }
     }
