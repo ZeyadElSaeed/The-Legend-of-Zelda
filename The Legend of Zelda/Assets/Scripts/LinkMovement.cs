@@ -259,7 +259,7 @@ public class LinkMovement : MonoBehaviour
     {
         wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, climbMask);
         wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
-        Debug.Log("Wall look angle"+ wallLookAngle);
+        //Debug.Log("Wall look angle"+ wallLookAngle);
     }
 
 
@@ -297,7 +297,7 @@ public class LinkMovement : MonoBehaviour
             anim.SetBool("Shield", true);
             hasShield = true;
             timeremaining = timeremaining - Time.deltaTime;
-            Debug.Log(timeremaining);
+            //Debug.Log(timeremaining);
         }
         
         if(Input.GetKeyUp(KeyCode.Mouse1) || timeremaining <= 0)
@@ -322,7 +322,7 @@ public class LinkMovement : MonoBehaviour
         {
             healthPoints = healthPoints - Damage;
             anim.SetTrigger("Damage");
-            Debug.Log("Health Points" + healthPoints);
+            //Debug.Log("Health Points" + healthPoints);
         }
     }
 
