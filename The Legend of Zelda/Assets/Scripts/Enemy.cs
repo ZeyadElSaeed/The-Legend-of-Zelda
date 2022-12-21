@@ -30,6 +30,7 @@ public class Enemy : MonoBehaviour
     float newDestinationCD = 0.5f;
     int attackType;
     bool isChasing;
+    bool isDead;
     
 
     void Start()
@@ -37,53 +38,59 @@ public class Enemy : MonoBehaviour
         agent = GetComponent<NavMeshAgent>();
         animator = GetComponent<Animator>();
         isChasing = false;
-
+        isDead = false;
+        //healthBar.maxValue = health;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        healthBar.value = health;
-        // Put here the main camera that follows the player to be able always to see healthbar
-        canvas.transform.LookAt(this.transform);
-        animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-
-		if (player == null)
-		{
-            return;
-		}
-
-        if (timePassed >= attackCD)
+        if (!isDead)
         {
-            if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+
+
+            healthBar.value = health;
+            // Put here the main camera that follows the player to be able always to see healthbar
+            canvas.transform.LookAt(this.transform);
+            animator.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+
+            if (player == null)
             {
-                //animator.SetTrigger("attack");
-                attackType = Random.Range(1,3);
-                transform.LookAt(player.transform);
-                animator.SetInteger("attackType", attackType);
-                timePassed = 0;
+                return;
+            }
+
+            if (timePassed >= attackCD)
+            {
+                if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+                {
+                    //animator.SetTrigger("attack");
+                    attackType = Random.Range(1, 3);
+                    transform.LookAt(player.transform);
+                    animator.SetInteger("attackType", attackType);
+                    timePassed = 0;
+                }
+                else
+                {
+                    animator.SetInteger("attackType", 0);
+                }
+
             }
             else
             {
-                animator.SetInteger("attackType", 0 );
+                animator.SetInteger("attackType", 0);
             }
-             
-        }
-        else
-        {
-            animator.SetInteger("attackType", 0);
-        }
-        timePassed += Time.deltaTime;
-        // && Vector3.Distance(player.transform.position, transform.position) <= aggroRange
+            timePassed += Time.deltaTime;
+            // && Vector3.Distance(player.transform.position, transform.position) <= aggroRange
 
-        if (newDestinationCD <= 0 && isChasing)
-        {
-            newDestinationCD = 0.5f;
-            agent.SetDestination(player.transform.position);
+            if (newDestinationCD <= 0 && isChasing)
+            {
+                newDestinationCD = 0.5f;
+                agent.SetDestination(player.transform.position);
+            }
+            newDestinationCD -= Time.deltaTime;
+            //transform.LookAt(player.transform);
         }
-        newDestinationCD -= Time.deltaTime;
-        //transform.LookAt(player.transform);
     }
 
 	private void OnCollisionEnter(Collision collision)
@@ -98,27 +105,36 @@ public class Enemy : MonoBehaviour
 	void Die()
     {
         animator.SetTrigger("die");
+        agent.SetDestination(this.transform.position);
+        isDead = true;
+        //(this.GetComponent<Enemy>()).enabled = false;
         // Destroy(this.gameObject);
     }
 
     public void TakeDamage(float damageAmount)
     {
-        health -= damageAmount;
-        animator.SetTrigger("damage");
-        if (!isChasing)
+        if (!isDead)
         {
-            // if hit without chase 
-            // active chasing for all enemies in the camp
-            foreach (Transform child in this.transform.parent.transform)
-            {
-                child.GetComponent<Enemy>().chasePlayer();
-            }
-        }
-       
 
-        if (health <= 0)
-        {
-            Die();
+
+            health -= damageAmount;
+            animator.SetTrigger("damage");
+            if (!isChasing)
+            {
+                // if hit without chase 
+                // active chasing for all enemies in the camp
+                foreach (Transform child in this.transform.parent.transform)
+                {
+                    child.GetComponent<Enemy>().chasePlayer();
+                }
+            }
+
+
+            if (health <= 0)
+            {
+                healthBar.value = 0.0f;
+                Die();
+            }
         }
     }
     public void StartDealDamage()

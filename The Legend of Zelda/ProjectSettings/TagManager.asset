@@ -8,6 +8,8 @@ TagManager:
   - Camp_1
   - Bokoblin
   - Moblin
+  - Fragile
+  - MawJLaygo
   layers:
   - Default
   - TransparentFX

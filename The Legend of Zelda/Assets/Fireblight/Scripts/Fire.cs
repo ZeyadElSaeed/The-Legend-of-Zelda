@@ -31,6 +31,7 @@ public class Fire : MonoBehaviour
     bool isWalking;
     bool isStopping;
     bool isChasing;
+    bool isDead;
 
     [Header("Small Fire Ball")]
     [SerializeField] GameObject objectToThrow;
@@ -62,44 +63,47 @@ public class Fire : MonoBehaviour
         isStopping = true;
         isWalking = false;
         isChasing = false;
+        isDead = false;
 
     }
 
     // Update is called once per frame
     void Update()
     {
-        // Increase The time for coolDown and walking and idle
-        timePassed += Time.deltaTime;
-        healthBar.value = health;
-        anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-        // Check player in chasing distance
-        float distance = Vector3.Distance(player.transform.position, transform.position);
-        if (distance <= aggroRange && !isChasing)
+        if (!isDead)
         {
-            chasePlayer();
-        }
-        // Check if enemy in phase 2
-        if (health <= 150 && state == 1)
-        {
-            state = 2;
-            attackCD *= 3;
-            activeShield();
-        }
-            
-        // Enemy Animation Conditions
-        if (isStopping)
-            idleState();
-        if (isWalking)
-            walkingState();
-        if (isChasing)
-        {
-            chasingState();
-            attackState();
-        }
-            
-        
-            
+            // Increase The time for coolDown and walking and idle
+            timePassed += Time.deltaTime;
+            healthBar.value = health;
+            anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+            // Check player in chasing distance
+            float distance = Vector3.Distance(player.transform.position, transform.position);
+            if (distance <= aggroRange && !isChasing)
+            {
+                chasePlayer();
+            }
+            // Check if enemy in phase 2
+            if (health <= 150 && state == 1)
+            {
+                state = 2;
+                attackCD *= 3;
+                activeShield();
+            }
 
+            // Enemy Animation Conditions
+            if (isStopping)
+                idleState();
+            if (isWalking)
+                walkingState();
+            if (isChasing)
+            {
+                chasingState();
+                attackState();
+            }
+
+
+
+        }
     }
 
     void attackState()
@@ -197,17 +201,30 @@ public class Fire : MonoBehaviour
 
     public void TakeDamage(float damageAmount)
     {
-        if ( state == 1)
-            health -= damageAmount;
-        else
-            health -= (damageAmount*2);
-
-
-        Debug.Log("Enemy is being hit");
-        if (health <= 0)
+        if (!isDead)
         {
-            anim.SetTrigger("die");
-            Debug.Log("Enemy die");
+
+            if (!isChasing)
+            {
+                chasePlayer();
+            }
+
+            
+            if (state == 1)
+                health -= damageAmount;
+            else if (!shield.activeSelf)
+                health -= (damageAmount * 2);
+
+            
+            Debug.Log("Enemy is being hit");
+            if (health <= 0)
+            {
+                healthBar.value = 0.0f;
+                anim.SetTrigger("die");
+                isDead = true;
+                agent.SetDestination(this.transform.position);
+                Debug.Log("Enemy die");
+            }
         }
     }
 
