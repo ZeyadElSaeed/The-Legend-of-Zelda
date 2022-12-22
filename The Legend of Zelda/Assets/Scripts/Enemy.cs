@@ -31,7 +31,7 @@ public class Enemy : MonoBehaviour
     int attackType;
     bool isChasing;
     bool isDead;
-    
+    public AudioSource EnemyFootSteps;
 
     void Start()
     {
@@ -87,6 +87,9 @@ public class Enemy : MonoBehaviour
             {
                 newDestinationCD = 0.5f;
                 agent.SetDestination(player.transform.position);
+                if(!EnemyFootSteps.isPlaying){
+                    EnemyFootSteps.Play();
+                }
             }
             newDestinationCD -= Time.deltaTime;
             //transform.LookAt(player.transform);

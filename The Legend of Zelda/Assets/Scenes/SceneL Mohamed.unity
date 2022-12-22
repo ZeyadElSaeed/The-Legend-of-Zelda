@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -5316,7 +5316,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ad18160c63bad1649916ebb67220b2ae, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sounds: []
+  sounds:
+  - name: Theme
+    clip: {fileID: 8300000, guid: 413e3531145e8dd498c7b77071403a3a, type: 3}
+    volume: 0.1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Walking
+    clip: {fileID: 8300000, guid: b0c8f9505577a6d4fb78dc31e400b3c2, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Sprint
+    clip: {fileID: 8300000, guid: 03dff9b7e9f91f842865c2aa32f7da47, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Jump
+    clip: {fileID: 8300000, guid: d95dc0d931ebdc449b7df0864cbdc03f, type: 3}
+    volume: 1
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
+  - name: Explosion
+    clip: {fileID: 8300000, guid: 808164f57a0c1ab4a929d83b704ae387, type: 3}
+    volume: 0.7
+    pitch: 1
+    loop: 0
+    source: {fileID: 0}
 --- !u!4 &1006291691
 Transform:
   m_ObjectHideFlags: 0
@@ -10121,19 +10151,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8953712
+      value: 0.9513596
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000037625432
+      value: -0.00006935001
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00010277331
+      value: 0.00007614494
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4453206
+      value: -0.30808267
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187422, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -10141,19 +10171,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87759346
+      value: 0.8675497
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00008627773
+      value: -0.00009000299
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00006511808
+      value: 0.000061988816
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4794057
+      value: -0.49735048
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140690, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size

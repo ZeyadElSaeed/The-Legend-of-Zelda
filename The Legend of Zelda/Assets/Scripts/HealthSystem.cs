@@ -13,6 +13,8 @@ public class HealthSystem : MonoBehaviour
     private float waitTime = 5;
 
     Animator animator;
+    public AudioSource HitShield;
+    public AudioSource HitLink;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -90,9 +92,13 @@ public class HealthSystem : MonoBehaviour
     {
         if (!hasShield)
         {
+            HitLink.Play();
             healthPoints = healthPoints - Damage;
             animator.SetTrigger("Damage");
             Debug.Log("Health Points" + healthPoints);
+        }
+        else{
+            HitShield.Play();
         }
     }
 
