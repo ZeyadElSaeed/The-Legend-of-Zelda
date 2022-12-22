@@ -6,7 +6,6 @@ public class HealthSystem : MonoBehaviour
 {
 
 
-
     public float healthPoints;
     private bool hasShield;
     private float timeremaining = 10;

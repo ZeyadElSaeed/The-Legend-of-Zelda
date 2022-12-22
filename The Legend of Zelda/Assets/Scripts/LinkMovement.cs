@@ -36,16 +36,12 @@ public class LinkMovement : MonoBehaviour
 
 
 
-
-
     [Header("References")]
     [SerializeField] private Transform orientation;
     [SerializeField] private LayerMask climbMask;
     private CharacterController controller;
     private Rigidbody rb;
     private Animator anim;
-
-
 
 
     // Start is called before the first frame update
@@ -62,6 +58,10 @@ public class LinkMovement : MonoBehaviour
         Move();
         WallCheck();
         StateMachine();
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            SwordAttack();
+        }
     }
 
     private void Move()
@@ -178,6 +178,19 @@ public class LinkMovement : MonoBehaviour
     {
         velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         anim.SetTrigger("Jump");
+    }
+
+    private void SwordAttack()
+    {
+        anim.SetTrigger("SwordAttack");
+    }
+    private void OnTriggerEnter(Collider other)
+    {
+        if(anim.GetBool("SwordAttack") && other.gameObject.CompareTag("Bokoblin") || other.gameObject.CompareTag("Moblin"))
+        {
+            other.GetComponent<Enemy>().TakeDamage(10);
+            Debug.Log("Taken damage 10");
+        }
     }
     private void Glide()
     {

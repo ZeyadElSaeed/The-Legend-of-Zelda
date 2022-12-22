@@ -115,8 +115,6 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead)
         {
-
-
             health -= damageAmount;
             animator.SetTrigger("damage");
             if (!isChasing)
@@ -153,8 +151,6 @@ public class Enemy : MonoBehaviour
         }
         
     }
-
-    
 
     private void OnDrawGizmos()
     {
