@@ -74,7 +74,7 @@ public class BowScript : MonoBehaviour
     void Update()
     {
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 
             if (!shootRest && !isAiming)
@@ -95,7 +95,7 @@ public class BowScript : MonoBehaviour
             }
         }
 
-        if (Input.GetKeyUp(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             if (!shootRest && isAiming)
             {
@@ -156,7 +156,7 @@ public class BowScript : MonoBehaviour
         CameraZoom(camOriginalFov, camOriginalPos, bowOriginalPos, bowOriginalRot, zoomOutDuration, true);
         arrowModel.transform.localPosition = arrowOriginalPos;
 
-        Instantiate(circleParticlePrefab, arrowSpawnOrigin.position, Quaternion.identity);
+        GameObject circleParticlePrefabClone = Instantiate(circleParticlePrefab, arrowSpawnOrigin.position, Quaternion.identity);
 
         GameObject arrow = Instantiate(arrowPrefab, arrowSpawnOrigin.position, bowModel.rotation);
         arrow.GetComponent<Rigidbody>().AddForce(transform.forward * arrowImpulse.z + transform.up * arrowImpulse.y, ForceMode.Impulse);
@@ -164,6 +164,11 @@ public class BowScript : MonoBehaviour
 
         yield return new WaitForSeconds(shootWait);
         shootRest = false;
+
+        Destroy(circleParticlePrefabClone, 10);
+        Destroy(arrow, 10);
+        
+
     }
 
     public void ShowReticle(bool state, float duration)
