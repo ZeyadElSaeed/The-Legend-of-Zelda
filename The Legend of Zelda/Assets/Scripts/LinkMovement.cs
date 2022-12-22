@@ -65,10 +65,7 @@ public class LinkMovement : MonoBehaviour
         Move();
         WallCheck();
         StateMachine();
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            SwordAttack();
-        }
+        
     }
 
     private void Move()
@@ -210,18 +207,7 @@ public class LinkMovement : MonoBehaviour
         anim.SetTrigger("Jump");
     }
 
-    private void SwordAttack()
-    {
-        anim.SetTrigger("SwordAttack");
-    }
-    private void OnTriggerEnter(Collider other)
-    {
-        if(anim.GetBool("SwordAttack") && other.gameObject.CompareTag("Bokoblin") || other.gameObject.CompareTag("Moblin"))
-        {
-            other.GetComponent<Enemy>().TakeDamage(10);
-            Debug.Log("Taken damage 10");
-        }
-    }
+    
     private void Glide()
     {
         gravity = -1;
