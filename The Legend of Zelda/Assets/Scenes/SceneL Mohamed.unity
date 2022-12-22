@@ -8165,6 +8165,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8eccb7d526730f4187e5aee05d2418e, type: 3}
+--- !u!4 &1782468597 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4956802897647245219, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+  m_PrefabInstance: {fileID: 8977846742702371282}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1787069766
 GameObject:
   m_ObjectHideFlags: 0
@@ -10095,6 +10100,10 @@ PrefabInstance:
       propertyPath: reticleCanvas
       value: 
       objectReference: {fileID: 209869187}
+    - target: {fileID: 4956802897201542507, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+      propertyPath: arrowSpawnOrigin
+      value: 
+      objectReference: {fileID: 1782468597}
     - target: {fileID: 4956802897656689610, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalPosition.y
       value: 0.98
@@ -10121,19 +10130,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.8953712
+      value: 0.902863
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0.0000037625432
+      value: -0.00007897615
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00010277331
+      value: 0.00006616115
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.4453206
+      value: -0.4299283
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187422, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -10141,19 +10150,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.87759346
+      value: 0.97838044
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.00008627773
+      value: -0.000023841852
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00006511808
+      value: 0.00010573862
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.4794057
+      value: 0.20681329
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140690, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size
