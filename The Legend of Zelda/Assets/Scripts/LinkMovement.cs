@@ -115,6 +115,11 @@ public class LinkMovement : MonoBehaviour
                 Jump();
             }
         }
+        else
+        {
+            moveDirection *= moveSpeed;
+            moveDirectionX *= moveSpeed;
+        }
         if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
             Glide();
