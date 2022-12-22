@@ -44,12 +44,19 @@ public class LinkMovement : MonoBehaviour
     private Animator anim;
 
 
+    private float initialPosition;
+    private float unitsCount;
+    private bool isGliding;
+
+
     // Start is called before the first frame update
     void Start()
     {
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+        initialPosition = transform.position.y;
+        isGliding = false;
     }
 
     // Update is called once per frame
@@ -79,6 +86,24 @@ public class LinkMovement : MonoBehaviour
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirectionX = new Vector3(moveX, 0, 0);
         moveDirectionX = transform.TransformDirection(moveDirectionX);
+
+        if(!isGrounded)
+        {
+            if(isGliding)
+            {
+                unitsCount = 0;
+                initialPosition = transform.position.y;
+            }
+            else
+            {
+                unitsCount = unitsCount + (initialPosition - transform.position.y);
+                initialPosition = transform.position.y;
+            }
+        }
+        if(unitsCount >= 10)
+        {
+            this.GetComponent<HealthSystem>().healthPoints = 0;
+        }
 
         if (isGrounded)
         {            
@@ -196,11 +221,14 @@ public class LinkMovement : MonoBehaviour
     {
         gravity = -1;
         anim.SetBool("Gliding", true);
+        isGliding = true;
+        unitsCount = 0;
     }
     private void NoGlide()
     {
         anim.SetBool("Gliding", false);
         gravity = -9.81f;
+        isGliding = false;
     }
     private void StateMachine()
     {
