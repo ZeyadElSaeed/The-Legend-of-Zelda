@@ -13,12 +13,14 @@ public class SwitchingAttackModes : MonoBehaviour
     [SerializeField] private GameObject bowCanvas;
     BowScript bowScript;
     HealthSystem shieldScript;
+    AttackWithSword swordScript;
     bool isMelee;
     bool isRanged;
     void Start()
     {
         bowScript = transform.Find("Main Camera").GetComponent<BowScript>();
         shieldScript = transform.GetComponent<HealthSystem>();
+        swordScript = transform.GetComponent<AttackWithSword>();
         isMelee = true;
         isRanged = false;
         changeWeapons();
@@ -48,7 +50,7 @@ public class SwitchingAttackModes : MonoBehaviour
         swordOnBack.SetActive(!isMelee);
         shieldOnBack.SetActive(!isMelee);
         shieldScript.enabled = isMelee;
-
+        swordScript.enabled = isMelee;
         bowInHand.SetActive(isRanged);
         bowCanvas.SetActive(isRanged);
         bowScript.enabled = isRanged;
