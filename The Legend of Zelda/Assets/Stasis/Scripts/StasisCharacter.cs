@@ -112,13 +112,14 @@ public class StasisCharacter : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
-        {
+        //if (Input.GetMouseButtonDown(0))
+         if (Input.GetMouseButtonDown(0))
+            {
             if (!stasisAim)
             {
                 Debug.Log("Slashing");
-                anim.SetTrigger("slash");
-                StartCoroutine(WaitFrame());
+                //anim.SetTrigger("slash");
+                //StartCoroutine(WaitFrame());
             }
             else
             {
@@ -130,6 +131,7 @@ public class StasisCharacter : MonoBehaviour
                 }
             }
         }
+        
 
 
         //

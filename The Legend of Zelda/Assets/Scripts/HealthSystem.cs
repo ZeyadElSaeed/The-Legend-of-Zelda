@@ -10,7 +10,7 @@ public class HealthSystem : MonoBehaviour
     private bool hasShield;
     private float timeremaining = 10;
     private float waitTime = 5;
-
+    public bool isMelee;
     Animator animator;
     void Start()
     {
@@ -21,27 +21,12 @@ public class HealthSystem : MonoBehaviour
 
     private void Update()
     {
-        Shield();
+        if(isMelee)
+            Shield();
         Death();
     }
 
-    //public void TakeDamage(float damageAmount)
-    //{
-    //    health -= damageAmount;
-    //    animator.SetTrigger("damage");
-
-
-    //    if (health <= 0)
-    //    {
-    //        Die();
-    //    }
-    //}
-
-    //void Die()
-    //{
-    //    Debug.Log("Someone died");
-    //    Destroy(this.gameObject);
-    //}
+ 
 
     private void OnTriggerEnter(Collider other)
     {
