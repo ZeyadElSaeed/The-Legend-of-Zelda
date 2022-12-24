@@ -31,7 +31,6 @@ public class grenade : MonoBehaviour
     void Explode() {
         GameObject currentExplosion = Instantiate(explosionEffect,transform.position,transform.rotation);
         Destroy(gameObject);
-        AudioSource source = GetComponent<AudioSource>();
         Collider [] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider bombed in colliders){
             if(bombed.CompareTag("Fragile")){

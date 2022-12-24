@@ -43,8 +43,6 @@ public class Fire : MonoBehaviour
     [SerializeField] GameObject shield;
     [Header("Fire")]
     [SerializeField] GameObject FireAroundBody;
-    [Header("Audio")]
-    [SerializeField] AudioSource BossMove;
 
     // Start is called before the first frame update
     void Start()
@@ -110,13 +108,12 @@ public class Fire : MonoBehaviour
 
     void attackState()
     {
-        BossMove.Stop();
         if (timePassed >= attackCD)
         {
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
                 transform.LookAt(player.transform);
-                if (state == 1)
+                if ( state == 1)
                     anim.SetTrigger("attack 1");
                 else
                 {
@@ -160,7 +157,6 @@ public class Fire : MonoBehaviour
             timePassed = 0;
             anim.SetTrigger("walk");
         }
-        BossMove.Stop();
     }
 
     void walkingState()
@@ -177,6 +173,7 @@ public class Fire : MonoBehaviour
             agent.SetDestination(agent.transform.position);
             anim.SetTrigger("stop");
         }
+
     }
 
 
@@ -187,7 +184,6 @@ public class Fire : MonoBehaviour
         {
             newDestinationCD = 0.5f;
             agent.SetDestination(player.transform.position);
-            if(!BossMove.isPlaying) BossMove.Play();
         }
         newDestinationCD -= Time.deltaTime;
     }
@@ -200,6 +196,7 @@ public class Fire : MonoBehaviour
             isChasing = true;
             agent.stoppingDistance = attackRange;
             anim.SetTrigger("chase");
+
     }
 
     public void TakeDamage(float damageAmount)

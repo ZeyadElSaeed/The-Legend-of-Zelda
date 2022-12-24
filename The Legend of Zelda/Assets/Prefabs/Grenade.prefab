@@ -119,6 +119,5 @@ MonoBehaviour:
   delay: 0.5
   radius: 5
   explosionForce: 700
-  ExplosionSound: {fileID: 8300000, guid: 808164f57a0c1ab4a929d83b704ae387, type: 3}
   explosionEffect: {fileID: 3680419463364919849, guid: d4f3444d5becc404db6fdb0e9ff8807b, type: 3}
   detonateKey: 113
