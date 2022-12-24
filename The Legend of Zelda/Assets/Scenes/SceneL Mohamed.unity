@@ -4180,7 +4180,7 @@ PrefabInstance:
       objectReference: {fileID: 8977846741726834335}
     - target: {fileID: 5086989381585180575, guid: 9eb15f0e949b93c40ab58b9f0b2a05f5, type: 3}
       propertyPath: attackRange
-      value: 1.07
+      value: 1.8
       objectReference: {fileID: 0}
     - target: {fileID: 5259660694374285975, guid: 9eb15f0e949b93c40ab58b9f0b2a05f5, type: 3}
       propertyPath: weaponLength
