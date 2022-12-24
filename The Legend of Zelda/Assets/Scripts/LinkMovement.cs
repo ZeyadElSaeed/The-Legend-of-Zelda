@@ -48,7 +48,6 @@ public class LinkMovement : MonoBehaviour
     private float unitsCount;
     private bool isGliding;
     private AudioManager audioManager;
-    private bool isClimbing;
 
 
     // Start is called before the first frame update
@@ -103,19 +102,9 @@ public class LinkMovement : MonoBehaviour
             }
             else
             {
-                if(!isClimbing)
-                {
-                    unitsCount = unitsCount + (initialPosition - transform.position.y);
-                    Debug.Log(unitsCount);
-                    initialPosition = transform.position.y;
-                }
-                else
-                {
-                    if(isClimbing || transform.position.y > initialPosition)
-                    {
-                        initialPosition = transform.position.y;
-                    }
-                }
+                unitsCount = unitsCount + (initialPosition - transform.position.y);
+                Debug.Log(unitsCount);
+                initialPosition = transform.position.y;
             }
         }
         if(unitsCount >= 10 && isGrounded)
@@ -325,7 +314,6 @@ public class LinkMovement : MonoBehaviour
         int climbDirection = (climbSpeed == 0 ? 0 :1);
 
         anim.speed = climbDirection;
-        isClimbing = true;
         /// idea - sound effect
     }
 
@@ -336,7 +324,6 @@ public class LinkMovement : MonoBehaviour
         attached = false;
         climbing = false;
         anim.speed = 1;
-        isClimbing = false;
 
     }
 }
