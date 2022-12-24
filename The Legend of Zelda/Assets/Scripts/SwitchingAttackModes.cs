@@ -16,11 +16,14 @@ public class SwitchingAttackModes : MonoBehaviour
     AttackWithSword swordScript;
     bool isMelee;
     bool isRanged;
+
+    Animator anim;
     void Start()
     {
         bowScript = transform.Find("Main Camera").GetComponent<BowScript>();
         shieldScript = transform.GetComponent<HealthSystem>();
         swordScript = transform.GetComponent<AttackWithSword>();
+        anim = transform.GetComponent<Animator>();
         isMelee = true;
         isRanged = false;
         changeWeapons();
@@ -52,9 +55,12 @@ public class SwitchingAttackModes : MonoBehaviour
         shieldScript.enabled = isMelee;
         shieldScript.isMelee = isMelee;
         swordScript.enabled = isMelee;
+        swordScript.isMelee = isMelee;
         bowInHand.SetActive(isRanged);
         bowCanvas.SetActive(isRanged);
         bowScript.enabled = isRanged;
 
+        anim.SetBool("IsMelee", isMelee);
+        anim.SetBool("IsRanged", isRanged);
     }
 }

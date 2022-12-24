@@ -7,7 +7,7 @@ public class AttackWithSword : MonoBehaviour
 
     
     Animator anim;
-    
+    public bool isMelee;
     void Start()
     {
         anim = GetComponent<Animator>();
@@ -17,7 +17,7 @@ public class AttackWithSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && isMelee)
         {
 
             anim.SetTrigger("SwordAttack");
@@ -26,10 +26,12 @@ public class AttackWithSword : MonoBehaviour
 
     public void StartDealDamage()
     {
-        GetComponentInChildren<LinkDamageDealer>().StartDealDamage();
+        if(isMelee)
+            GetComponentInChildren<LinkDamageDealer>().StartDealDamage();
     }
     public void EndDealDamage()
     {
-        GetComponentInChildren<LinkDamageDealer>().EndDealDamage();
+        if(isMelee)
+            GetComponentInChildren<LinkDamageDealer>().EndDealDamage();
     }
 }
