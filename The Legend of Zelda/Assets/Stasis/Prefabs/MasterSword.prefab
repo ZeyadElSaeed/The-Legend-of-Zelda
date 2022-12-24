@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2800743043769738846}
   - component: {fileID: 1145640238532519603}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: DamageDealer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -24,14 +24,14 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1495506094468509234}
-  m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 0, z: 0.31}
+  m_LocalRotation: {x: -0.7071068, y: 0, z: 0, w: 0.7071068}
+  m_LocalPosition: {x: -0, y: -0, z: -0.527}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 6444047282607238505}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!114 &1145640238532519603
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 892d1caab9bd6154a80da3553668b1b2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  weaponLength: 0.91
+  weaponLength: 1.06
   weaponDamage: 10
 --- !u!1 &8013736641836801914
 GameObject:
@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 8577761936645876646}
   - component: {fileID: 2024207581456432069}
   - component: {fileID: 2024207581456432070}
-  m_Layer: 9
+  m_Layer: 8
   m_Name: MasterSword
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -141,10 +141,10 @@ BoxCollider:
   m_GameObject: {fileID: 8013736641836801914}
   m_Material: {fileID: 0}
   m_IsTrigger: 1
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 2
-  m_Size: {x: 0.2919153, y: 0.20908952, z: 0.9331744}
-  m_Center: {x: -0.000000029802322, y: 1.6738654e-22, z: -0.20059621}
+  m_Size: {x: 0.2919153, y: 0.20908952, z: 0.779192}
+  m_Center: {x: -0.0000000349718, y: -1.5755382e-10, z: -0.1649006}
 --- !u!114 &2024207581456432070
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -160,7 +160,7 @@ MonoBehaviour:
   collisionForce: 6
   layerMask:
     serializedVersion: 2
-    m_Bits: 1
+    m_Bits: 65
   hitPoint: {x: 0, y: 0, z: 0}
   hitParticle: {fileID: 2880666387293389018, guid: f56929e25c7e9b34786fe9053eccaee5, type: 3}
   stasisHitParticle: {fileID: 3608655068656298126, guid: 726e6acbded378d41964ac5eeab554d3, type: 3}
