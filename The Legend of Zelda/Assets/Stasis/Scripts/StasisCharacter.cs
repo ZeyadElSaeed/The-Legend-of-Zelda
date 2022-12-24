@@ -57,13 +57,13 @@ public class StasisCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(1))
+        if (Input.GetMouseButtonDown(2))
         {
             Debug.Log("Right Mouse Down");
             StasisAim(true);
         }
 
-        if (Input.GetMouseButtonUp(1))
+        if (Input.GetMouseButtonUp(2))
         {
             Debug.Log("Right Mouse Up");
             StasisAim(false);
@@ -113,7 +113,7 @@ public class StasisCharacter : MonoBehaviour
         }
 
         //if (Input.GetMouseButtonDown(0))
-         if (Input.GetMouseButtonDown(0))
+         if (Input.GetKeyDown("q"))
             {
             if (!stasisAim)
             {
