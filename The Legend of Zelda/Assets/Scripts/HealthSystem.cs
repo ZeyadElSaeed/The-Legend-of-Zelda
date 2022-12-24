@@ -6,12 +6,13 @@ using UnityEngine.UI;
 public class HealthSystem : MonoBehaviour
 {
 
-
+    public float maxHealth;
     public float healthPoints;
     private bool hasShield;
     private float timeremaining = 10;
     private float waitTime = 5;
     public bool isMelee;
+    private bool isInvisible;
 
     [Header("Hearts")]
     [SerializeField] Image[] hearts;
@@ -24,8 +25,9 @@ public class HealthSystem : MonoBehaviour
     void Start()
     {
         animator = GetComponent<Animator>();
-        healthPoints = 24;
+        healthPoints = maxHealth;
         hasShield = false;
+        isInvisible = false;
     }
 
     private void Update()
@@ -81,13 +83,18 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        if (!hasShield)
+        if ( !isInvisible)
         {
-            HitLink.Play();
-            healthPoints = healthPoints - Damage;
-            animator.SetTrigger("Damage");
-            Debug.Log("Health Points" + healthPoints);
-            UpdateHearts();
+            
+            if (!hasShield)
+            {
+                HitLink.Play();
+
+                healthPoints = healthPoints - Damage;
+                animator.SetTrigger("Damage");
+                Debug.Log("Health Points" + healthPoints);
+                UpdateHearts();
+            }
         }
         else{
             HitShield.Play();
@@ -118,6 +125,19 @@ public class HealthSystem : MonoBehaviour
                 hearts[i].enabled = false;
             }
         }
+    }
+
+    public void IncreaseHealth()
+    {
+        healthPoints += 10;
+        if (healthPoints > maxHealth)
+            healthPoints = maxHealth;
+        UpdateHearts();
+    }
+
+    public void SwitchInvisibility()
+    {
+        isInvisible = !isInvisible;
     }
 
 }
