@@ -32,7 +32,8 @@ public class Enemy : MonoBehaviour
     bool isChasing;
     bool isDead;
     public AudioSource EnemyFootSteps;
-
+    public AudioSource EnemyHit;
+    public AudioSource EnemyDies;
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
@@ -48,8 +49,6 @@ public class Enemy : MonoBehaviour
     {
         if (!isDead)
         {
-
-
             healthBar.value = health;
             // Put here the main camera that follows the player to be able always to see healthbar
             canvas.transform.LookAt(this.transform);
@@ -60,6 +59,9 @@ public class Enemy : MonoBehaviour
                 return;
             }
 
+            if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+                {EnemyFootSteps.Stop();
+                }
             if (timePassed >= attackCD)
             {
                 if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
@@ -121,6 +123,7 @@ public class Enemy : MonoBehaviour
 
 
             health -= damageAmount;
+            EnemyHit.Play();
             animator.SetTrigger("damage");
             if (!isChasing)
             {
@@ -135,6 +138,8 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
+                EnemyHit.Stop();
+                EnemyDies.Play();
                 healthBar.value = 0.0f;
                 Die();
             }
