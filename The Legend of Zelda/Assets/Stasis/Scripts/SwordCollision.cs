@@ -12,13 +12,13 @@ public class SwordCollision : MonoBehaviour
     [Header("Particle")]
     public GameObject hitParticle;
     public GameObject stasisHitParticle;
-
+    
 
     private void OnTriggerEnter(Collider other)
     {
         RaycastHit hit;
 
-        if (Physics.Raycast(transform.position + (transform.forward * 1f), -transform.forward, out hit,8, layerMask))
+        if (Physics.Raycast(transform.position + (transform.forward * 1f), -transform.forward, out hit, 8, layerMask))
         {
             print("hit");
             if (hit.transform.GetComponent<StasisObject>() == null)
@@ -38,7 +38,7 @@ public class SwordCollision : MonoBehaviour
             ParticleSystem[] stasisParticles = stasisHit.GetComponentsInChildren<ParticleSystem>();
 
             //Particle color
-            foreach(ParticleSystem p in stasisParticles)
+            foreach (ParticleSystem p in stasisParticles)
             {
                 var pmain = p.main;
                 pmain.startColor = hit.transform.GetComponent<StasisObject>().particleColor;
@@ -47,11 +47,12 @@ public class SwordCollision : MonoBehaviour
             main.startColor = hit.transform.GetComponent<StasisObject>().particleColor;
         }
     }
+   
 
     private void OnDrawGizmos()
     {
         Gizmos.color = Color.red;
-        Ray ray = new Ray(transform.position + (transform.forward * 1f), -transform.forward);
+        Ray ray = new Ray(transform.position + (transform.forward * 1f), -transform.forward * 2);
         Gizmos.DrawRay(ray);
 
         Gizmos.DrawSphere(hitPoint, .2f);
