@@ -2030,7 +2030,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 6faa6753ea477534a8aa0664cb348ef3, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -10091,9 +10091,9 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 563032b081fe69b45bf24a333c7525a6, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.6
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -11205,6 +11205,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1991284109}
     - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
+      propertyPath: BossHit
+      value: 
+      objectReference: {fileID: 2013078158}
+    - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
+      propertyPath: BossDies
+      value: 
+      objectReference: {fileID: 396068637}
+    - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
       propertyPath: BossMove
       value: 
       objectReference: {fileID: 574414520}
@@ -11413,19 +11421,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.9276666
+      value: 0.80643845
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.0000054240213
+      value: -0.00008282065
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.00010317562
+      value: 0.00005605816
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187420, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0.3734096
+      value: -0.5913181
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898384187422, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size
@@ -11433,19 +11441,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.44022894
+      value: 0.44364685
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0.000105857835
+      value: -0.00010246037
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0.000007808207
+      value: 0.000016033648
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140688, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0.8978856
+      value: -0.8962017
       objectReference: {fileID: 0}
     - target: {fileID: 4956802898674140690, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_Materials.Array.size

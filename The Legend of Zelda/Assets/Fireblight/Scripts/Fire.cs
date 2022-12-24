@@ -45,6 +45,8 @@ public class Fire : MonoBehaviour
     [SerializeField] GameObject FireAroundBody;
     [Header("Audio")]
     [SerializeField] AudioSource BossMove;
+    [SerializeField] AudioSource BossHit;
+    [SerializeField] AudioSource BossDies;
 
     // Start is called before the first frame update
     void Start()
@@ -74,10 +76,23 @@ public class Fire : MonoBehaviour
     {
         if (!isDead)
         {
+            // bool moveSound = isChasing || isWalking;
+            // if(!BossMove.isPlaying && moveSound){ BossMove.Play(); Debug.Log("over here");}
+            // if(isStopping)BossMove.Stop();
             // Increase The time for coolDown and walking and idle
             timePassed += Time.deltaTime;
             healthBar.value = health;
             anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+            if(agent.velocity.magnitude / agent.speed > 0.7){
+                if(!BossMove.isPlaying){
+                    Debug.Log("Play Audio");
+                    BossMove.Play();
+                }
+            }
+            else{
+                Debug.Log("Pause Audio");
+                BossMove.Stop();
+            }
             // Check player in chasing distance
             float distance = Vector3.Distance(player.transform.position, transform.position);
             if (distance <= aggroRange && !isChasing)
@@ -102,19 +117,16 @@ public class Fire : MonoBehaviour
                 chasingState();
                 attackState();
             }
-
-
-
         }
     }
 
     void attackState()
     {
-        BossMove.Stop();
         if (timePassed >= attackCD)
         {
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
+                // BossMove.Stop();
                 transform.LookAt(player.transform);
                 if (state == 1)
                     anim.SetTrigger("attack 1");
@@ -123,7 +135,9 @@ public class Fire : MonoBehaviour
                     anim.SetTrigger("attack 2");
                 }
                 timePassed = 0; 
-
+            }
+            else{
+                // if(!BossMove.isPlaying)BossMove.Play();
             }
         }
     }
@@ -155,22 +169,26 @@ public class Fire : MonoBehaviour
     {   
         if (timePassed > 5)
         {
+            // if(!BossMove.isPlaying)BossMove.Play();
             isStopping = false;
             isWalking = true;
             timePassed = 0;
             anim.SetTrigger("walk");
         }
-        BossMove.Stop();
+        // BossMove.Stop();
     }
 
     void walkingState()
     {
-        if (agent.remainingDistance <= agent.stoppingDistance)
+        if (agent.remainingDistance <= agent.stoppingDistance){
             agent.SetDestination(wayPoints[Random.Range(0, wayPoints.Count)].position);
+            // if(!BossMove.isPlaying)BossMove.Play();
+        }
 
         
         if (timePassed > 10)
         {
+            // BossMove.Stop();
             isStopping = true;
             isWalking = false;
             timePassed = 0;
@@ -187,7 +205,6 @@ public class Fire : MonoBehaviour
         {
             newDestinationCD = 0.5f;
             agent.SetDestination(player.transform.position);
-            if(!BossMove.isPlaying) BossMove.Play();
         }
         newDestinationCD -= Time.deltaTime;
     }
@@ -213,8 +230,10 @@ public class Fire : MonoBehaviour
             }
 
             
-            if (state == 1)
+            if (state == 1){
                 health -= damageAmount;
+                BossHit.Play();
+            }
             else if (!shield.activeSelf)
                 health -= (damageAmount * 2);
 
@@ -227,6 +246,7 @@ public class Fire : MonoBehaviour
                 isDead = true;
                 agent.SetDestination(this.transform.position);
                 Debug.Log("Enemy die");
+                BossDies.Play();
             }
         }
     }
