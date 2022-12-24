@@ -11202,6 +11202,26 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 8977846742277391451}
     m_Modifications:
+    - target: {fileID: 2024207581456432069, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Size.z
+      value: 0.779192
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024207581456432069, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024207581456432069, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Center.x
+      value: -0.0000000349718
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024207581456432069, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Center.y
+      value: -1.5755382e-10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2024207581456432069, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Center.z
+      value: -0.1649006
+      objectReference: {fileID: 0}
     - target: {fileID: 2024207581456432070, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
       propertyPath: layerMask.m_Bits
       value: 65
@@ -11253,6 +11273,18 @@ PrefabInstance:
     - target: {fileID: 8013736641836801914, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
       propertyPath: m_Name
       value: MasterSword
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306169368069259854, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306169368069259854, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: weaponDamage
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 8306169368069259854, guid: 8fe9815106ffc914d9672476160550a0, type: 3}
+      propertyPath: weaponLength
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 8fe9815106ffc914d9672476160550a0, type: 3}

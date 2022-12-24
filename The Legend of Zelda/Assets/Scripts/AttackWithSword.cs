@@ -7,7 +7,6 @@ public class AttackWithSword : MonoBehaviour
 
     
     Animator anim;
-
     
     void Start()
     {
@@ -23,5 +22,14 @@ public class AttackWithSword : MonoBehaviour
 
             anim.SetTrigger("SwordAttack");
         }
+    }
+
+    public void StartDealDamage()
+    {
+        GetComponentInChildren<LinkDamageDealer>().StartDealDamage();
+    }
+    public void EndDealDamage()
+    {
+        GetComponentInChildren<LinkDamageDealer>().EndDealDamage();
     }
 }
