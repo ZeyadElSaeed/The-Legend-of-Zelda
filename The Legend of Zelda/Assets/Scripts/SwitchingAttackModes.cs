@@ -50,6 +50,7 @@ public class SwitchingAttackModes : MonoBehaviour
         swordOnBack.SetActive(!isMelee);
         shieldOnBack.SetActive(!isMelee);
         shieldScript.enabled = isMelee;
+        shieldScript.isMelee = isMelee;
         swordScript.enabled = isMelee;
         bowInHand.SetActive(isRanged);
         bowCanvas.SetActive(isRanged);
