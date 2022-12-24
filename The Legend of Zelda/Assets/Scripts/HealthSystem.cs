@@ -16,6 +16,11 @@ public class HealthSystem : MonoBehaviour
     [Header("Hearts")]
     [SerializeField] Image[] hearts;
     Animator animator;
+    [Header("Audio")]
+    public AudioSource HitShield;
+    public AudioSource HitLink;
+    public AudioSource DieLink;
+    bool isDead;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -78,18 +83,25 @@ public class HealthSystem : MonoBehaviour
     {
         if (!hasShield)
         {
+            HitLink.Play();
             healthPoints = healthPoints - Damage;
             animator.SetTrigger("Damage");
             Debug.Log("Health Points" + healthPoints);
             UpdateHearts();
         }
+        else{
+            HitShield.Play();
+        }
     }
 
     private void Death()
     {
-        if (healthPoints <= 0)
+        if (healthPoints <= 0 && !isDead)
         {
             animator.SetTrigger("Death");
+            isDead = true;
+            //if(DieLink.isPlaying)
+            DieLink.Play();
         }
     }
 
