@@ -135,7 +135,7 @@ public class HealthSystem : MonoBehaviour
         UpdateHearts();
     }
 
-    public void SwitchInvisibility()
+    public void SwitchInvincibility()
     {
         isInvincible = !isInvincible;
     }

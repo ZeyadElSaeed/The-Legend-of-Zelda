@@ -21,13 +21,13 @@ public class LinkCheats : MonoBehaviour
 
         if (Input.GetKeyDown("k"))
         {
-            linkHealth.SwitchInvisibility();
+            linkHealth.SwitchInvincibility();
         }
 
         if (Input.GetKeyDown("m"))
         {
             if (Time.timeScale == 1.0f)
-                Time.timeScale = 0.7f;
+                Time.timeScale = 0.5f;
             else
                 Time.timeScale = 1.0f;
         }
