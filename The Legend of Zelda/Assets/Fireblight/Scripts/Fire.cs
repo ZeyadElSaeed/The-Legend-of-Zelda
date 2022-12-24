@@ -43,6 +43,10 @@ public class Fire : MonoBehaviour
     [SerializeField] GameObject shield;
     [Header("Fire")]
     [SerializeField] GameObject FireAroundBody;
+    [Header("Audio")]
+    [SerializeField] AudioSource BossMove;
+    [SerializeField] AudioSource BossHit;
+    [SerializeField] AudioSource BossDies;
 
     // Start is called before the first frame update
     void Start()
@@ -76,6 +80,14 @@ public class Fire : MonoBehaviour
             timePassed += Time.deltaTime;
             healthBar.value = health;
             anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+            if(agent.velocity.magnitude / agent.speed > 0.7){
+                if(!BossMove.isPlaying){
+                    BossMove.Play();
+                }
+            }
+            else{
+                BossMove.Stop();
+            }
             // Check player in chasing distance
             float distance = Vector3.Distance(player.transform.position, transform.position);
             if (distance <= aggroRange && !isChasing)
@@ -210,8 +222,10 @@ public class Fire : MonoBehaviour
             }
 
             
-            if (state == 1)
+            if (state == 1){
                 health -= damageAmount;
+                BossHit.Play();
+            }
             else if (!shield.activeSelf)
                 health -= (damageAmount * 2);
 
@@ -224,6 +238,7 @@ public class Fire : MonoBehaviour
                 isDead = true;
                 agent.SetDestination(this.transform.position);
                 Debug.Log("Enemy die");
+                BossDies.Play();
             }
         }
     }

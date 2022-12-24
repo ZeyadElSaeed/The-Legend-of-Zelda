@@ -12330,6 +12330,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 8977846741726834335}
+    - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
+      propertyPath: BossHit
+      value: 
+      objectReference: {fileID: 2127054798}
+    - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
+      propertyPath: BossDies
+      value: 
+      objectReference: {fileID: 1294844021}
+    - target: {fileID: 8733349658967483261, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
+      propertyPath: BossMove
+      value: 
+      objectReference: {fileID: 888674939}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 319104968cb53d842a482cfd76fdb3a9, type: 3}
 --- !u!114 &1848639170759335721 stripped
