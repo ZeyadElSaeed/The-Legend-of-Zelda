@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour
     [Header("Combat")]
     [SerializeField] float attackCD = 3f;
     [SerializeField] float attackRange = 1f;
-    [SerializeField] float aggroRange = 4f;
+    //[SerializeField] float aggroRange = 4f;
 
     
     NavMeshAgent agent;
