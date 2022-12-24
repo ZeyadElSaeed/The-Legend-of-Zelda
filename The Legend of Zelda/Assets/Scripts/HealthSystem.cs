@@ -12,7 +12,7 @@ public class HealthSystem : MonoBehaviour
     private float timeremaining = 10;
     private float waitTime = 5;
     public bool isMelee;
-    private bool isInvisible;
+    private bool isInvincible;
 
     [Header("Hearts")]
     [SerializeField] Image[] hearts;
@@ -27,7 +27,7 @@ public class HealthSystem : MonoBehaviour
         animator = GetComponent<Animator>();
         healthPoints = maxHealth;
         hasShield = false;
-        isInvisible = false;
+        isInvincible = false;
     }
 
     private void Update()
@@ -83,7 +83,7 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        if ( !isInvisible)
+        if ( !isInvincible)
         {
             
             if (!hasShield)
@@ -137,7 +137,7 @@ public class HealthSystem : MonoBehaviour
 
     public void SwitchInvisibility()
     {
-        isInvisible = !isInvisible;
+        isInvincible = !isInvincible;
     }
 
 }
