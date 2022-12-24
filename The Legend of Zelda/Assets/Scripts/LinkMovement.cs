@@ -94,10 +94,11 @@ public class LinkMovement : MonoBehaviour
             else
             {
                 unitsCount = unitsCount + (initialPosition - transform.position.y);
+                Debug.Log(unitsCount);
                 initialPosition = transform.position.y;
             }
         }
-        if(unitsCount >= 10)
+        if(unitsCount >= 10 && isGrounded)
         {
             this.GetComponent<HealthSystem>().healthPoints = 0;
         }
