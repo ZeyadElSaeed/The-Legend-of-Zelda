@@ -47,6 +47,7 @@ public class LinkMovement : MonoBehaviour
     private float initialPosition;
     private float unitsCount;
     private bool isGliding;
+    private AudioManager audioManager;
 
 
     // Start is called before the first frame update
@@ -57,6 +58,7 @@ public class LinkMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         initialPosition = transform.position.y;
         isGliding = false;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -78,7 +80,14 @@ public class LinkMovement : MonoBehaviour
 
         float moveZ = Input.GetAxis("Vertical");
         float moveX = Input.GetAxis("Horizontal");
-
+        if(moveZ !=0 || moveX != 0){
+            // if(Input.GetKey("left shift")){
+            //     // audioManager.Play("Sprint");
+            // }
+            // else{
+            //     // audioManager.Play("Walking");
+            // }
+        }
         moveDirection = new Vector3(0, 0, moveZ);
         moveDirection = transform.TransformDirection(moveDirection);
         moveDirectionX = new Vector3(moveX, 0, 0);
@@ -107,10 +116,12 @@ public class LinkMovement : MonoBehaviour
         {            
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
+                audioManager.Play("Walking");
                 Walk();
             }
             else if (moveDirection != Vector3.zero && Input.GetKey("left shift"))
             {
+                audioManager.Play("Sprint");
                 Sprint();
             }
             else if (moveDirection == Vector3.zero)
@@ -119,10 +130,12 @@ public class LinkMovement : MonoBehaviour
             }
             if (moveDirectionX != Vector3.zero && !Input.GetKey("left shift"))
             {
+                audioManager.Play("Walking");
                 Walk();
             }
             else if (moveDirectionX != Vector3.zero && Input.GetKey("left shift"))
             {
+                audioManager.Play("Sprint");
                 Sprint();
             }
             else if (moveDirectionX == Vector3.zero)
@@ -135,6 +148,7 @@ public class LinkMovement : MonoBehaviour
 
             if (Input.GetKeyDown("space"))
             {
+                audioManager.Play("Jump");
                 Jump();
             }
         }
@@ -146,6 +160,7 @@ public class LinkMovement : MonoBehaviour
         if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
             velocity.y = -2;
+            audioManager.Play("Glide");
             Glide();
         }
         else
@@ -175,8 +190,6 @@ public class LinkMovement : MonoBehaviour
             controller.Move((moveDirection) * Time.deltaTime);
             Idle();
         }
-
-
 
 
         controller.Move(moveDirection * Time.deltaTime);
@@ -253,7 +266,6 @@ public class LinkMovement : MonoBehaviour
         }
         if (attached && Input.GetKeyUp(KeyCode.W))
         {
-            
             climbing = false;
             climbSpeed = 0;
         }

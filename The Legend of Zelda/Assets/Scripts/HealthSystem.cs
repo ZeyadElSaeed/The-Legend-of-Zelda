@@ -12,6 +12,10 @@ public class HealthSystem : MonoBehaviour
     private float waitTime = 5;
     public bool isMelee;
     Animator animator;
+    public AudioSource HitShield;
+    public AudioSource HitLink;
+    public AudioSource DieLink;
+    bool isDead;
     void Start()
     {
         animator = GetComponent<Animator>();
@@ -72,19 +76,28 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        if (!hasShield)
-        {
-            healthPoints = healthPoints - Damage;
-            animator.SetTrigger("Damage");
-            Debug.Log("Health Points" + healthPoints);
+        if(!isDead){
+            if (!hasShield)
+            {
+                HitLink.Play();
+                healthPoints = healthPoints - Damage;
+                animator.SetTrigger("Damage");
+                Debug.Log("Health Points" + healthPoints);
+            }
+            else{
+                HitShield.Play();
+            }
         }
     }
 
     private void Death()
     {
-        if (healthPoints <= 0)
+        if (healthPoints <= 0 && !isDead)
         {
             animator.SetTrigger("Death");
+            isDead = true;
+            //if(DieLink.isPlaying)
+            DieLink.Play();
         }
     }
 
