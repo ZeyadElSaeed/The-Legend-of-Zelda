@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.18028328, g: 0.22571322, b: 0.30692163, a: 1}
+  m_IndirectSpecularColor: {r: 0.18028378, g: 0.22571412, b: 0.30692285, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -13267,6 +13267,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c28bfe71fc077c84d930502428922ee4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxHealth: 0
   healthPoints: 24
   isMelee: 0
   hearts:
@@ -13352,6 +13353,7 @@ GameObject:
   - component: {fileID: 8977846741726834336}
   - component: {fileID: 8977846741726834337}
   - component: {fileID: 8977846741726834338}
+  - component: {fileID: 8977846741726834340}
   m_Layer: 8
   m_Name: Link
   m_TagString: Player
@@ -13424,6 +13426,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &8977846741726834340
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8977846741726834335}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 78f54f9332764d5438fccc04a5e2044a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &8977846741757461090
 GameObject:
   m_ObjectHideFlags: 0
