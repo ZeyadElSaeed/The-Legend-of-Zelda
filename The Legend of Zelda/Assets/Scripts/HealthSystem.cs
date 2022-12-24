@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class HealthSystem : MonoBehaviour
 {
@@ -11,6 +12,9 @@ public class HealthSystem : MonoBehaviour
     private float timeremaining = 10;
     private float waitTime = 5;
     public bool isMelee;
+
+    [Header("Hearts")]
+    [SerializeField] Image[] hearts;
     Animator animator;
     void Start()
     {
@@ -77,6 +81,7 @@ public class HealthSystem : MonoBehaviour
             healthPoints = healthPoints - Damage;
             animator.SetTrigger("Damage");
             Debug.Log("Health Points" + healthPoints);
+            UpdateHearts();
         }
     }
 
@@ -85,6 +90,21 @@ public class HealthSystem : MonoBehaviour
         if (healthPoints <= 0)
         {
             animator.SetTrigger("Death");
+        }
+    }
+
+    private void UpdateHearts()
+    {
+        for ( int i=0; i< hearts.Length; i++)
+        {
+            if ( i < healthPoints)
+            {
+                hearts[i].enabled = true;
+            }
+            else
+            {
+                hearts[i].enabled = false;
+            }
         }
     }
 
