@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class SwitchingAttackModes : MonoBehaviour
 {
@@ -11,6 +12,12 @@ public class SwitchingAttackModes : MonoBehaviour
     [SerializeField] private GameObject shieldOnBack;
     [SerializeField] private GameObject bowInHand;
     [SerializeField] private GameObject bowCanvas;
+
+    [Header("Weapons Images")]
+    [SerializeField] private Image weaponImage;
+    [SerializeField] private Sprite swordImage;
+    [SerializeField] private Sprite arrowImage;
+
     BowScript bowScript;
     HealthSystem shieldScript;
     AttackWithSword swordScript;
@@ -23,6 +30,7 @@ public class SwitchingAttackModes : MonoBehaviour
         swordScript = transform.GetComponent<AttackWithSword>();
         isMelee = true;
         isRanged = false;
+        weaponImage.sprite = swordImage;
         changeWeapons();
         
     }
@@ -34,6 +42,15 @@ public class SwitchingAttackModes : MonoBehaviour
         {
             isMelee = !isMelee;
             isRanged = !isRanged;
+
+            if (isMelee)
+            {
+                weaponImage.sprite = swordImage;
+            }
+            else
+            {
+                weaponImage.sprite = arrowImage;
+            }
 
             changeWeapons();
 
