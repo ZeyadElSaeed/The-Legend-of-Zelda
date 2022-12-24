@@ -31,6 +31,12 @@ public class Enemy : MonoBehaviour
     int attackType;
     bool isChasing;
     bool isDead;
+
+    
+    [Header("Audio")]
+    public AudioSource EnemyFootSteps;
+    public AudioSource EnemyHit;
+    public AudioSource EnemyDies;
     
 
     void Start()
@@ -60,6 +66,10 @@ public class Enemy : MonoBehaviour
                 return;
             }
 
+            if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
+            {
+                    EnemyFootSteps.Stop();
+            }
             if (timePassed >= attackCD)
             {
                 if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
@@ -87,6 +97,9 @@ public class Enemy : MonoBehaviour
             {
                 newDestinationCD = 0.5f;
                 agent.SetDestination(player.transform.position);
+                if(!EnemyFootSteps.isPlaying){
+                    EnemyFootSteps.Play();
+                }
             }
             newDestinationCD -= Time.deltaTime;
             //transform.LookAt(player.transform);
@@ -116,6 +129,7 @@ public class Enemy : MonoBehaviour
         if (!isDead)
         {
             health -= damageAmount;
+            EnemyHit.Play();
             animator.SetTrigger("damage");
             if (!isChasing)
             {
@@ -130,6 +144,8 @@ public class Enemy : MonoBehaviour
 
             if (health <= 0)
             {
+                EnemyHit.Stop();
+                EnemyDies.Play();
                 healthBar.value = 0.0f;
                 Die();
             }
