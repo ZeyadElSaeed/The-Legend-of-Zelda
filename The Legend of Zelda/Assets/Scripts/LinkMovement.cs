@@ -145,6 +145,7 @@ public class LinkMovement : MonoBehaviour
         }
         if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
+            velocity.y = -2;
             Glide();
         }
         else
