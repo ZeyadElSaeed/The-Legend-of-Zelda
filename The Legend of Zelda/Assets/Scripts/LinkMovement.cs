@@ -48,6 +48,7 @@ public class LinkMovement : MonoBehaviour
     private float unitsCount;
     private bool isGliding;
 
+    private AudioManager audioManager;
 
     // Start is called before the first frame update
     void Start()
@@ -57,6 +58,7 @@ public class LinkMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         initialPosition = transform.position.y;
         isGliding = false;
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
@@ -107,10 +109,12 @@ public class LinkMovement : MonoBehaviour
         {            
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
+                audioManager.Play("Walking");
                 Walk();
             }
             else if (moveDirection != Vector3.zero && Input.GetKey("left shift"))
             {
+                audioManager.Play("Sprint");
                 Sprint();
             }
             else if (moveDirection == Vector3.zero)
@@ -119,10 +123,12 @@ public class LinkMovement : MonoBehaviour
             }
             if (moveDirectionX != Vector3.zero && !Input.GetKey("left shift"))
             {
+                audioManager.Play("Walking");
                 Walk();
             }
             else if (moveDirectionX != Vector3.zero && Input.GetKey("left shift"))
             {
+                audioManager.Play("Sprint");
                 Sprint();
             }
             else if (moveDirectionX == Vector3.zero)
@@ -135,6 +141,7 @@ public class LinkMovement : MonoBehaviour
 
             if (Input.GetKeyDown("space"))
             {
+                audioManager.Play("Jump");
                 Jump();
             }
         }
@@ -145,6 +152,7 @@ public class LinkMovement : MonoBehaviour
         }
         if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
+            audioManager.Play("Glide");
             velocity.y = -2;
             Glide();
         }
