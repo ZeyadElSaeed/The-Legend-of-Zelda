@@ -77,7 +77,14 @@ public class SwitchingAttackModes : MonoBehaviour
         bowCanvas.SetActive(isRanged);
         bowScript.enabled = isRanged;
 
+        bowScript.canShoot = false;
+        bowScript.shootRest = false;
+        bowScript.isAiming = false;
+
         anim.SetBool("IsMelee", isMelee);
         anim.SetBool("IsRanged", isRanged);
+        anim.SetBool("Aiming", false);
+        anim.SetBool("Shield", false);
+        anim.ResetTrigger("Shoot");
     }
 }
