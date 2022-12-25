@@ -74,47 +74,49 @@ public class Fire : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!isDead)
-        {
-            // Increase The time for coolDown and walking and idle
-            timePassed += Time.deltaTime;
-            healthBar.value = health;
-            anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
-            if(agent.velocity.magnitude / agent.speed > 0.7){
-                if(!BossMove.isPlaying){
-                    BossMove.Play();
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (!isDead)
+            {
+                // Increase The time for coolDown and walking and idle
+                timePassed += Time.deltaTime;
+                healthBar.value = health;
+                anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
+                if(agent.velocity.magnitude / agent.speed > 0.7){
+                    if(!BossMove.isPlaying){
+                        BossMove.Play();
+                    }
                 }
-            }
-            else{
-                BossMove.Stop();
-            }
-            // Check player in chasing distance
-            float distance = Vector3.Distance(player.transform.position, transform.position);
-            if (distance <= aggroRange && !isChasing)
-            {
-                chasePlayer();
-            }
-            // Check if enemy in phase 2
-            if (health <= 150 && state == 1)
-            {
-                state = 2;
-                attackCD *= 3;
-                activeShield();
-            }
+                else{
+                    BossMove.Stop();
+                }
+                // Check player in chasing distance
+                float distance = Vector3.Distance(player.transform.position, transform.position);
+                if (distance <= aggroRange && !isChasing)
+                {
+                    chasePlayer();
+                }
+                // Check if enemy in phase 2
+                if (health <= 150 && state == 1)
+                {
+                    state = 2;
+                    attackCD *= 3;
+                    activeShield();
+                }
 
-            // Enemy Animation Conditions
-            if (isStopping)
-                idleState();
-            if (isWalking)
-                walkingState();
-            if (isChasing)
-            {
-                chasingState();
-                attackState();
-            }
-
+                // Enemy Animation Conditions
+                if (isStopping)
+                    idleState();
+                if (isWalking)
+                    walkingState();
+                if (isChasing)
+                {
+                    chasingState();
+                    attackState();
+                }
 
 
+
+            }
         }
     }
 

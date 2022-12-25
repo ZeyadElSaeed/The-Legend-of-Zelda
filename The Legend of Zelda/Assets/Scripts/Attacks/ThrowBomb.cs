@@ -33,15 +33,17 @@ public class ThrowBomb : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(throwKey) && !hasThrown)
-        {
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if(Input.GetKeyDown(throwKey) && !hasThrown)
+            {
 
-            if(grenade == null){
-                hasThrown = true;
-                anim.SetTrigger("Throwing");
-                
-                // readyToThrow = false;
-            }            
+                if(grenade == null){
+                    hasThrown = true;
+                    anim.SetTrigger("Throwing");
+                    
+                    // readyToThrow = false;
+                }            
+            }
         }
     }
 

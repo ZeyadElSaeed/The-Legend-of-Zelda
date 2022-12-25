@@ -13,6 +13,12 @@ public class AudioManager : MonoBehaviour
     void Start(){
         StartTheme("Theme");
     }
+    // void update(){
+    //     if(GetComponent<GameManagerBridge>().paused()){
+    //         currentTheme.Pause();
+    //         currentSound.Pause();
+    //     }
+    // }
     private void Awake()
     {
         if (instance == null)

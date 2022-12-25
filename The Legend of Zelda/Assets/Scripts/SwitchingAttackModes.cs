@@ -41,26 +41,23 @@ public class SwitchingAttackModes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp(KeyCode.Tab))
-        {
-            isMelee = !isMelee;
-            isRanged = !isRanged;
-
-            if (isMelee)
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (Input.GetKeyUp(KeyCode.Tab))
             {
-                weaponImage.sprite = swordImage;
+                isMelee = !isMelee;
+                isRanged = !isRanged;
+
+                if (isMelee)
+                {
+                    weaponImage.sprite = swordImage;
+                }
+                else
+                {
+                    weaponImage.sprite = arrowImage;
+                }
+
+                changeWeapons();
             }
-            else
-            {
-                weaponImage.sprite = arrowImage;
-            }
-
-            changeWeapons();
-
-
-
-
-
         }
     }
     void changeWeapons()
