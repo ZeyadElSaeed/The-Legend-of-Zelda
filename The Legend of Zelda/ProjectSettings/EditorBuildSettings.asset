@@ -4,5 +4,17 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/MainMenu.unity
+    guid: 67e74aa244a5576419272493f35f6c4d
+  - enabled: 1
+    path: Assets/Scenes/Credits.unity
+    guid: 9892050980de0b341836b6e4c34c9f90
+  - enabled: 1
+    path: Assets/Scenes/SceneL Mohamed.unity
+    guid: f8fc8e3b588b80645b2cba0643975e54
+  - enabled: 0
+    path: Assets/Scenes/Overworld.unity
+    guid: 3bc0c0a881867eb438826a1cfe4eb11d
   m_configObjects: {}
