@@ -64,10 +64,11 @@ public class LinkMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        Move();
-        WallCheck();
-        StateMachine();
-        
+        if(!GetComponent<GameManagerBridge>().paused()){
+            Move();
+            WallCheck();
+            StateMachine();
+        }
     }
 
     private void Move()

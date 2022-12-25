@@ -56,27 +56,29 @@ public class HealthSystem : MonoBehaviour
     }
     private void Shield()
     {
-        if (Input.GetKey(KeyCode.Mouse1) && timeremaining > 0)
-        {
-            animator.SetBool("Shield", true);
-            hasShield = true;
-            timeremaining = timeremaining - Time.deltaTime;
-            //Debug.Log(timeremaining);
-            //Debug.Log(healthPoints);
-        }
-
-        if (Input.GetKeyUp(KeyCode.Mouse1) || timeremaining <= 0)
-        {
-            animator.SetBool("Shield", false);
-            hasShield = false;
-            if (timeremaining <= 0 && waitTime > 0)
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (Input.GetKey(KeyCode.Mouse1) && timeremaining > 0)
             {
-                waitTime = waitTime - Time.deltaTime;
+                animator.SetBool("Shield", true);
+                hasShield = true;
+                timeremaining = timeremaining - Time.deltaTime;
+                //Debug.Log(timeremaining);
+                //Debug.Log(healthPoints);
             }
-            else
+
+            if (Input.GetKeyUp(KeyCode.Mouse1) || timeremaining <= 0)
             {
-                timeremaining = 10;
-                waitTime = 5;
+                animator.SetBool("Shield", false);
+                hasShield = false;
+                if (timeremaining <= 0 && waitTime > 0)
+                {
+                    waitTime = waitTime - Time.deltaTime;
+                }
+                else
+                {
+                    timeremaining = 10;
+                    waitTime = 5;
+                }
             }
         }
     }

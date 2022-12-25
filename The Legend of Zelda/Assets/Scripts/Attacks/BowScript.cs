@@ -73,40 +73,40 @@ public class BowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-        if (Input.GetKeyDown(KeyCode.Mouse1))
-        {
-
-            if (!shootRest && !isAiming)
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (Input.GetKeyDown(KeyCode.Mouse1))
             {
-                canShoot = false;
-                isAiming = true;
-                anim.SetBool("Aiming", true);
-                StopCoroutine(PrepareSequence());
-                StartCoroutine(PrepareSequence());
 
-                ShowReticle(true, zoomInDuration/2);
+                if (!shootRest && !isAiming)
+                {
+                    canShoot = false;
+                    isAiming = true;
+                    anim.SetBool("Aiming", true);
+                    StopCoroutine(PrepareSequence());
+                    StartCoroutine(PrepareSequence());
 
-                Transform bow = bowZoomTransform;
-                arrowModel.transform.localPosition = arrowOriginalPos;
-                arrowModel.DOLocalMoveZ(arrowModel.transform.localPosition.z - .10f, zoomInDuration * 2f);
-                CameraZoom(camZoomFov, camOriginalPos + camZoomOffset, bow.localPosition, bow.localEulerAngles, zoomInDuration, true);
+                    ShowReticle(true, zoomInDuration/2);
 
+                    Transform bow = bowZoomTransform;
+                    arrowModel.transform.localPosition = arrowOriginalPos;
+                    arrowModel.DOLocalMoveZ(arrowModel.transform.localPosition.z - .10f, zoomInDuration * 2f);
+                    CameraZoom(camZoomFov, camOriginalPos + camZoomOffset, bow.localPosition, bow.localEulerAngles, zoomInDuration, true);
+
+                }
+            }
+
+            if (Input.GetKeyDown(KeyCode.Mouse0))
+            {
+                if (!shootRest && isAiming)
+                {
+                    
+                    anim.SetTrigger("Shoot");
+                    anim.SetBool("Aiming", false);
+                    StopCoroutine(ShootSequence());
+                    StartCoroutine(ShootSequence());
+                }
             }
         }
-
-        if (Input.GetKeyDown(KeyCode.Mouse0))
-        {
-            if (!shootRest && isAiming)
-            {
-                
-                anim.SetTrigger("Shoot");
-                anim.SetBool("Aiming", false);
-                StopCoroutine(ShootSequence());
-                StartCoroutine(ShootSequence());
-            }
-        }
-
     }
 
     public void CameraZoom(float fov, Vector3 camPos, Vector3 bowPos, Vector3 bowRot, float duration, bool zoom)

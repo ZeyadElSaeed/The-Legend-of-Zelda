@@ -57,85 +57,87 @@ public class StasisCharacter : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButtonDown(2))
-        {
-            Debug.Log("Right Mouse Down");
-            StasisAim(true);
-        }
-
-        if (Input.GetMouseButtonUp(2))
-        {
-            Debug.Log("Right Mouse Up");
-            StasisAim(false);
-        }
-
-        if (stasisAim)
-        {
-            RaycastHit hit;
-            Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
-            if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (Input.GetMouseButtonDown(2))
             {
+                Debug.Log("Right Mouse Down");
+                StasisAim(true);
+            }
 
-                if (target != hit.transform)
+            if (Input.GetMouseButtonUp(2))
+            {
+                Debug.Log("Right Mouse Up");
+                StasisAim(false);
+            }
+
+            if (stasisAim)
+            {
+                RaycastHit hit;
+                Ray ray = new Ray(Camera.main.transform.position, Camera.main.transform.forward);
+                if(Physics.Raycast(ray, out hit, Mathf.Infinity, layerMask))
                 {
 
-
-                    if(target!= null && target.GetComponent<StasisObject>() != null)
-                        target.GetComponent<Renderer>().material.SetColor("_EmissionColor", normalColor);
-
-                    target = hit.transform;
-                    if (target.GetComponent<StasisObject>() != null)
+                    if (target != hit.transform)
                     {
 
-                        if (!target.GetComponent<StasisObject>().activated)
-                            target.GetComponent<Renderer>().material.SetColor("_EmissionColor", highligthedColor);
 
-                        InterfaceAnimation.instance.Target(true);
+                        if(target!= null && target.GetComponent<StasisObject>() != null)
+                            target.GetComponent<Renderer>().material.SetColor("_EmissionColor", normalColor);
+
+                        target = hit.transform;
+                        if (target.GetComponent<StasisObject>() != null)
+                        {
+
+                            if (!target.GetComponent<StasisObject>().activated)
+                                target.GetComponent<Renderer>().material.SetColor("_EmissionColor", highligthedColor);
+
+                            InterfaceAnimation.instance.Target(true);
+                        }
+                        else
+                        {
+                            InterfaceAnimation.instance.Target(false);
+                        }
                     }
-                    else
+                }
+                else
+                {
+                    if (target != null)
                     {
+                        if(target.GetComponent<StasisObject>()!= null)
+                        if (!target.GetComponent<StasisObject>().activated)
+                            target.GetComponent<Renderer>().material.SetColor("_EmissionColor", normalColor);
+
+                        target = null;
                         InterfaceAnimation.instance.Target(false);
                     }
                 }
             }
-            else
-            {
-                if (target != null)
-                {
-                    if(target.GetComponent<StasisObject>()!= null)
-                    if (!target.GetComponent<StasisObject>().activated)
-                        target.GetComponent<Renderer>().material.SetColor("_EmissionColor", normalColor);
 
-                    target = null;
-                    InterfaceAnimation.instance.Target(false);
+            //if (Input.GetMouseButtonDown(0))
+            if (Input.GetKeyDown("q"))
+                {
+                if (!stasisAim)
+                {
+                    Debug.Log("Slashing");
+                    //anim.SetTrigger("slash");
+                    //StartCoroutine(WaitFrame());
+                }
+                else
+                {
+                    if (target != null && target.GetComponent<StasisObject>()!=null)
+                    {
+                        bool stasis = target.GetComponent<StasisObject>().activated;
+                        target.GetComponent<StasisObject>().SetStasis(!stasis);
+                        StasisAim(false);
+                    }
                 }
             }
+            
+
+
+            //
+            RestartHotkey();
         }
-
-        //if (Input.GetMouseButtonDown(0))
-         if (Input.GetKeyDown("q"))
-            {
-            if (!stasisAim)
-            {
-                Debug.Log("Slashing");
-                //anim.SetTrigger("slash");
-                //StartCoroutine(WaitFrame());
-            }
-            else
-            {
-                if (target != null && target.GetComponent<StasisObject>()!=null)
-                {
-                    bool stasis = target.GetComponent<StasisObject>().activated;
-                    target.GetComponent<StasisObject>().SetStasis(!stasis);
-                    StasisAim(false);
-                }
-            }
-        }
-        
-
-
-        //
-        RestartHotkey();
     }
 
 

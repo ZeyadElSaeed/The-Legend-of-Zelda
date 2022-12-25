@@ -17,10 +17,12 @@ public class AttackWithSword : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && isMelee)
-        {
+        if(!GetComponent<GameManagerBridge>().paused()){
+            if (Input.GetKeyDown(KeyCode.Mouse0) && isMelee)
+            {
 
-            anim.SetTrigger("SwordAttack");
+                anim.SetTrigger("SwordAttack");
+            }
         }
     }
 
