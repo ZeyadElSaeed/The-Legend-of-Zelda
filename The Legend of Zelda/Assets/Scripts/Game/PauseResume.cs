@@ -49,7 +49,7 @@ public class PauseResume : MonoBehaviour
     }
     public void goToMainMenu(){
         Time.timeScale = 1;
-        SceneManager.LoadScene("Main Menu");
+        SceneManager.LoadScene("MainMenu");
     }
     public void quitGame(){
         Application.Quit();
