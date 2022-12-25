@@ -532,8 +532,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7ad6e1affbefbd469edbde43a93490a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  MuteButton: {fileID: 0}
-  UnmuteButton: {fileID: 0}
 --- !u!4 &1016742775
 Transform:
   m_ObjectHideFlags: 0
@@ -817,7 +815,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: c8b50738035a7d241894ef32d22a1123, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 2
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_StabilizeFeet: 0
