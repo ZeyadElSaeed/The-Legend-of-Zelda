@@ -600,6 +600,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climable Cube (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2878460081389043239, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
 --- !u!4 &108772940 stripped
@@ -5269,6 +5273,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climable Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 2878460081389043239, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
 --- !u!4 &951399764 stripped
@@ -5457,7 +5465,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d4cd16469ee0144291ce14d041362c7, type: 2}
+  - {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -5503,6 +5511,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Unclimable Cube '
       objectReference: {fileID: 0}
+    - target: {fileID: 460964239208440504, guid: aaebf6bc6ee6720439ca43df51590d43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     - target: {fileID: 460964239208440506, guid: aaebf6bc6ee6720439ca43df51590d43, type: 3}
       propertyPath: m_RootOrder
       value: 8
@@ -9144,7 +9156,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d4cd16469ee0144291ce14d041362c7, type: 2}
+  - {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10267,7 +10279,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 6d4cd16469ee0144291ce14d041362c7, type: 2}
+  - {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -10421,6 +10433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climable Cube (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2878460081389043239, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
 --- !u!4 &1792790753 stripped
@@ -11061,6 +11077,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climable Cube (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 2878460081389043239, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
 --- !u!1001 &1956223005
@@ -12030,6 +12050,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: 'Unclimable Cube '
       objectReference: {fileID: 0}
+    - target: {fileID: 460964239208440504, guid: aaebf6bc6ee6720439ca43df51590d43, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 61f275fd7c557874fbb2ecb46052232e, type: 2}
     - target: {fileID: 460964239208440506, guid: aaebf6bc6ee6720439ca43df51590d43, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -12397,6 +12421,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Climable Cube
       objectReference: {fileID: 0}
+    - target: {fileID: 2878460081389043239, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 7c62e41dbfc754d4b8639167849a4bc1, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ba5151d0d7b551f4fb71a7c3ec789557, type: 3}
 --- !u!4 &3446164019825932550 stripped
