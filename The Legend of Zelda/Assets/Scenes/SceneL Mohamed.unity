@@ -1114,11 +1114,6 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c8eccb7d526730f4187e5aee05d2418e, type: 3}
---- !u!225 &209869187 stripped
-CanvasGroup:
-  m_CorrespondingSourceObject: {fileID: 8041611605348232158, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
-  m_PrefabInstance: {fileID: 3525690885110783853}
-  m_PrefabAsset: {fileID: 0}
 --- !u!224 &209869188 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 8041611605348232153, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
@@ -2202,17 +2197,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9120660921093151726, guid: c8eccb7d526730f4187e5aee05d2418e, type: 3}
   m_PrefabInstance: {fileID: 831704159}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &498070084 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 8041611606304119593, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
-  m_PrefabInstance: {fileID: 3525690885110783853}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &498545473 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 3525690884784614444, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
@@ -10599,6 +10583,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3525690885813909804, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
+      propertyPath: m_Name
+      value: LinkStats
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ff001b24ee7d41440a13776d08ecf1d0, type: 3}
 --- !u!4 &4176883752434281034 stripped
@@ -11033,11 +11021,11 @@ PrefabInstance:
     - target: {fileID: 2512400510893610086, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: centerCircle
       value: 
-      objectReference: {fileID: 498070084}
+      objectReference: {fileID: 0}
     - target: {fileID: 2512400510893610086, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: reticleCanvas
       value: 
-      objectReference: {fileID: 209869187}
+      objectReference: {fileID: 0}
     - target: {fileID: 7356576172350897580, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: thirdPersonCamera
       value: 
