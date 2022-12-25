@@ -30,7 +30,7 @@ public class Enemy : MonoBehaviour
     float newDestinationCD = 0.5f;
     int attackType;
     bool isChasing;
-    bool isDead;
+    public bool isDead;
 
     
     [Header("Audio")]
