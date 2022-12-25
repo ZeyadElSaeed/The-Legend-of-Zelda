@@ -42,6 +42,7 @@ public class PauseResume : MonoBehaviour
         PauseResumePanel.SetActive(false);
         Time.timeScale = 1;
         paused = false;
+        Cursor.lockState = CursorLockMode.Locked;
         foreach (AudioSource audio in audios){
             audio.Play();
         }
