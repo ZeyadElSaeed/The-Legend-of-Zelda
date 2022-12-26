@@ -5,6 +5,12 @@ using UnityEngine.SceneManagement;
 public class OpenShrine : MonoBehaviour
 {
     [SerializeField] GameObject[] enemies;
+
+
+    private void Start()
+    {
+        enemies = new GameObject[12];
+    }
     private void OnTriggerEnter(Collider other)
     {
         for(int i =0; i< enemies.Length; i++)

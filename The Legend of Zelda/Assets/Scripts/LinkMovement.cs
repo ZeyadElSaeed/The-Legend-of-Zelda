@@ -12,7 +12,7 @@ public class LinkMovement : MonoBehaviour
     private Vector3 moveDirectionX;
     [SerializeField] private Vector3 velocity;
     [Header("Jumping")]
-    
+
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask walkOnTopMask;
     [SerializeField] private float gravity;
@@ -22,7 +22,7 @@ public class LinkMovement : MonoBehaviour
     public float climbSpeed;
     public float maxClimbTime;
 
-    
+
     [Header("Detection")]
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool climbing;
@@ -47,6 +47,7 @@ public class LinkMovement : MonoBehaviour
     private float initialPosition;
     private float unitsCount;
     private bool isGliding;
+    private bool isDead;
 
     private AudioManager audioManager;
 
@@ -58,23 +59,31 @@ public class LinkMovement : MonoBehaviour
         rb = GetComponent<Rigidbody>();
         initialPosition = transform.position.y;
         isGliding = false;
+        isDead = false;
         audioManager = FindObjectOfType<AudioManager>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponent<GameManagerBridge>().paused()){
+        if (!GetComponent<GameManagerBridge>().paused() && !isDead)
+        {
             Move();
             WallCheck();
             StateMachine();
+        }
+        else if (isDead)
+        {
+            controller.Move(Vector3.zero);
+
+
         }
     }
 
     private void Move()
     {
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, walkOnTopMask);
-        if(isGrounded && velocity.y < 0)
+        if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
@@ -87,9 +96,9 @@ public class LinkMovement : MonoBehaviour
         moveDirectionX = new Vector3(moveX, 0, 0);
         moveDirectionX = transform.TransformDirection(moveDirectionX);
 
-        if(!isGrounded)
+        if (!isGrounded)
         {
-            if(isGliding)
+            if (isGliding)
             {
                 unitsCount = 0;
                 initialPosition = transform.position.y;
@@ -101,14 +110,17 @@ public class LinkMovement : MonoBehaviour
                 initialPosition = transform.position.y;
             }
         }
-        if(unitsCount >= 10 && isGrounded)
+        
+        if (!isDead && unitsCount >= 10 && isGrounded)
         {
-            Debug.Log("Died by falling from very high place");
-            //this.GetComponent<HealthSystem>().healthPoints = 0;
+            this.GetComponent<HealthSystem>().TakeDamage(100);
+            if(this.GetComponent<HealthSystem>().healthPoints <=0)
+                isDead = true;
+            unitsCount = 0;
         }
 
         if (isGrounded)
-        {            
+        {
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
                 audioManager.Play("Walking");
@@ -152,7 +164,7 @@ public class LinkMovement : MonoBehaviour
             moveDirection *= moveSpeed;
             moveDirectionX *= moveSpeed;
         }
-        if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
+        if (!isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
             audioManager.Play("Glide");
             velocity.y = -2;
@@ -162,7 +174,7 @@ public class LinkMovement : MonoBehaviour
         {
             NoGlide();
         }
-        
+
         if (!wallFront || !attached || wallLookAngle >= maxWallLookAngle)
         {
             velocity.y += gravity * Time.deltaTime;
@@ -174,13 +186,13 @@ public class LinkMovement : MonoBehaviour
             float climbX = Input.GetAxis("Horizontal");
             if (climbing)
             {
-                
+
                 moveDirection = new Vector3(climbX * 2, climbSpeed, 0);
                 moveDirection = transform.TransformDirection(moveDirection);
             }
             else
                 moveDirection = new Vector3(climbX * 2, 0, 0);
-                moveDirection = transform.TransformDirection(moveDirection);
+            moveDirection = transform.TransformDirection(moveDirection);
 
             controller.Move((moveDirection) * Time.deltaTime);
             Idle();
@@ -219,7 +231,7 @@ public class LinkMovement : MonoBehaviour
         anim.SetTrigger("Jump");
     }
 
-    
+
     private void Glide()
     {
         gravity = -1;
@@ -263,7 +275,7 @@ public class LinkMovement : MonoBehaviour
         }
         if (attached && Input.GetKeyUp(KeyCode.W))
         {
-            
+
             climbing = false;
             climbSpeed = 0;
         }
@@ -309,7 +321,7 @@ public class LinkMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
         anim.SetFloat("ClimbUpDirection", climbSpeed);
-        int climbDirection = (climbSpeed == 0 ? 0 :1);
+        int climbDirection = (climbSpeed == 0 ? 0 : 1);
 
         anim.speed = climbDirection;
         /// idea - sound effect
