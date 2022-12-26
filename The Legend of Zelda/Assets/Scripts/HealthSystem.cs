@@ -102,6 +102,10 @@ public class HealthSystem : MonoBehaviour
                     Debug.Log("Health Points" + healthPoints);
                     UpdateHearts();
                 }
+                else
+                {
+                    HitShield.Play();
+                }
             }
             else{
                 HitShield.Play();
