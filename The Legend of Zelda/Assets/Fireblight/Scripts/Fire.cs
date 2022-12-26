@@ -46,7 +46,9 @@ public class Fire : MonoBehaviour
     [Header("Audio")]
     [SerializeField] AudioSource BossMove;
     [SerializeField] AudioSource BossHit;
+    [SerializeField] AudioSource BossHitWeakness;
     [SerializeField] AudioSource BossDies;
+
 
     // Start is called before the first frame update
     void Start()
@@ -228,9 +230,10 @@ public class Fire : MonoBehaviour
                 health -= damageAmount;
                 AudioManager.PlayEffect(BossHit);
             }
-            else if (!shield.activeSelf)
+            else if (!shield.activeSelf){
                 health -= (damageAmount * 2);
-
+                AudioManager.PlayEffect(BossHitWeakness);
+            }
             
             Debug.Log("Enemy is being hit");
             if (health <= 0)
