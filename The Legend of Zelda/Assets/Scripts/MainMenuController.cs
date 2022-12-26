@@ -40,6 +40,7 @@ public class MainMenuController : MonoBehaviour
     public void SelectShrine()
     {
         Debug.Log("Select Shrine");
+        SceneManager.LoadScene("Shrine");
 
     }
     public void SelectFireBlightArena()

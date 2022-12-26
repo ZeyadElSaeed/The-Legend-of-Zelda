@@ -6,7 +6,8 @@ public class OpenShrine : MonoBehaviour
 {
     [SerializeField] GameObject[] enemies;
 
-
+    
+    
     
     private void OnTriggerEnter(Collider other)
     {
