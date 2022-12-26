@@ -12,6 +12,9 @@ public class grenade : MonoBehaviour
 
     public GameObject explosionEffect;
     public KeyCode detonateKey = KeyCode.G;
+
+
+    public AudioSource ExplosionAudio;
     // Start is called before the first frame update
     void Start()
     {

@@ -83,7 +83,7 @@ public class Fire : MonoBehaviour
                 anim.SetFloat("speed", agent.velocity.magnitude / agent.speed);
                 if(agent.velocity.magnitude / agent.speed > 0.7){
                     if(!BossMove.isPlaying){
-                        BossMove.Play();
+                        AudioManager.PlayEffect(BossMove);
                     }
                 }
                 else{
@@ -226,7 +226,7 @@ public class Fire : MonoBehaviour
             
             if (state == 1){
                 health -= damageAmount;
-                BossHit.Play();
+                AudioManager.PlayEffect(BossHit);
             }
             else if (!shield.activeSelf)
                 health -= (damageAmount * 2);
@@ -239,9 +239,8 @@ public class Fire : MonoBehaviour
                 anim.SetTrigger("die");
                 isDead = true;
                 agent.SetDestination(this.transform.position);
-                Debug.Log("Enemy die, to the next Scene");
-                //SceneManager.LoadScene("HinoxScene");
-                BossDies.Play();
+                Debug.Log("Enemy die");
+                AudioManager.PlayEffect(BossDies);
             }
         }
     }

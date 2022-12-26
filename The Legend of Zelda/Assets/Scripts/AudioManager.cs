@@ -50,7 +50,7 @@ public class AudioManager : MonoBehaviour
         {
             currentSound = s.source;
             currentSoundName = name;
-            currentSound.Play();
+            PlayEffect(currentSound);
         }
         else
         {
@@ -58,7 +58,7 @@ public class AudioManager : MonoBehaviour
                 currentSound.Stop();
                 currentSound = s.source;
                 currentSoundName = s.name;
-                currentSound.Play();
+                PlayEffect(currentSound);
             }
         }
         
@@ -76,14 +76,22 @@ public class AudioManager : MonoBehaviour
         {
             currentTheme = s.source;
             currentTheme.loop = true;
-            currentTheme.Play();
+            PlayMusic(currentTheme);
         }
         else
         {
             currentTheme.Stop();
             currentTheme = s.source;
             currentTheme.loop = true;
-            currentTheme.Play();
+            PlayMusic(currentTheme);
         }
+    }
+    public static void PlayEffect(AudioSource audio){
+        audio.volume = MusicEffects.EffectsLevel;
+        audio.Play();
+    }
+    public static void PlayMusic(AudioSource audio){
+        audio.volume = MusicEffects.MusicLevel;
+        audio.Play();
     }
 }

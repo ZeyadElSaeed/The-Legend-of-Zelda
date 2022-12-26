@@ -98,7 +98,7 @@ public class Enemy : MonoBehaviour
                 newDestinationCD = 0.5f;
                 agent.SetDestination(player.transform.position);
                 if(!EnemyFootSteps.isPlaying){
-                    EnemyFootSteps.Play();
+                    AudioManager.PlayEffect(EnemyFootSteps);
                 }
             }
             newDestinationCD -= Time.deltaTime;
@@ -129,7 +129,7 @@ public class Enemy : MonoBehaviour
         if (!isDead)
         {
             health -= damageAmount;
-            EnemyHit.Play();
+            AudioManager.PlayEffect(EnemyHit);
             animator.SetTrigger("damage");
             if (!isChasing)
             {
@@ -145,7 +145,7 @@ public class Enemy : MonoBehaviour
             if (health <= 0)
             {
                 EnemyHit.Stop();
-                EnemyDies.Play();
+                AudioManager.PlayEffect(EnemyDies);
                 healthBar.value = 0.0f;
                 Die();
             }

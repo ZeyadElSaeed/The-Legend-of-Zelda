@@ -95,7 +95,7 @@ public class HealthSystem : MonoBehaviour
                 
                 if (!hasShield)
                 {
-                    HitLink.Play();
+                    AudioManager.PlayEffect(HitLink);
 
                     healthPoints = healthPoints - Damage;
                     animator.SetTrigger("Damage");
@@ -108,7 +108,7 @@ public class HealthSystem : MonoBehaviour
                 }
             }
             else{
-                HitShield.Play();
+                AudioManager.PlayEffect(HitShield);
             }
         }
     }
@@ -120,7 +120,7 @@ public class HealthSystem : MonoBehaviour
             animator.SetTrigger("Death");
             isDead = true;
             //if(DieLink.isPlaying)
-            DieLink.Play();
+            AudioManager.PlayEffect(DieLink);
         }
     }
 
@@ -152,4 +152,10 @@ public class HealthSystem : MonoBehaviour
         isInvincible = !isInvincible;
     }
 
+
+    // void PlayEffect(AudioSource audio){
+    //     Debug.Log(MusicEffects.EffectsLevel);
+    //     audio.volume = MusicEffects.EffectsLevel;
+    //     audio.Play();
+    // }
 }
