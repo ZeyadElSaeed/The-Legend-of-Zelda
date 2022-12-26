@@ -37,6 +37,10 @@ public class HealthSystem : MonoBehaviour
         Death();
     }
 
+    public bool isLinkDead(){
+        return isDead;
+    }
+
  
 
     private void OnTriggerEnter(Collider other)
@@ -85,21 +89,23 @@ public class HealthSystem : MonoBehaviour
 
     public void TakeDamage(float Damage)
     {
-        if ( !isInvincible)
-        {
-            
-            if (!hasShield)
+        if(!isDead){
+            if ( !isInvincible)
             {
-                HitLink.Play();
+                
+                if (!hasShield)
+                {
+                    HitLink.Play();
 
-                healthPoints = healthPoints - Damage;
-                animator.SetTrigger("Damage");
-                Debug.Log("Health Points" + healthPoints);
-                UpdateHearts();
+                    healthPoints = healthPoints - Damage;
+                    animator.SetTrigger("Damage");
+                    Debug.Log("Health Points" + healthPoints);
+                    UpdateHearts();
+                }
             }
-        }
-        else{
-            HitShield.Play();
+            else{
+                HitShield.Play();
+            }
         }
     }
 

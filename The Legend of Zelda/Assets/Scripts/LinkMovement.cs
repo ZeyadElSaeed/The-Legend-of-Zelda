@@ -75,8 +75,6 @@ public class LinkMovement : MonoBehaviour
         else if (isDead)
         {
             controller.Move(Vector3.zero);
-
-
         }
     }
 
