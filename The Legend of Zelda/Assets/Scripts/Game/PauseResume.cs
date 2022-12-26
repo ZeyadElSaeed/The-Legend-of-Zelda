@@ -57,6 +57,7 @@ public class PauseResume : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("Restarted");
         Time.timeScale = 1;
     }
 }
