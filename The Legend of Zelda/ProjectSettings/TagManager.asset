@@ -10,6 +10,7 @@ TagManager:
   - Moblin
   - Fragile
   - MawJLaygo
+  - StasisObject
   layers:
   - Default
   - TransparentFX
