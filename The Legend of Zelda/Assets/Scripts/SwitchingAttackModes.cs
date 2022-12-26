@@ -41,7 +41,7 @@ public class SwitchingAttackModes : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponent<GameManagerBridge>().paused()){
+        if(!GetComponent<GameManagerBridge>().paused() && !GetComponent<HealthSystem>().isLinkDead()){
             if (Input.GetKeyUp(KeyCode.Tab))
             {
                 isMelee = !isMelee;
