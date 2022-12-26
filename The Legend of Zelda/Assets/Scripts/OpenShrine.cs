@@ -12,6 +12,7 @@ public class OpenShrine : MonoBehaviour
     {
         for(int i =0; i< enemies.Length; i++)
         {
+
             if (!enemies[i].GetComponent<Enemy>().isDead)
             {
                 return;
