@@ -10955,6 +10955,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Stasis Object
       objectReference: {fileID: 0}
+    - target: {fileID: 2580413441054321895, guid: 886d9f586a40eba4a83c81acd6157bca, type: 3}
+      propertyPath: m_Mass
+      value: 5
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 886d9f586a40eba4a83c81acd6157bca, type: 3}
 --- !u!1001 &6817848723366825581
