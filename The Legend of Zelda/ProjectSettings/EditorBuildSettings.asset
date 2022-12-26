@@ -17,4 +17,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Overworld.unity
     guid: 3bc0c0a881867eb438826a1cfe4eb11d
+  - enabled: 1
+    path: Assets/Scenes/FireBlight Boss arena.unity
+    guid: d6271ff85d8b9614fb38afc660a09711
   m_configObjects: {}

@@ -163,7 +163,7 @@ public class Enemy : MonoBehaviour
     {
         if (!isChasing) {
             isChasing = true;
-            Debug.Log("null " + animator == null);
+            
             animator.SetTrigger("chasing");
         }
         

@@ -40,10 +40,12 @@ public class MainMenuController : MonoBehaviour
     public void SelectShrine()
     {
         Debug.Log("Select Shrine");
+
     }
     public void SelectFireBlightArena()
     {
         Debug.Log("Select Fire");
+        SceneManager.LoadScene("FireBlightArena");
     }
     public void SelectHinixArena()
     {
