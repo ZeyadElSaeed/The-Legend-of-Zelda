@@ -10,9 +10,6 @@ public class AudioManager : MonoBehaviour
     private string currentSoundName;
     public static AudioManager instance;
 
-    void Start(){
-        StartTheme("Theme");
-    }
     private void Awake()
     {
         if (instance == null)
@@ -22,7 +19,7 @@ public class AudioManager : MonoBehaviour
             Destroy(gameObject);
             return;
         }
-        DontDestroyOnLoad(gameObject);
+        // DontDestroyOnLoad(gameObject);
         foreach (Sound s in sounds)
         {
             s.source = gameObject.AddComponent<AudioSource>();
@@ -31,6 +28,7 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
+        StartTheme("Theme");
     }
     public void Play( string name)
     {
