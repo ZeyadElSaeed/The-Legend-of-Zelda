@@ -239,7 +239,8 @@ public class Fire : MonoBehaviour
                 anim.SetTrigger("die");
                 isDead = true;
                 agent.SetDestination(this.transform.position);
-                Debug.Log("Enemy die");
+                Debug.Log("Enemy die, to the next Scene");
+                //SceneManager.LoadScene("HinoxScene");
                 BossDies.Play();
             }
         }

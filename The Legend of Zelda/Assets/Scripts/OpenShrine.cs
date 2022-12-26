@@ -19,7 +19,7 @@ public class OpenShrine : MonoBehaviour
             }
         }
         //Debug.Log("GoToScene3");
-        SceneManager.LoadScene("FireBlightArena");
+        SceneManager.LoadScene("Shrine");
     }
 
 }
