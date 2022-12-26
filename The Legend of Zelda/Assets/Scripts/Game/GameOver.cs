@@ -21,7 +21,10 @@ public class GameOver : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        Debug.Log("1" + Player.GetComponent<HealthSystem>().isLinkDead());
+        Debug.Log("2" + gameover);
         if(Player.GetComponent<HealthSystem>().isLinkDead() && !gameover){
+            Debug.Log(2);
             gameover = true;
             GameOverPanel.SetActive(true);
             Time.timeScale = 0;

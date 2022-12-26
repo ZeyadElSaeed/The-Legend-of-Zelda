@@ -5,7 +5,10 @@ using UnityEngine.SceneManagement;
 
 public class SettingController : MonoBehaviour
 {
-
+    public static float MusicLevel;
+    public static float EffectsLevel;
+    public GameObject MusicHandle;
+    public GameObject EffectsHandle;
     public void GoToMainMenu()
     {
         SceneManager.LoadScene("MainMenu");
@@ -20,5 +23,7 @@ public class SettingController : MonoBehaviour
         Debug.Log("to assets credits");
         //SceneManager.LoadScene("Credits");
     }
-
+    void Update(){
+        // MusicLevel;
+    }
 }
