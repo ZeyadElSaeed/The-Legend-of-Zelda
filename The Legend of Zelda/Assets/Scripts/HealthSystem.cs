@@ -37,9 +37,6 @@ public class HealthSystem : MonoBehaviour
         Death();
     }
 
-    public bool isLinkDead(){
-        return isDead;
-    }
  
 
     private void OnTriggerEnter(Collider other)
@@ -59,7 +56,7 @@ public class HealthSystem : MonoBehaviour
     }
     private void Shield()
     {
-        if(!GetComponent<GameManagerBridge>().paused() && !GetComponent<HealthSystem>().isLinkDead()){
+        if(!GetComponent<GameManagerBridge>().paused()){
             if (Input.GetKey(KeyCode.Mouse1) && timeremaining > 0)
             {
                 animator.SetBool("Shield", true);
@@ -111,9 +108,9 @@ public class HealthSystem : MonoBehaviour
         if (healthPoints <= 0 && !isDead)
         {
             animator.SetTrigger("Death");
+            isDead = true;
             //if(DieLink.isPlaying)
             DieLink.Play();
-            isDead = true;
         }
     }
 

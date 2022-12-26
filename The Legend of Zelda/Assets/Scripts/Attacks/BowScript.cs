@@ -73,7 +73,7 @@ public class BowScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponent<GameManagerBridge>().paused() && !GetComponent<HealthSystem>().isLinkDead()){
+        if(!GetComponent<GameManagerBridge>().paused()){
             if (Input.GetKeyDown(KeyCode.Mouse1))
             {
 

@@ -21,7 +21,7 @@ public class grenade : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponent<GameManagerBridge>().paused() && Time.timeScale == 1){
+        if(!GetComponent<GameManagerBridge>().paused()){
             countdown -=Time.deltaTime;
             if(!hasExploded && Input.GetKeyDown(detonateKey) && countdown<=0){
                 Explode();
