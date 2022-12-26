@@ -48,6 +48,10 @@ public class ProjectileAddon : MonoBehaviour
             // destroy projectile
             Destroy(gameObject);
         }
+        else
+        {
+            Destroy(gameObject);
+        }
         
     }
 }
