@@ -18,7 +18,7 @@ public class PauseResume : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(Input.GetKeyDown(pauseKey) && !GetComponent<GameOver>().isGameOver()){
+        if(Input.GetKeyDown(pauseKey)){
             if(paused) resumeGame();
             else pauseGame();
         }
@@ -57,6 +57,7 @@ public class PauseResume : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        Debug.Log("Restarted");
         Time.timeScale = 1;
     }
 }

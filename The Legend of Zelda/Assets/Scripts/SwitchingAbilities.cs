@@ -33,7 +33,7 @@ public class SwitchingAbilities : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if(!GetComponent<GameManagerBridge>().paused() && !GetComponent<HealthSystem>().isLinkDead()){
+        if(!GetComponent<GameManagerBridge>().paused()){
             if (Input.GetKeyDown("1"))
             {
                 bomb.enabled = true;
