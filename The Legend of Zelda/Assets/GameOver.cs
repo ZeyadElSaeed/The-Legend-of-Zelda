@@ -23,13 +23,12 @@ public class GameOver : MonoBehaviour
     {
         if(Player.GetComponent<HealthSystem>().isLinkDead() && !gameover){
             gameover = true;
+        }
+        if(gameover) timer -= Time.deltaTime;
+        if(timer<=0){
             GameOverPanel.SetActive(true);
             Time.timeScale = 0;
             Cursor.lockState = CursorLockMode.None;
         }
-        // if(gameover) timer -= Time.deltaTime;
-        // if(timer<=0){
-            
-        // }
     }
 }
