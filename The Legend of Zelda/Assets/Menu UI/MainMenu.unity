@@ -348,7 +348,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &117316782
 RectTransform:
   m_ObjectHideFlags: 0
@@ -1325,7 +1325,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &887654965
 RectTransform:
   m_ObjectHideFlags: 0
@@ -2179,7 +2179,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_WrapAround: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
@@ -2188,7 +2188,7 @@ MonoBehaviour:
   m_Transition: 1
   m_Colors:
     m_NormalColor: {r: 0.98823535, g: 0.9686275, b: 0.86666673, a: 1}
-    m_HighlightedColor: {r: 0.48627454, g: 0.6666667, b: 0.2784314, a: 1}
+    m_HighlightedColor: {r: 0.4862745, g: 0.6666667, b: 0.2784314, a: 1}
     m_PressedColor: {r: 0.28627452, g: 0.3019608, b: 0.50980395, a: 1}
     m_SelectedColor: {r: 0.9882353, g: 0.96862745, b: 0.8666667, a: 1}
     m_DisabledColor: {r: 0.78431374, g: 0.78431374, b: 0.78431374, a: 0.5019608}
@@ -2206,7 +2206,7 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 966043236}
+  m_TargetGraphic: {fileID: 1394985681}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
