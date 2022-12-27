@@ -36786,7 +36786,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5724911452682315911}
+      - m_Target: {fileID: 1770054428}
         m_TargetAssemblyTypeName: PauseResume, Assembly-CSharp
         m_MethodName: quitGame
         m_Mode: 1
@@ -38103,7 +38103,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5724911452682315911}
+      - m_Target: {fileID: 1770054428}
         m_TargetAssemblyTypeName: PauseResume, Assembly-CSharp
         m_MethodName: goToMainMenu
         m_Mode: 1
@@ -39386,7 +39386,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5724911452682315911}
+      - m_Target: {fileID: 1770054428}
         m_TargetAssemblyTypeName: PauseResume, Assembly-CSharp
         m_MethodName: resumeGame
         m_Mode: 1
@@ -40970,7 +40970,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4953233538829077140, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 182.9
+      value: 119.2
       objectReference: {fileID: 0}
     - target: {fileID: 4953233538829077140, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_LocalRotation.w
@@ -41361,7 +41361,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 5724911452682315911}
+      - m_Target: {fileID: 1770054428}
         m_TargetAssemblyTypeName: PauseResume, Assembly-CSharp
         m_MethodName: RestartLevel
         m_Mode: 1

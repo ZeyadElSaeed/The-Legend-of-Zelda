@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
 using DG.Tweening;
-
+using UnityEngine.SceneManagement;
 public class HinoxScript : MonoBehaviour
 {
     public float health = 150;
@@ -82,13 +82,22 @@ public class HinoxScript : MonoBehaviour
         if(health <= 0){
             anim.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
-        // }else{
-        //     anim.SetTrigger("Hit");
-        }if(health <= 100 && treeIndex < 6){
+            StartCoroutine(dieWaitTime());
+        }
+        if(health <= 100 && treeIndex < 6){
             //Phase2 = true;
             anim.SetBool("Phase1idle",false);
             anim.SetBool("Phase2Attack",true);
         }
+    }
+    IEnumerator dieWaitTime()
+    {
+
+
+        yield return new WaitForSeconds(5);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Credits");
+
     }
 
     public void StartDealDamage()

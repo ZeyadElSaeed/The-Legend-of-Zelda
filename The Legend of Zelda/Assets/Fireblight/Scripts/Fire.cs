@@ -277,7 +277,7 @@ public class Fire : MonoBehaviour
         
         yield return new WaitForSeconds(5);
         Cursor.lockState = CursorLockMode.None;
-        SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("HinoxArena");
 
     }
 

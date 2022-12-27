@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/FireBlightArena.unity
     guid: d6271ff85d8b9614fb38afc660a09711
+  - enabled: 1
+    path: Assets/Scenes/HinoxArena.unity
+    guid: e9d52636345027f4da92acc1266e350b
   m_configObjects: {}

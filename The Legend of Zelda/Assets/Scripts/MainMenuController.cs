@@ -50,7 +50,8 @@ public class MainMenuController : MonoBehaviour
     }
     public void SelectHinixArena()
     {
-        Debug.Log("Select Hinix");
+        Debug.Log("Select Hinox");
+        SceneManager.LoadScene("HinoxArena");
     }
 
     public void GoToSettingMenu()
