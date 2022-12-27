@@ -19,6 +19,7 @@ public class HinoxScript : MonoBehaviour
     public GameObject projectile;
     private GameObject player;
     [SerializeField] float offsetY;
+    public bool isHit;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,8 @@ public class HinoxScript : MonoBehaviour
         TreeInHand.SetActive(false);
         //Phase2 = false;
         treeIndex = 0;
-        //TakeDamage(60);  
+        //TakeDamage(60);
+        isHit = false;
     }
 
     // Update is called once per frame
@@ -79,7 +81,9 @@ public class HinoxScript : MonoBehaviour
 
     public void TakeDamage(float damage){
         health -= damage;
-        if(health <= 0){
+        anim.SetBool("isChasing", true);
+        isHit = true;
+        if (health <= 0){
             anim.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
             StartCoroutine(dieWaitTime());
