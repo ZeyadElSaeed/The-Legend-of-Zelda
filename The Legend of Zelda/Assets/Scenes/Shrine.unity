@@ -5039,6 +5039,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 27
@@ -5182,6 +5190,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (43)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 43
@@ -5242,6 +5258,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -5439,6 +5463,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 24
@@ -5500,6 +5532,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (22)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 22
@@ -5560,6 +5600,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (11)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -5644,6 +5692,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (44)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 44
@@ -5704,6 +5760,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -5827,6 +5891,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 18
@@ -5906,7 +5978,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 477678524}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.45, y: 0, z: -2.14}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -6091,6 +6163,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (35)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 35
@@ -6152,6 +6232,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (41)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 41
@@ -6212,6 +6300,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -6306,6 +6402,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 4
@@ -6377,6 +6481,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (19)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -6546,7 +6658,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5103127432720695023, guid: e0a6dd8aff0cd89469297204a22837fa, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 5162863968742687512, guid: e0a6dd8aff0cd89469297204a22837fa, type: 3}
@@ -6576,6 +6688,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -6643,6 +6763,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (37)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 37
@@ -6708,6 +6836,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -11769,6 +11905,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (17)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 17
@@ -11829,6 +11973,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (32)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -11902,6 +12054,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (33)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 33
@@ -11967,6 +12127,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -12104,6 +12272,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -12164,6 +12340,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (36)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -12255,6 +12439,7 @@ MonoBehaviour:
   IceCube: {fileID: 7764185953262388100, guid: a6d433e57a62fec4589f2b2b7237cfbe, type: 3}
   IceCubeHeight: 8
   CryonisCanvas: {fileID: 712964136}
+  currentIceCube: {fileID: 0}
 --- !u!4 &1064226108 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
@@ -12281,6 +12466,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (29)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -12403,6 +12596,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (39)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 39
@@ -12464,6 +12665,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (34)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 34
@@ -12524,6 +12733,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -12965,6 +13182,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 3
@@ -13041,6 +13266,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (42)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -13781,7 +14014,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1448084428}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 4.6, y: 40.8, z: 73.5}
+  m_LocalPosition: {x: 4.6, y: 40.8, z: 74.37}
   m_LocalScale: {x: 1, y: 1, z: 1.9695}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -13854,6 +14087,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (25)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 25
@@ -13915,6 +14156,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -13975,6 +14224,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (21)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -14200,6 +14457,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 9
@@ -14361,7 +14626,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1537133995}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -62.96629, y: 0, z: -30.6}
+  m_LocalPosition: {x: -65.53, y: 0, z: -41.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -14397,8 +14662,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 18.66623, y: 3.0535154, z: 11.96195}
-  m_Center: {x: -2.964878, y: 1.0162964, z: -2.1065722}
+  m_Size: {x: 16.965443, y: 1.5551066, z: 16.006805}
+  m_Center: {x: 0.028383255, y: 0.2670915, z: -0.103401184}
 --- !u!4 &1538956618 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
@@ -14504,6 +14769,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (14)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -14652,6 +14925,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (31)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 31
@@ -14747,7 +15028,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26096449e47058e47b7f547a8101ea61, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -2.4
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26096449e47058e47b7f547a8101ea61, type: 3}
       propertyPath: m_LocalPosition.y
@@ -14755,7 +15036,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26096449e47058e47b7f547a8101ea61, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -12.3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 26096449e47058e47b7f547a8101ea61, type: 3}
       propertyPath: m_LocalRotation.w
@@ -15024,6 +15305,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (23)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 23
@@ -15095,6 +15384,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -15295,6 +15592,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 7
@@ -15468,6 +15773,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (38)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 38
@@ -15533,6 +15846,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -15633,6 +15954,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 26
@@ -15698,6 +16027,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (40)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -15996,6 +16333,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: FragileCubeShrine (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -16072,6 +16417,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine (20)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder
@@ -16279,6 +16632,14 @@ PrefabInstance:
     - target: {fileID: 1131141116717334454, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_Name
       value: FragileCubeShrine
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Mass
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5733315038415531225, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
+      propertyPath: m_Constraints
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6367763320804911937, guid: d7c08fbf3e67b3d458db89f31255f400, type: 3}
       propertyPath: m_RootOrder

@@ -70,7 +70,7 @@ public class Cryonis : MonoBehaviour
                 }
                 else
                 {
-                    Destroy(currentIceCube);
+                    DestroyCryoins();
                     currentIceCube = Instantiate(IceCube, hit.point, Quaternion.identity);
                 }
                 currentIceCube.transform.DOScale(new Vector3(IceCubeHeight / 2, IceCubeHeight, IceCubeHeight / 2), 1);
@@ -81,6 +81,12 @@ public class Cryonis : MonoBehaviour
             }
 
         }
+    }
+
+    public void DestroyCryoins()
+    {
+        currentIceCube.transform.DOMoveY(-IceCubeHeight, 1);
+        Destroy(currentIceCube, 1);
     }
 
     

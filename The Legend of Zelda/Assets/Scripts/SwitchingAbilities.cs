@@ -79,7 +79,7 @@ public class SwitchingAbilities : MonoBehaviour
     {
         if (cryonis.currentIceCube != null)
         {
-            Destroy(cryonis.currentIceCube);
+            cryonis.DestroyCryoins();
         }
     }
     private void CleanBomb()
