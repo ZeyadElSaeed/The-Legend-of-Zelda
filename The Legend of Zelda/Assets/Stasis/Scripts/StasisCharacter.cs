@@ -60,13 +60,13 @@ public class StasisCharacter : MonoBehaviour
         if(!GetComponent<GameManagerBridge>().paused()){
             if (Input.GetMouseButtonDown(2))
             {
-                Debug.Log("Right Mouse Down");
+                //Debug.Log("Right Mouse Down");
                 StasisAim(true);
             }
 
             if (Input.GetMouseButtonUp(2))
             {
-                Debug.Log("Right Mouse Up");
+                //Debug.Log("Right Mouse Up");
                 StasisAim(false);
             }
 
@@ -118,7 +118,7 @@ public class StasisCharacter : MonoBehaviour
                 {
                 if (!stasisAim)
                 {
-                    Debug.Log("Slashing");
+                    //Debug.Log("Slashing");
                     //anim.SetTrigger("slash");
                     //StartCoroutine(WaitFrame());
                 }

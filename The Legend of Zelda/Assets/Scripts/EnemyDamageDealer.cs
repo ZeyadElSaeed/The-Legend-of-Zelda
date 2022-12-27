@@ -35,13 +35,13 @@ public class EnemyDamageDealer : MonoBehaviour
                     if (enemyType == 1) {
                         if ( attackType == 1 )
                         {
-                            Debug.Log("Boko has dealt horizontal damage 1");
+                            //Debug.Log("Boko has dealt horizontal damage 1");
                             weaponDamage = 1;
                             health.TakeDamage(weaponDamage);
                         }
                         else
                         {
-                            Debug.Log("Boko has dealt vertical damage 3");
+                            //Debug.Log("Boko has dealt vertical damage 3");
                             weaponDamage = 3;
                             health.TakeDamage(weaponDamage);
                         }
@@ -50,13 +50,13 @@ public class EnemyDamageDealer : MonoBehaviour
                     {
                         if (attackType == 1)
                         {
-                            Debug.Log("Mo has dealt horizontal damage 2");
+                            //Debug.Log("Mo has dealt horizontal damage 2");
                             weaponDamage = 2;
                             health.TakeDamage(weaponDamage);
                         }
                         else
                         {
-                            Debug.Log("Mo has dealt vertical damage 4");
+                            //Debug.Log("Mo has dealt vertical damage 4");
                             weaponDamage = 4;
                             health.TakeDamage(weaponDamage);
                         }

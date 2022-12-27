@@ -22,7 +22,7 @@ public class MainMenuController : MonoBehaviour
 
     public void SelectLevel()
     {
-        Debug.Log("Select Level");
+        //Debug.Log("Select Level");
         MainButtons.SetActive(false);
         LevelButtons.SetActive(true);
     }
@@ -34,23 +34,23 @@ public class MainMenuController : MonoBehaviour
     }
     public void SelectOverWorld()
     {
-        Debug.Log("Select OverWorld");
+        //Debug.Log("Select OverWorld");
         SceneManager.LoadScene("Overworld");
     }
     public void SelectShrine()
     {
-        Debug.Log("Select Shrine");
+        //Debug.Log("Select Shrine");
         SceneManager.LoadScene("Shrine");
 
     }
     public void SelectFireBlightArena()
     {
-        Debug.Log("Select Fire");
+        //Debug.Log("Select Fire");
         SceneManager.LoadScene("FireBlightArena");
     }
     public void SelectHinixArena()
     {
-        Debug.Log("Select Hinox");
+        //Debug.Log("Select Hinox");
         SceneManager.LoadScene("HinoxArena");
     }
 

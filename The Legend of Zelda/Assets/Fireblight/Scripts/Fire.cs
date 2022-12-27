@@ -135,7 +135,7 @@ public class Fire : MonoBehaviour
     {
         if (timePassed >= attackCD)
         {
-            Debug.Log("Attack CD" + attackCD);
+            //Debug.Log("Attack CD" + attackCD);
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
                 transform.LookAt(player.transform);
@@ -255,14 +255,14 @@ public class Fire : MonoBehaviour
                 AudioManager.PlayEffect(BossHitWeakness);
             }
             
-            Debug.Log("Enemy is being hit");
+            //Debug.Log("Enemy is being hit");
             if (health <= 0)
             {
                 healthBar.value = 0.0f;
                 anim.SetTrigger("die");
                 isDead = true;
                 agent.SetDestination(this.transform.position);
-                Debug.Log("Enemy die");
+                //Debug.Log("Enemy die");
                 AudioManager.PlayEffect(BossDies);
                 StartCoroutine(dieWaitTime());
                 
