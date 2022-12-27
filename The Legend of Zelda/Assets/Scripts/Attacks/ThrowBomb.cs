@@ -20,7 +20,7 @@ public class ThrowBomb : MonoBehaviour
 
     bool hasThrown = false;
 
-    GameObject grenade;
+    public GameObject grenade;
 
     private Animator anim;
     // Start is called before the first frame update

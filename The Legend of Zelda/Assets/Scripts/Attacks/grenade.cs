@@ -33,7 +33,7 @@ public class grenade : MonoBehaviour
             }
         }
     }
-    void Explode() {
+    public void Explode() {
         GameObject currentExplosion = Instantiate(explosionEffect,transform.position,transform.rotation);
         Destroy(gameObject);
         Collider [] colliders = Physics.OverlapSphere(transform.position, radius);

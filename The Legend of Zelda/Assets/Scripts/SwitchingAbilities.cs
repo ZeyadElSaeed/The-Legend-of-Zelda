@@ -44,6 +44,8 @@ public class SwitchingAbilities : MonoBehaviour
                 cryonis.enabled = false;
                 stasis.enabled = false;
 
+                CleanCryoins();
+
                 runeImage.sprite = bombImage;
             }
 
@@ -52,6 +54,8 @@ public class SwitchingAbilities : MonoBehaviour
                 bomb.enabled = false;
                 cryonis.enabled = true;
                 stasis.enabled = false;
+
+                CleanBomb();
 
                 runeImage.sprite = cryoinsImage;
             }
@@ -62,8 +66,27 @@ public class SwitchingAbilities : MonoBehaviour
                 cryonis.enabled = false;
                 stasis.enabled = true;
 
+                CleanCryoins();
+                CleanBomb();
+
+
                 runeImage.sprite = stasisImage;
             }
+        }
+    }
+
+    private void CleanCryoins()
+    {
+        if (cryonis.currentIceCube != null)
+        {
+            Destroy(cryonis.currentIceCube);
+        }
+    }
+    private void CleanBomb()
+    {
+        if (bomb.grenade != null)
+        {
+            bomb.grenade.GetComponent<grenade>().Explode();
         }
     }
 }
