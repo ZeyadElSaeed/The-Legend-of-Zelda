@@ -557,6 +557,7 @@ MonoBehaviour:
   IceCube: {fileID: 7764185953262388100, guid: a6d433e57a62fec4589f2b2b7237cfbe, type: 3}
   IceCubeHeight: 8
   CryonisCanvas: {fileID: 1372282334}
+  currentIceCube: {fileID: 0}
 --- !u!1 &756806868 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: f1d12088228324e679c5b3c81b8af2d5, type: 3}
@@ -1634,7 +1635,7 @@ MonoBehaviour:
   health: 150
   Eye: {fileID: 205359407}
   TreeInHand: {fileID: 2203901566172003883}
-  TreeGrabbed: {fileID: 0}
+  TreeGrabbed: {fileID: 1903494084}
   Trees:
   - {fileID: 1903494084}
   - {fileID: 1961659673}
@@ -1644,6 +1645,7 @@ MonoBehaviour:
   - {fileID: 756806868}
   projectile: {fileID: 5421538789842216541, guid: e2e958c0da84f47339262c3171913d73, type: 3}
   offsetY: 1.5
+  isHit: 0
 --- !u!136 &2124748025
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -12334,6 +12336,7 @@ MonoBehaviour:
   throwKey: 113
   throwForce: 20
   throwUpwardForce: 0
+  grenade: {fileID: 0}
 --- !u!54 &4953233540103567096
 Rigidbody:
   m_ObjectHideFlags: 0

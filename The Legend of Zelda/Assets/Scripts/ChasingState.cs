@@ -9,9 +9,11 @@ public class ChasingState : StateMachineBehaviour
     NavMeshAgent agent;
     GameObject TreeInHand;
     GameObject TreeToGrab;
+    private bool isHit;
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        isHit = animator.GetComponent<HinoxScript>().isHit;
         animator.GetComponent<HinoxScript>().GotoNextTree();
         player = GameObject.FindGameObjectWithTag("Player").transform;
         agent = animator.GetComponent<NavMeshAgent>();
@@ -27,7 +29,7 @@ public class ChasingState : StateMachineBehaviour
         if(animator.GetBool("Phase2Attack") == false){
             agent.SetDestination(player.position);
             float distance = Vector3.Distance(player.position, animator.transform.position);
-            if(distance > 20)
+            if(distance > 20 && !isHit)
                 animator.SetBool("isChasing",false);
             if(distance < 2.5f)
                 animator.SetBool("isKicking",true);
@@ -47,6 +49,7 @@ public class ChasingState : StateMachineBehaviour
     {
         //Debug.Log(animator.GetBool("Phase2Attack"));
         agent.SetDestination(animator.transform.position);
+        animator.GetComponent<HinoxScript>().isHit = false;
     }
 
     // OnStateMove is called right after Animator.OnAnimatorMove()
