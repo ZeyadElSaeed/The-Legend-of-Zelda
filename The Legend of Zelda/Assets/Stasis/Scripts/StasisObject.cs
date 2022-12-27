@@ -20,7 +20,7 @@ public class StasisObject : MonoBehaviour
     private Color finalColor;
 
     private Transform arrow;
-    private Renderer renderer;
+    private Renderer rend;
 
     [Header("Particles")]
     public Transform startparticleGroup;
@@ -34,7 +34,7 @@ public class StasisObject : MonoBehaviour
         finalColor = FindObjectOfType<StasisCharacter>().finalColor;
         particleColor = normalColor;
         arrow = transform.GetChild(0);
-        renderer = GetComponent<Renderer>();
+        rend = GetComponent<Renderer>();
     }
 
     public void SetStasis(bool state)
@@ -44,12 +44,12 @@ public class StasisObject : MonoBehaviour
         rb.isKinematic = state;
         float noise = state ? 1 : 0;
 
-        renderer.material.SetFloat("_StasisAmount", .2f);
-        renderer.material.SetFloat("_NoiseAmount", noise);
+        rend.material.SetFloat("_StasisAmount", .2f);
+        rend.material.SetFloat("_NoiseAmount", noise);
 
         if (state)
         {
-            renderer.material.SetColor("_EmissionColor", normalColor);
+            rend.material.SetColor("_EmissionColor", normalColor);
             StartCoroutine(StasisWait());
 
 
@@ -66,7 +66,7 @@ public class StasisObject : MonoBehaviour
             StopAllCoroutines();
             DOTween.KillAll();
             transform.GetChild(0).gameObject.SetActive(state);
-            renderer.material.SetFloat("_StasisAmount", 0);
+            rend.material.SetFloat("_StasisAmount", 0);
 
             ParticleSystem[] particles = endParticleGroup.GetComponentsInChildren<ParticleSystem>();
             foreach (ParticleSystem p in particles)
@@ -108,7 +108,7 @@ public class StasisObject : MonoBehaviour
 
         Color c = Color.Lerp(normalColor, finalColor, accumulatedForce/50);
         transform.GetChild(0).GetComponentInChildren<Renderer>().material.SetColor("_Color",c);
-        renderer.material.SetColor("_EmissionColor", c);
+        rend.material.SetColor("_EmissionColor", c);
         particleColor = c;
     }
 
@@ -126,9 +126,9 @@ public class StasisObject : MonoBehaviour
 
             yield return new WaitForSeconds(wait);
             Sequence s = DOTween.Sequence();
-            s.Append(renderer.material.DOFloat(.5f, "_StasisAmount", .05f));
+            s.Append(rend.material.DOFloat(.5f, "_StasisAmount", .05f));
             s.AppendInterval(.1f);
-            s.Append(renderer.material.DOFloat(.2f, "_StasisAmount", .05f));
+            s.Append(rend.material.DOFloat(.2f, "_StasisAmount", .05f));
         }
 
         SetStasis(false);

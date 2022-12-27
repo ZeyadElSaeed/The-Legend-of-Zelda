@@ -8,14 +8,18 @@ public class ProjectileAddon : MonoBehaviour
     private Rigidbody rb;
     private bool targetHit;
     private int phase;
+   
 
     [Header("Thrower")]
-    [SerializeField] GameObject Boss;
+    private GameObject Boss;
 
     private void Start()
     {
+        Boss = GameObject.FindGameObjectWithTag("MawJLaygo");
+        //Debug.Log(Boss.name);
         rb = GetComponent<Rigidbody>();
         phase = Boss.GetComponent<Fire>().getBossPhase();
+
     }
 
     private void OnCollisionEnter(Collision collision)
@@ -25,21 +29,21 @@ public class ProjectileAddon : MonoBehaviour
             return;
         else
             targetHit = true;
-        Debug.Log(phase);
-
+        //Debug.Log(phase);
+        //Debug.Log(Boss.name);
         // check if Boss hit The Player
         if( collision.gameObject.tag == "Player")
         {
             HealthSystem playerHealth = collision.gameObject.GetComponent<HealthSystem>();
             // Make Damage to the player
-            if (transform.localScale.Equals(new Vector3(0.25f, 0.25f, 0.25f)))
+            if (phase ==1)
             {
-                Debug.Log("I'm in phase 1 Throwing a SMALL fire ball to the player");
+                //Debug.Log("I'm in phase 1 Throwing a SMALL fire ball to the player");
                 playerHealth.TakeDamage(2);
             }
             else
             {
-                Debug.Log("I'm in phase 2 Throwing a LARGE fire ball to the player");
+                //Debug.Log("I'm in phase 2 Throwing a LARGE fire ball to the player");
                 playerHealth.TakeDamage(5);
             }
 

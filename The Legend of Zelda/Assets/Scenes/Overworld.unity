@@ -34767,6 +34767,10 @@ PrefabInstance:
       propertyPath: hearts.Array.data[23]
       value: 
       objectReference: {fileID: 3525690886803935966}
+    - target: {fileID: 4953233538829077135, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+      propertyPath: groundCheckDistance
+      value: 0.2
+      objectReference: {fileID: 0}
     - target: {fileID: 4953233538829077140, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: m_RootOrder
       value: 0

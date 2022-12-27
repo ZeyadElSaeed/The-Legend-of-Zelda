@@ -39,7 +39,7 @@ public class grenade : MonoBehaviour
         Collider [] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider bombed in colliders){
             if(bombed.CompareTag("Fragile")){
-                Destroy(bombed);
+                Destroy(bombed.gameObject);
             }
             else{
                 if(bombed.CompareTag("Bokoblin") || bombed.CompareTag("Moblin") || bombed.CompareTag("MawJLaygo")){

@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 using UnityEngine.UI;
-
+using DG.Tweening;
+using UnityEngine.SceneManagement;
 public class Fire : MonoBehaviour
 {
     [Header("Tracked Objects")]
@@ -20,8 +21,10 @@ public class Fire : MonoBehaviour
     [Header("Combat")]
     [SerializeField] float health;
     [SerializeField] float attackCD ;
+    [SerializeField] float ChargedAttackCD;
     [SerializeField] float attackRange ;
     [SerializeField] float aggroRange ;
+    [SerializeField] float offsetY;
     float newDestinationCD = 0.5f;
 
     int state = 1;
@@ -48,6 +51,7 @@ public class Fire : MonoBehaviour
     [SerializeField] AudioSource BossHit;
     [SerializeField] AudioSource BossHitWeakness;
     [SerializeField] AudioSource BossDies;
+    
 
 
     // Start is called before the first frame update
@@ -57,6 +61,7 @@ public class Fire : MonoBehaviour
         anim = GetComponent<Animator>();
         agent = anim.GetComponent<NavMeshAgent>();
         shield.SetActive(false);
+        
         state = 1;
         healthBar.maxValue = health;
 
@@ -101,7 +106,7 @@ public class Fire : MonoBehaviour
                 if (health <= 150 && state == 1)
                 {
                     state = 2;
-                    attackCD *= 3;
+                    
                     activeShield();
                 }
 
@@ -116,6 +121,10 @@ public class Fire : MonoBehaviour
                     attackState();
                 }
 
+                if (health <= 150)
+                {
+                    attackCD = ChargedAttackCD;
+                }
 
 
             }
@@ -126,6 +135,7 @@ public class Fire : MonoBehaviour
     {
         if (timePassed >= attackCD)
         {
+            Debug.Log("Attack CD" + attackCD);
             if (Vector3.Distance(player.transform.position, transform.position) <= attackRange)
             {
                 transform.LookAt(player.transform);
@@ -146,10 +156,19 @@ public class Fire : MonoBehaviour
         // instantiate object to throw
         GameObject projectile = Instantiate(objectToThrow, attackPoint.position, Quaternion.identity);
         if (state == 1)
-            projectile.transform.localScale = new Vector3(0.25f, 0.25f, 0.25f);
-        else
+        {
             projectile.transform.localScale = new Vector3(1, 1, 1);
+            projectile.transform.DOMove(player.transform.position + Vector3.up * offsetY, 1);
+        }
+        else
+        {
+            projectile.transform.localScale = new Vector3(2, 2, 2);
+            projectile.transform.DOMove(player.transform.position + Vector3.up * offsetY *1.5f, 1);
+        }
 
+        
+
+        /*
         // get rigidbody component
         Rigidbody projectileRb = projectile.GetComponent<Rigidbody>();
         // calculate direction
@@ -162,6 +181,7 @@ public class Fire : MonoBehaviour
         // add force
         Vector3 forceToAdd = forceDirection * throwForce + transform.up * throwUpwardForce;
         projectileRb.AddForce(forceToAdd, ForceMode.Impulse);
+        */
     }
 
     void idleState()
@@ -244,11 +264,22 @@ public class Fire : MonoBehaviour
                 agent.SetDestination(this.transform.position);
                 Debug.Log("Enemy die");
                 AudioManager.PlayEffect(BossDies);
+                StartCoroutine(dieWaitTime());
+                
+                
             }
         }
     }
 
+    IEnumerator dieWaitTime()
+    {
 
+        
+        yield return new WaitForSeconds(5);
+        Cursor.lockState = CursorLockMode.None;
+        SceneManager.LoadScene("Credits");
+
+    }
 
 
     // Draw Circles to make it easy to indicate ranges
@@ -267,9 +298,11 @@ public class Fire : MonoBehaviour
     public void activeShield()
     {
         shield.SetActive(true);
+        shield.transform.DOScale(new Vector3(4, 4, 4), 2f);
     }
     public void deActiveShield()
     {
+        shield.transform.DOScale(new Vector3(1, 1, 1), 0f);
         shield.SetActive(false);
     }
     public void deActiveFire()

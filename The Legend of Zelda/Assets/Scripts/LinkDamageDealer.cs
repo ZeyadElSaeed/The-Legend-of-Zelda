@@ -9,7 +9,7 @@ public class LinkDamageDealer : MonoBehaviour
     [SerializeField] float weaponLength;
     [SerializeField] float weaponDamage;
 
-    float collisionForce = 6;
+    //float collisionForce = 6;
     
     void Start()
     {

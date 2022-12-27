@@ -110,7 +110,7 @@ public class LinkMovement : MonoBehaviour
             }
         }
         
-        if (!isDead && unitsCount >= 10 && isGrounded)
+        if (!isDead &&  unitsCount >= 10 && isGrounded)
         {
             this.GetComponent<HealthSystem>().TakeDamage(100);
             if(this.GetComponent<HealthSystem>().healthPoints <=0)
@@ -156,6 +156,7 @@ public class LinkMovement : MonoBehaviour
             {
                 audioManager.Play("Jump");
                 Jump();
+                unitsCount = 0;
             }
         }
         else
@@ -195,6 +196,7 @@ public class LinkMovement : MonoBehaviour
 
             controller.Move((moveDirection) * Time.deltaTime);
             Idle();
+            unitsCount = 0;
         }
 
 
