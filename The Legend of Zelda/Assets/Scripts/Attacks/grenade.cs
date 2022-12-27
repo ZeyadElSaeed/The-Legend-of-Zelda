@@ -42,13 +42,19 @@ public class grenade : MonoBehaviour
                 Destroy(bombed.gameObject);
             }
             else{
-                if(bombed.CompareTag("Bokoblin") || bombed.CompareTag("Moblin") || bombed.CompareTag("MawJLaygo")){
+                if(bombed.CompareTag("Bokoblin") || bombed.CompareTag("Moblin") || bombed.CompareTag("MawJLaygo") || bombed.CompareTag("Hinox"))
+                {
                     if (bombed.CompareTag("MawJLaygo"))
                     {
                         Fire fire = bombed.GetComponent<Fire>();
                         fire.TakeDamage(10);
                     }
-                    else
+                    else if (bombed.CompareTag("Hinox"))
+                    {
+                        HinoxScript hinox = bombed.GetComponent<HinoxScript>();
+                        hinox.TakeDamage(10);
+                    }
+                    else 
                     {
                         Enemy enemy = bombed.GetComponent<Enemy>();
                         enemy.TakeDamage(10);

@@ -25,7 +25,16 @@ public class ArrowScript : MonoBehaviour
             {
                 collision.gameObject.GetComponent<Fire>().TakeDamage(5);
             }
-        
+             else if (collision.gameObject.CompareTag("Eye"))
+            {
+            //collision.gameObject.GetComponent<Fire>().TakeDamage(5);
+                collision.gameObject.transform.root.GetComponent<HinoxScript>().TakeDamage( 5 * 5);
+            }
+            else if (collision.gameObject.CompareTag("Hinox"))
+            {
+                collision.gameObject.GetComponent<HinoxScript>().TakeDamage(5);
+            }
+
         GameObject hitParticleClone =  Instantiate(hitParticle, transform.position, Quaternion.identity);
         //trailParticle.transform.parent = transform.parent;
         //trailParticle.Stop();

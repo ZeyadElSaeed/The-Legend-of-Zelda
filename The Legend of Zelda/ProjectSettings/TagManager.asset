@@ -11,6 +11,11 @@ TagManager:
   - Fragile
   - MawJLaygo
   - StasisObject
+  - Tree
+  - Eye
+  - WayPoints
+  - Hinox
+  - HinoxKickPoint
   layers:
   - Default
   - TransparentFX

@@ -38,6 +38,13 @@ public class LinkDamageDealer : MonoBehaviour
                     fireBlight.TakeDamage(weaponDamage);
                     hasDealtDamage.Add(hit.transform.gameObject);
                 }
+
+                if (hit.transform.TryGetComponent(out HinoxScript Hinox) && !hasDealtDamage.Contains(hit.transform.gameObject))
+                {
+                    Debug.Log("Link try to Hit Hinox");
+                    Hinox.TakeDamage( weaponDamage );
+                    hasDealtDamage.Add(hit.transform.gameObject);
+                }
             }
         }
     }

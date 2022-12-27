@@ -2,10 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
 using UnityEngine;
+using DG.Tweening;
 
 public class HinoxScript : MonoBehaviour
 {
-    public int health = 150;
+    public float health = 150;
     private Animator anim;
     //public bool Phase2 = false;
     private int treeIndex = 0;
@@ -16,16 +17,19 @@ public class HinoxScript : MonoBehaviour
     public GameObject[] Trees;
     private NavMeshAgent agent;
     public GameObject projectile;
+    private GameObject player;
+    [SerializeField] float offsetY;
     // Start is called before the first frame update
     void Start()
     {
+        player = GameObject.FindGameObjectWithTag("Player");
         agent = GetComponent<NavMeshAgent>();
         anim = GetComponent<Animator>();
         anim.SetBool("Phase1idle",true);
         TreeInHand.SetActive(false);
         //Phase2 = false;
         treeIndex = 0;
-        TakeDamage(60);  
+        //TakeDamage(60);  
     }
 
     // Update is called once per frame
@@ -36,10 +40,17 @@ public class HinoxScript : MonoBehaviour
 
     public void Shoot(){
         TreeInHand.SetActive(false);
-        Rigidbody rb = Instantiate(projectile,TreeInHand.transform.position,Quaternion.identity).GetComponent<Rigidbody>();
+        
+        
+        GameObject thrownTree = Instantiate(projectile,TreeInHand.transform.position,Quaternion.identity);
+        thrownTree.transform.DOMove(player.transform.position + Vector3.up * offsetY, 1);
+
+        /*
         rb.AddForce(transform.forward*15f,ForceMode.Impulse);
         rb.AddForce(transform.right*7,ForceMode.Impulse);
         rb.AddForce(transform.up*5,ForceMode.Impulse);
+        */
+        
     }
 
     public void GotoNextTree(){
@@ -66,7 +77,7 @@ public class HinoxScript : MonoBehaviour
         //     TreeGrabbed.SetActive(false);
     }
 
-    public void TakeDamage(int damage){
+    public void TakeDamage(float damage){
         health -= damage;
         if(health <= 0){
             anim.SetTrigger("Die");
@@ -78,5 +89,14 @@ public class HinoxScript : MonoBehaviour
             anim.SetBool("Phase1idle",false);
             anim.SetBool("Phase2Attack",true);
         }
+    }
+
+    public void StartDealDamage()
+    {
+            GetComponentInChildren<HinoxKickPoint>().StartDealDamage();
+    }
+    public void EndDealDamage()
+    {
+            GetComponentInChildren<HinoxKickPoint>().EndDealDamage();
     }
 }
