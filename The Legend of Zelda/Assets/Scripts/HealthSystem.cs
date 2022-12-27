@@ -47,7 +47,7 @@ public class HealthSystem : MonoBehaviour
     {
         if ( other.tag == "Camp_1")
         {
-            Debug.Log("Entered the camp");
+            //Debug.Log("Entered the camp");
             // if Player enter the camp
             // active chasing for all enemies in the camp
             foreach (Transform child in other.transform)
@@ -99,7 +99,7 @@ public class HealthSystem : MonoBehaviour
 
                     healthPoints = healthPoints - Damage;
                     animator.SetTrigger("Damage");
-                    Debug.Log("Health Points" + healthPoints);
+                    //Debug.Log("Health Points" + healthPoints);
                     UpdateHearts();
                 }
                 else

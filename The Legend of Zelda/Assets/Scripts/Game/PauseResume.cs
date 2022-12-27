@@ -35,7 +35,7 @@ public class PauseResume : MonoBehaviour
         audios = Array.FindAll(audios, audio=>audio.isPlaying == true);
         foreach (AudioSource audio in audios){
             audio.Pause();
-            Debug.Log("xD");
+            //Debug.Log("xD");
         }
     }
     public void resumeGame(){
@@ -57,7 +57,7 @@ public class PauseResume : MonoBehaviour
     public void RestartLevel()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
-        Debug.Log("Restarted");
+        //Debug.Log("Restarted");
         Time.timeScale = 1;
     }
 }

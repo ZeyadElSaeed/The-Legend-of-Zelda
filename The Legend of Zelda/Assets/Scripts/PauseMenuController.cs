@@ -25,7 +25,7 @@ public class PauseMenuController : MonoBehaviour
 
     public void Resume()
     {
-        Debug.Log("Game is Resumed");
+        //Debug.Log("Game is Resumed");
         PauseMenuUI.SetActive(false);
         Time.timeScale = 1f;
         GameIsPaused = false;
@@ -33,7 +33,7 @@ public class PauseMenuController : MonoBehaviour
     }
     void Pause()
     {
-        Debug.Log("Game is Paused");
+        //Debug.Log("Game is Paused");
         PauseMenuUI.SetActive(true);
         Time.timeScale = 0f;
         GameIsPaused = true;
@@ -41,19 +41,19 @@ public class PauseMenuController : MonoBehaviour
 
     public void GoToMainMenu()
     {
-        Debug.Log("To Main Menu");
+        //Debug.Log("To Main Menu");
         SceneManager.LoadScene("MainMenu");
     }
 
     public void QuitGame()
     {
-        Debug.Log("Quit Game");
+        //Debug.Log("Quit Game");
         Application.Quit();
     }
 
     public void RestartLevel()
     {
-        Debug.Log("Reload Current Scene");
+        //Debug.Log("Reload Current Scene");
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

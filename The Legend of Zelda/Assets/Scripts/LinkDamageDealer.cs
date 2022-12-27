@@ -26,10 +26,10 @@ public class LinkDamageDealer : MonoBehaviour
             int layerMask = 1 << 9;
             if (Physics.Raycast(transform.position, -transform.up, out hit, weaponLength, layerMask))
             {
-                Debug.Log("Link try to Deal Damage to Enemy");
+                //Debug.Log("Link try to Deal Damage to Enemy");
                 if (hit.transform.TryGetComponent(out Enemy enemy) && !hasDealtDamage.Contains(hit.transform.gameObject))
                 {
-                    Debug.Log("Link Dealt Damage to Enemy");
+                    //Debug.Log("Link Dealt Damage to Enemy");
                     enemy.TakeDamage(weaponDamage);
                     hasDealtDamage.Add(hit.transform.gameObject);
                 }
@@ -41,7 +41,7 @@ public class LinkDamageDealer : MonoBehaviour
 
                 if (hit.transform.TryGetComponent(out HinoxScript Hinox) && !hasDealtDamage.Contains(hit.transform.gameObject))
                 {
-                    Debug.Log("Link try to Hit Hinox");
+                    //Debug.Log("Link try to Hit Hinox");
                     Hinox.TakeDamage( weaponDamage );
                     hasDealtDamage.Add(hit.transform.gameObject);
                 }

@@ -96,7 +96,7 @@ public class LinkMovement : MonoBehaviour
 
         if (!isGrounded)
         {
-            Debug.Log(velocity.y);
+            //Debug.Log(velocity.y);
             if (isGliding)
             {
                 unitsCount = 0;

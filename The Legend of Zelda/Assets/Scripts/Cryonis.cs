@@ -19,7 +19,7 @@ public class Cryonis : MonoBehaviour
     
     private void Start()
     {
-        CryonisCanvas.SetActive(true);
+        CryonisCanvas.SetActive(false);
     }
 
 

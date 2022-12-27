@@ -32,7 +32,7 @@ public class MusicEffects : MonoBehaviour
         // 6.4 177.7
         MusicLevel = MusicHandle.GetComponent<RectTransform>().anchorMax.x;
         EffectsLevel = EffectsHandle.GetComponent<RectTransform>().anchorMax.x;
-        Debug.Log("Music Level" + MusicLevel);
-        Debug.Log("Effects Level" + EffectsLevel);
+        //Debug.Log("Music Level" + MusicLevel);
+        //Debug.Log("Effects Level" + EffectsLevel);
     }
 }
