@@ -14,15 +14,14 @@ public class Cryonis : MonoBehaviour
     [SerializeField] GameObject CryonisCanvas;
 
     private Transform _selection;
-    
-    
 
 
-    
+   
+
 
     private void Start()
     {
-        CryonisCanvas.SetActive(true);
+        CryonisCanvas.SetActive(false);
     }
 
 
