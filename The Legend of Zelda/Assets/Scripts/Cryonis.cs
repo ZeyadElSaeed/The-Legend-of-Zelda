@@ -22,7 +22,7 @@ public class Cryonis : MonoBehaviour
 
     private void Start()
     {
-        CryonisCanvas.SetActive(false);
+        CryonisCanvas.SetActive(true);
     }
 
 
@@ -68,7 +68,10 @@ public class Cryonis : MonoBehaviour
             {
                 Vector3 offset = new Vector3(0, -IceCubeHeight, 0);
                 GameObject currentIceCube =  Instantiate( IceCube , hit.point, Quaternion.identity);
-                currentIceCube.transform.localScale = new Vector3(1, IceCubeHeight, 1);
+                currentIceCube.transform.DOScale(new Vector3(IceCubeHeight / 2, IceCubeHeight, IceCubeHeight / 2), 1);
+                currentIceCube.transform.DOMoveY(IceCubeHeight/2, 1);
+
+                //currentIceCube.transform.localScale = new Vector3(1, IceCubeHeight, 1);
                 //currentIceCube.transform.DOMoveY(IceCubeHeight, 2);
             }
 
