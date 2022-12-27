@@ -7,11 +7,13 @@ public class SwitchingAbilities : MonoBehaviour
 {
     ThrowBomb bomb;
     StasisCharacter stasis;
+    Cryonis cryonis;
 
     [Header("Abilities Images")]
     [SerializeField] private Image runeImage;
     [SerializeField] private Sprite bombImage;
     [SerializeField] private Sprite stasisImage;
+    [SerializeField] private Sprite cryoinsImage;
 
 
 
@@ -21,10 +23,12 @@ public class SwitchingAbilities : MonoBehaviour
     {
         bomb = GetComponent<ThrowBomb>();
         stasis = GetComponent<StasisCharacter>();
+        cryonis = GetComponent<Cryonis>();
 
 
         bomb.enabled = true;
         stasis.enabled = false;
+        cryonis.enabled = false;
 
         runeImage.sprite = bombImage;
 
@@ -37,14 +41,25 @@ public class SwitchingAbilities : MonoBehaviour
             if (Input.GetKeyDown("1"))
             {
                 bomb.enabled = true;
+                cryonis.enabled = false;
                 stasis.enabled = false;
 
                 runeImage.sprite = bombImage;
             }
-            
+
+            if (Input.GetKeyDown("2"))
+            {
+                bomb.enabled = false;
+                cryonis.enabled = true;
+                stasis.enabled = false;
+
+                runeImage.sprite = cryoinsImage;
+            }
+
             if (Input.GetKeyDown("4"))
             {
                 bomb.enabled = false;
+                cryonis.enabled = false;
                 stasis.enabled = true;
 
                 runeImage.sprite = stasisImage;
