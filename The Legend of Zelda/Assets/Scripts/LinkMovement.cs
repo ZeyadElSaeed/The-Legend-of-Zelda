@@ -48,6 +48,7 @@ public class LinkMovement : MonoBehaviour
     private float unitsCount;
     private bool isGliding;
     private bool isDead;
+    private bool isAttacking;
 
     private AudioManager audioManager;
 
@@ -66,13 +67,20 @@ public class LinkMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!GetComponent<GameManagerBridge>().paused() && !isDead)
+        if (!isAttacking) 
         {
-            Move();
-            WallCheck();
-            StateMachine();
+            if (!GetComponent<GameManagerBridge>().paused() && !isDead)
+            {
+                Move();
+                WallCheck();
+                StateMachine();
+            }
+            else if (isDead)
+            {
+                controller.Move(Vector3.zero);
+            }
         }
-        else if (isDead)
+        else
         {
             controller.Move(Vector3.zero);
         }
@@ -336,5 +344,15 @@ public class LinkMovement : MonoBehaviour
         climbing = false;
         anim.speed = 1;
 
+    }
+
+    private void StartAttacking()
+    {
+        controller.Move(Vector3.zero);
+        isAttacking = true;
+    }
+    private void EndAttacking()
+    {
+        isAttacking = false;
     }
 }
