@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.17301786, g: 0.21623552, b: 0.29822552, a: 1}
+  m_IndirectSpecularColor: {r: 0.17301741, g: 0.21623503, b: 0.29822406, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -8385,6 +8385,7 @@ MonoBehaviour:
   throwKey: 113
   throwForce: 20
   throwUpwardForce: 0
+  grenade: {fileID: 0}
 --- !u!4 &1909657112141920514
 Transform:
   m_ObjectHideFlags: 0
@@ -8637,6 +8638,7 @@ MonoBehaviour:
   IceCube: {fileID: 7764185953262388100, guid: a6d433e57a62fec4589f2b2b7237cfbe, type: 3}
   IceCubeHeight: 8
   CryonisCanvas: {fileID: 86284654}
+  currentIceCube: {fileID: 0}
 --- !u!114 &1909657112141920548
 MonoBehaviour:
   m_ObjectHideFlags: 0
