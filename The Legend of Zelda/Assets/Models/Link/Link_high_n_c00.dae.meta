@@ -3,7 +3,22 @@ guid: 5229ba8151583454ba11b18a620b38b1
 ModelImporter:
   serializedVersion: 21300
   internalIDToNameTable: []
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: body_mt_ref_mat
+    second: {fileID: 2100000, guid: 58445735a3a77af43840c429f67b662f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: eye_mt_mat
+    second: {fileID: 2100000, guid: 1537238baf78bc940afb8a28d8ba032f, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: mouth_mt_mat
+    second: {fileID: 2100000, guid: 1e72e263d24e18145aa8883941807981, type: 2}
   materials:
     materialImportMode: 2
     materialName: 0
@@ -262,82 +277,12 @@ ModelImporter:
       position: {x: 0, y: 0, z: 0}
       rotation: {x: 0, y: 0, z: 0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: link_ken_VIS_O_OBJ_0_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: link_kenb_VIS_O_OBJ_1_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: link_tate_VIS_O_OBJ_2_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: link_tateb_VIS_O_OBJ_3_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
     - name: body_mh_4_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: body_mh_4_1_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Blink_mh_5_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_EyeD_mh_6_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_EyeL_mh_7_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_EyeR_mh_8_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_EyeU_mh_9_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Eye_HeavyAttack_mh_10_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Eye_Ottotto_mh_11_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Eye_furafura_mh_12_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Eye_mh_13_0_node
-      parentName: Link_high_n_c00(Clone)
-      position: {x: -0, y: 0, z: 0}
-      rotation: {x: 0, y: -0, z: -0, w: 1}
-      scale: {x: 1, y: 1, z: 1}
-    - name: Link_Harfblink_mh_14_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
@@ -372,22 +317,62 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Rhand_1_VIS_O_OBJ_21_0_node
+    - name: Link_Blink_mh_5_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Rhand_2_VIS_O_OBJ_22_0_node
+    - name: Link_Eye_furafura_mh_12_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Rhand_3_VIS_O_OBJ_23_0_node
+    - name: Link_Eye_HeavyAttack_mh_10_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
-    - name: Rhand_4_VIS_O_OBJ_24_0_node
+    - name: Link_Eye_mh_13_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_Eye_Ottotto_mh_11_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_EyeD_mh_6_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_EyeL_mh_7_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_EyeR_mh_8_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_EyeU_mh_9_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Link_Harfblink_mh_14_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: link_ken_VIS_O_OBJ_0_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: -0.561, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: link_kenb_VIS_O_OBJ_1_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
@@ -422,6 +407,16 @@ ModelImporter:
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
+    - name: link_tate_VIS_O_OBJ_2_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: link_tateb_VIS_O_OBJ_3_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     - name: mouth_damage_mh_31_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
@@ -438,6 +433,26 @@ ModelImporter:
       rotation: {x: 0, y: -0, z: -0, w: 1}
       scale: {x: 1, y: 1, z: 1}
     - name: mouth_open_mh_34_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rhand_1_VIS_O_OBJ_21_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rhand_2_VIS_O_OBJ_22_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rhand_3_VIS_O_OBJ_23_0_node
+      parentName: Link_high_n_c00(Clone)
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Rhand_4_VIS_O_OBJ_24_0_node
       parentName: Link_high_n_c00(Clone)
       position: {x: -0, y: 0, z: 0}
       rotation: {x: 0, y: -0, z: -0, w: 1}
@@ -510,7 +525,7 @@ ModelImporter:
     - name: LShoulderN
       parentName: BustN
       position: {x: -0.24719302, y: -0.00681518, z: 0.046360005}
-      rotation: {x: 0.0069085974, y: 0.69412583, z: -0.018276973, w: 0.7195884}
+      rotation: {x: 0.006908598, y: 0.6941259, z: -0.018276975, w: 0.71958846}
       scale: {x: 0.9999916, y: 0.99999624, z: 0.9999998}
     - name: LShoulderJ
       parentName: LShoulderN
@@ -525,7 +540,7 @@ ModelImporter:
     - name: LHandN
       parentName: LArmJ
       position: {x: -0.295585, y: 0, z: 0}
-      rotation: {x: 0.7067764, y: 0.018951, z: -0.022830222, w: 0.70681465}
+      rotation: {x: 0.7067763, y: 0.018951, z: -0.02283022, w: 0.70681465}
       scale: {x: 1.0000043, y: 1.0000135, z: 1.000013}
     - name: KenJ
       parentName: LHandN
@@ -535,13 +550,133 @@ ModelImporter:
     - name: KenModelN
       parentName: KenJ
       position: {x: -0.181573, y: -0.00014152, z: 0.00116852}
-      rotation: {x: -0.000002211607, y: -0.0000068843347, z: -0.0044305264, w: 0.99999017}
+      rotation: {x: -0.0000022116071, y: -0.000006884335, z: -0.004430527, w: 0.9999902}
       scale: {x: 1.0000097, y: 1.0000159, z: 1.0000057}
     - name: LHaveN
       parentName: LHandN
       position: {x: -0.116505004, y: 0.030243002, z: -0.00273653}
       rotation: {x: 0.49999872, y: 0.50000316, z: -0.5000013, w: -0.4999969}
       scale: {x: 1.0000026, y: 1.000004, z: 1.0000005}
+    - name: BowAndArrow
+      parentName: LHandN
+      position: {x: -0.6, y: 0.96, z: 0.8}
+      rotation: {x: 0, y: -0.7071068, z: 0, w: 0.7071068}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ZoomTransform
+      parentName: BowAndArrow
+      position: {x: 0, y: 0, z: -0.638}
+      rotation: {x: -0.04473425, y: 0.025165921, z: 0.33343434, w: 0.94137514}
+      scale: {x: 1, y: 11, z: 1}
+    - name: BowModel
+      parentName: BowAndArrow
+      position: {x: -0.771, y: -0.93, z: -0.655}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ArrowSketchFab
+      parentName: BowModel
+      position: {x: 0, y: 0.024, z: -0.095}
+      rotation: {x: -0.5, y: -0.5, z: -0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ArrowWood
+      parentName: ArrowSketchFab
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8, y: 0.8, z: 0.8}
+    - name: Particles_Prepare
+      parentName: ArrowWood
+      position: {x: 0.659, y: 0.036250055, z: 0.027}
+      rotation: {x: 0.5, y: 0.5, z: 0.5, w: 0.5}
+      scale: {x: 1.25, y: 1.25, z: 1.25}
+    - name: Particle System Force Field
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lines
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Spiral
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: 0.000056266763, y: -0.000093698465, z: 0.08101502, w: -0.99671286}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Sphere
+      parentName: Spiral
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 0.26682, y: 0.26682, z: 0.26682}
+    - name: Spiral Copy
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: -0.00006806104, y: -0.00008188931, z: -0.91017187, w: -0.41423094}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Center
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Circle
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Flash
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: -0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Center_After
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Lines_After
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Circle_After
+      parentName: Particles_Prepare
+      position: {x: 0, y: 0, z: 0.004}
+      rotation: {x: 0, y: 0, z: 0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: ArrowTip
+      parentName: ArrowSketchFab
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 0.8, y: 0.8, z: 0.8}
+    - name: SketchfabModel
+      parentName: BowModel
+      position: {x: 0, y: 0, z: 0.14763302}
+      rotation: {x: 0.5, y: -0.5, z: 0.5, w: 0.5}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group3793
+      parentName: SketchfabModel
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group3796
+      parentName: SketchfabModel
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group3799
+      parentName: SketchfabModel
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group24031
+      parentName: SketchfabModel
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
+    - name: Group53094
+      parentName: SketchfabModel
+      position: {x: -0, y: 0, z: 0}
+      rotation: {x: 0, y: -0, z: -0, w: 1}
+      scale: {x: 1, y: 1, z: 1}
     - name: NeckN
       parentName: BustN
       position: {x: -0.28811502, y: 0, z: 0.000000121966}
@@ -565,7 +700,7 @@ ModelImporter:
     - name: RShoulderN
       parentName: BustN
       position: {x: -0.24719602, y: -0.0068150503, z: -0.046360005}
-      rotation: {x: 0.006906297, y: 0.6941197, z: 0.018279212, w: -0.7195943}
+      rotation: {x: 0.0069062975, y: 0.69411975, z: 0.018279213, w: -0.71959436}
       scale: {x: 0.99999195, y: 0.99999624, z: 0.9999998}
     - name: RShoulderJ
       parentName: RShoulderN

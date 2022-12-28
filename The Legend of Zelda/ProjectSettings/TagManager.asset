@@ -6,6 +6,19 @@ TagManager:
   tags:
   - Climable
   - Camp_1
+<<<<<<< HEAD
+=======
+  - Bokoblin
+  - Moblin
+  - Fragile
+  - MawJLaygo
+  - StasisObject
+  - Tree
+  - Eye
+  - WayPoints
+  - Hinox
+  - HinoxKickPoint
+>>>>>>> Team-link-dev
   layers:
   - Default
   - TransparentFX
@@ -16,8 +29,13 @@ TagManager:
   - Climbable
   - Ground
   - Player
+<<<<<<< HEAD
   - 
   - 
+=======
+  - Enemy
+  - IceCube
+>>>>>>> Team-link-dev
   - 
   - 
   - 

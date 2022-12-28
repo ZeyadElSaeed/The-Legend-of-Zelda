@@ -12,7 +12,11 @@ public class LinkMovement : MonoBehaviour
     private Vector3 moveDirectionX;
     [SerializeField] private Vector3 velocity;
     [Header("Jumping")]
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> Team-link-dev
     [SerializeField] private float groundCheckDistance;
     [SerializeField] private LayerMask walkOnTopMask;
     [SerializeField] private float gravity;
@@ -22,7 +26,11 @@ public class LinkMovement : MonoBehaviour
     public float climbSpeed;
     public float maxClimbTime;
 
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> Team-link-dev
     [Header("Detection")]
     [SerializeField] private bool isGrounded;
     [SerializeField] private bool climbing;
@@ -36,8 +44,11 @@ public class LinkMovement : MonoBehaviour
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> Team-link-dev
     [Header("References")]
     [SerializeField] private Transform orientation;
     [SerializeField] private LayerMask climbMask;
@@ -46,8 +57,18 @@ public class LinkMovement : MonoBehaviour
     private Animator anim;
 
 
+<<<<<<< HEAD
     
 
+=======
+    private float initialPosition;
+    private float unitsCount;
+    private bool isGliding;
+    private bool isDead;
+    private bool isAttacking;
+
+    private AudioManager audioManager;
+>>>>>>> Team-link-dev
 
     // Start is called before the first frame update
     void Start()
@@ -55,20 +76,53 @@ public class LinkMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody>();
+<<<<<<< HEAD
     }
+=======
+        initialPosition = transform.position.y;
+        isGliding = false;
+        isDead = false;
+        audioManager = FindObjectOfType<AudioManager>();
+        isAttacking = false;
+}
+>>>>>>> Team-link-dev
 
     // Update is called once per frame
     void Update()
     {
+<<<<<<< HEAD
         Move();
         WallCheck();
         StateMachine();
+=======
+        if ( !isAttacking)
+        {
+            if (!GetComponent<GameManagerBridge>().paused() && !isDead)
+            {
+                Move();
+                WallCheck();
+                StateMachine();
+            }
+            else if (isDead)
+            {
+                controller.Move(Vector3.zero);
+            }
+        }
+        else
+        {
+            controller.Move(Vector3.zero);
+        }
+>>>>>>> Team-link-dev
     }
 
     private void Move()
     {
         isGrounded = Physics.CheckSphere(transform.position, groundCheckDistance, walkOnTopMask);
+<<<<<<< HEAD
         if(isGrounded && velocity.y < 0)
+=======
+        if (isGrounded && velocity.y < 0)
+>>>>>>> Team-link-dev
         {
             velocity.y = -2f;
         }
@@ -81,14 +135,50 @@ public class LinkMovement : MonoBehaviour
         moveDirectionX = new Vector3(moveX, 0, 0);
         moveDirectionX = transform.TransformDirection(moveDirectionX);
 
+<<<<<<< HEAD
         if (isGrounded)
         {            
             if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
             {
+=======
+        if (!isGrounded)
+        {
+            //Debug.Log(velocity.y);
+            if (isGliding)
+            {
+                unitsCount = 0;
+                initialPosition = transform.position.y;
+            }
+            else
+            {
+                unitsCount = unitsCount + (initialPosition - transform.position.y);
+                //Debug.Log(unitsCount);
+                initialPosition = transform.position.y;
+            }
+        }
+        
+        if (!isDead &&  unitsCount >= 10 && isGrounded)
+        {
+            this.GetComponent<HealthSystem>().TakeDamage(100);
+            if(this.GetComponent<HealthSystem>().healthPoints <=0)
+                isDead = true;
+            unitsCount = 0;
+        }
+
+        if (isGrounded)
+        {
+            if (moveDirection != Vector3.zero && !Input.GetKey("left shift"))
+            {
+                audioManager.Play("Walking");
+>>>>>>> Team-link-dev
                 Walk();
             }
             else if (moveDirection != Vector3.zero && Input.GetKey("left shift"))
             {
+<<<<<<< HEAD
+=======
+                audioManager.Play("Sprint");
+>>>>>>> Team-link-dev
                 Sprint();
             }
             else if (moveDirection == Vector3.zero)
@@ -97,10 +187,18 @@ public class LinkMovement : MonoBehaviour
             }
             if (moveDirectionX != Vector3.zero && !Input.GetKey("left shift"))
             {
+<<<<<<< HEAD
+=======
+                audioManager.Play("Walking");
+>>>>>>> Team-link-dev
                 Walk();
             }
             else if (moveDirectionX != Vector3.zero && Input.GetKey("left shift"))
             {
+<<<<<<< HEAD
+=======
+                audioManager.Play("Sprint");
+>>>>>>> Team-link-dev
                 Sprint();
             }
             else if (moveDirectionX == Vector3.zero)
@@ -113,18 +211,39 @@ public class LinkMovement : MonoBehaviour
 
             if (Input.GetKeyDown("space"))
             {
+<<<<<<< HEAD
                 Jump();
             }
         }
         if ( !isGrounded && Input.GetKey("space") && velocity.y < 0f)
         {
+=======
+                audioManager.Play("Jump");
+                Jump();
+                unitsCount = 0;
+            }
+        }
+        else
+        {
+            moveDirection *= moveSpeed;
+            moveDirectionX *= moveSpeed;
+        }
+        if (!isGrounded && Input.GetKey("space") && velocity.y < 0f)
+        {
+            audioManager.Play("Glide");
+            velocity.y = -2;
+>>>>>>> Team-link-dev
             Glide();
         }
         else
         {
             NoGlide();
         }
+<<<<<<< HEAD
         
+=======
+
+>>>>>>> Team-link-dev
         if (!wallFront || !attached || wallLookAngle >= maxWallLookAngle)
         {
             velocity.y += gravity * Time.deltaTime;
@@ -132,12 +251,30 @@ public class LinkMovement : MonoBehaviour
         }
         else
         {
+<<<<<<< HEAD
             if (climbing)
                 moveDirection = new Vector3(moveX * 2, climbSpeed, 0);
             else
                 moveDirection = new Vector3(moveX * 2, 0, 0);
             controller.Move((moveDirection) * Time.deltaTime);
             Idle();
+=======
+
+            float climbX = Input.GetAxis("Horizontal");
+            if (climbing)
+            {
+
+                moveDirection = new Vector3(climbX * 2, climbSpeed, 0);
+                moveDirection = transform.TransformDirection(moveDirection);
+            }
+            else
+                moveDirection = new Vector3(climbX * 2, 0, 0);
+            moveDirection = transform.TransformDirection(moveDirection);
+
+            controller.Move((moveDirection) * Time.deltaTime);
+            Idle();
+            unitsCount = 0;
+>>>>>>> Team-link-dev
         }
 
 
@@ -172,15 +309,29 @@ public class LinkMovement : MonoBehaviour
         velocity.y = Mathf.Sqrt(jumpHeight * -2 * gravity);
         anim.SetTrigger("Jump");
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> Team-link-dev
     private void Glide()
     {
         gravity = -1;
         anim.SetBool("Gliding", true);
+<<<<<<< HEAD
+=======
+        isGliding = true;
+        unitsCount = 0;
+>>>>>>> Team-link-dev
     }
     private void NoGlide()
     {
         anim.SetBool("Gliding", false);
         gravity = -9.81f;
+<<<<<<< HEAD
+=======
+        isGliding = false;
+>>>>>>> Team-link-dev
     }
     private void StateMachine()
     {
@@ -212,7 +363,11 @@ public class LinkMovement : MonoBehaviour
         }
         if (attached && Input.GetKeyUp(KeyCode.W))
         {
+<<<<<<< HEAD
             
+=======
+
+>>>>>>> Team-link-dev
             climbing = false;
             climbSpeed = 0;
         }
@@ -243,6 +398,10 @@ public class LinkMovement : MonoBehaviour
     {
         wallFront = Physics.SphereCast(transform.position, sphereCastRadius, orientation.forward, out frontWallHit, detectionLength, climbMask);
         wallLookAngle = Vector3.Angle(orientation.forward, -frontWallHit.normal);
+<<<<<<< HEAD
+=======
+        //Debug.Log("Wall look angle"+ wallLookAngle);
+>>>>>>> Team-link-dev
     }
 
 
@@ -257,7 +416,11 @@ public class LinkMovement : MonoBehaviour
     {
         rb.velocity = new Vector3(rb.velocity.x, climbSpeed, rb.velocity.z);
         anim.SetFloat("ClimbUpDirection", climbSpeed);
+<<<<<<< HEAD
         int climbDirection = (climbSpeed == 0 ? 0 :1);
+=======
+        int climbDirection = (climbSpeed == 0 ? 0 : 1);
+>>>>>>> Team-link-dev
 
         anim.speed = climbDirection;
         /// idea - sound effect
@@ -272,4 +435,17 @@ public class LinkMovement : MonoBehaviour
         anim.speed = 1;
 
     }
+<<<<<<< HEAD
+=======
+
+    private void StartAttacking()
+    {
+        isAttacking = true;
+    }
+
+    private void EndAttacking()
+    {
+        isAttacking = false;
+    }
+>>>>>>> Team-link-dev
 }
