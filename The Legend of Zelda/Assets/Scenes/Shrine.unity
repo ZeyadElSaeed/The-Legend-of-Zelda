@@ -13508,6 +13508,10 @@ PrefabInstance:
       propertyPath: cryoinsImage
       value: 
       objectReference: {fileID: 21300000, guid: 012042cac9a51a24f893bb63406d5015, type: 3}
+    - target: {fileID: 4953233538829077169, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     - target: {fileID: 4953233538829077170, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: bowCanvas
       value: 
