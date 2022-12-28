@@ -14,7 +14,7 @@ public class grenade : MonoBehaviour
     public KeyCode detonateKey = KeyCode.G;
 
 
-    public AudioSource ExplosionAudio;
+    // public AudioSource ExplosionAudio;
     // Start is called before the first frame update
     void Start()
     {
@@ -35,7 +35,8 @@ public class grenade : MonoBehaviour
     }
     public void Explode() {
         GameObject currentExplosion = Instantiate(explosionEffect,transform.position,transform.rotation);
-        Destroy(gameObject);
+        AudioManager.PlayEffect(GetComponent<AudioSource>());
+        Destroy(gameObject, 1);
         Collider [] colliders = Physics.OverlapSphere(transform.position, radius);
         foreach (Collider bombed in colliders){
             if(bombed.CompareTag("Fragile")){
