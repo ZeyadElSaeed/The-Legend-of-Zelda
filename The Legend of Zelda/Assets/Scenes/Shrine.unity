@@ -13449,6 +13449,14 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 503862329}
     - target: {fileID: 4953233538829077135, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+      propertyPath: runSpeed
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953233538829077135, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
+      propertyPath: walkSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4953233538829077135, guid: 2a73ff975da818c4d892a6605d17edc7, type: 3}
       propertyPath: climbMask.m_Bits
       value: 1088
       objectReference: {fileID: 0}
