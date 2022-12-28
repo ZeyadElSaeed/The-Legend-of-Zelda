@@ -49,9 +49,11 @@ public class PauseResume : MonoBehaviour
     }
     public void goToMainMenu(){
         Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.None;
         SceneManager.LoadScene("MainMenu");
     }
     public void quitGame(){
+        Cursor.lockState = CursorLockMode.None;
         Application.Quit();
     }
     public void RestartLevel()
