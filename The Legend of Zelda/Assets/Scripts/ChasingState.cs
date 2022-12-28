@@ -19,7 +19,7 @@ public class ChasingState : StateMachineBehaviour
         agent = animator.GetComponent<NavMeshAgent>();
         TreeInHand = animator.GetComponent<HinoxScript>().TreeInHand;
         TreeToGrab = animator.GetComponent<HinoxScript>().TreeGrabbed;
-        agent.speed = 4.5f;
+        agent.speed = 6f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -29,14 +29,14 @@ public class ChasingState : StateMachineBehaviour
         if(animator.GetBool("Phase2Attack") == false){
             agent.SetDestination(player.position);
             float distance = Vector3.Distance(player.position, animator.transform.position);
-            if(distance > 20 && !isHit)
+            if(distance > 30 && !isHit)
                 animator.SetBool("isChasing",false);
             if(distance < 2.5f)
                 animator.SetBool("isKicking",true);
         }else{
             agent.SetDestination(TreeToGrab.transform.position);
             float distance = Vector3.Distance(TreeToGrab.transform.position, animator.transform.position);
-            if(distance <= 0.2f ){
+            if(distance <= 0.2f){
                 animator.SetBool("GrabbedBool",true);
                 TreeInHand.SetActive(true);
                 TreeToGrab.SetActive(false);

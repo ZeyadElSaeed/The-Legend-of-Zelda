@@ -1,16 +1,20 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.AI;
+using UnityEngine.UI;
 using UnityEngine;
 using DG.Tweening;
 using UnityEngine.SceneManagement;
+using TMPro;
+
 public class HinoxScript : MonoBehaviour
 {
     public float health = 150;
     private Animator anim;
     //public bool Phase2 = false;
     private int treeIndex = 0;
-    // public int Maxtrees = 6;
+    public Slider HealthBar;
+    public TextMeshProUGUI HealthValue;
     public GameObject Eye;
     public GameObject TreeInHand;
     public GameObject TreeGrabbed;
@@ -20,6 +24,7 @@ public class HinoxScript : MonoBehaviour
     private GameObject player;
     [SerializeField] float offsetY;
     public bool isHit;
+    private bool isDead;
     // Start is called before the first frame update
     void Start()
     {
@@ -32,11 +37,19 @@ public class HinoxScript : MonoBehaviour
         treeIndex = 0;
         //TakeDamage(60);
         isHit = false;
+        isDead = false;
     }
 
     // Update is called once per frame
     void Update()
     {
+        HealthBar.value = health;
+        HealthValue.text = "Hinox "+health;
+        if(health<0)
+            HealthValue.text = "Hinox 0";
+
+
+
         //TakeDamage(150);
     }
 
@@ -62,7 +75,7 @@ public class HinoxScript : MonoBehaviour
         
         //Debug.Log(treeIndex);
 
-        if(treeIndex >= 6){
+        if(treeIndex >= 7){
             anim.SetBool("Phase2Attack",false);
             return;
         }
@@ -85,14 +98,15 @@ public class HinoxScript : MonoBehaviour
         isHit = true;
         if (health <= 0){
             anim.SetTrigger("Die");
+            isDead = true;
             GetComponent<Collider>().enabled = false;
             StartCoroutine(dieWaitTime());
-        }
-        if(health <= 100 && treeIndex < 6){
+        }if(health <= 100 && treeIndex < 7){
             //Phase2 = true;
             anim.SetBool("Phase1idle",false);
             anim.SetBool("Phase2Attack",true);
-        }
+        }if(!anim.GetBool("Phase2Attack")&&!isDead)
+            anim.SetTrigger("Hit");
     }
     IEnumerator dieWaitTime()
     {

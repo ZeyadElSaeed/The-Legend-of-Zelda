@@ -12,7 +12,7 @@ public class WalkWithTree : StateMachineBehaviour
     {
        player = GameObject.FindGameObjectWithTag("Player").transform;
        agent = animator.GetComponent<NavMeshAgent>();
-       agent.speed = 2.5f;
+       agent.speed = 4.5f;
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
@@ -23,7 +23,7 @@ public class WalkWithTree : StateMachineBehaviour
 
         float distance = Vector3.Distance(player.position, animator.transform.position);
        
-        if(distance <= 8)
+        if(distance <= 15)
             animator.SetBool("ThrowBool",true);
     }
 
