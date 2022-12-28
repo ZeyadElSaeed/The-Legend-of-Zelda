@@ -2348,7 +2348,7 @@ MonoBehaviour:
   HealthValue: {fileID: 1134169349}
   Eye: {fileID: 205359407}
   TreeInHand: {fileID: 2203901566172003883}
-  TreeGrabbed: {fileID: 756806868}
+  TreeGrabbed: {fileID: 154557891}
   Trees:
   - {fileID: 756806868}
   - {fileID: 1903494084}
@@ -6652,9 +6652,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1372282335}
   - {fileID: 8402648662587301385}
   - {fileID: 3485347806454092023}
+  - {fileID: 1372282335}
   - {fileID: 427672113921005557}
   - {fileID: 3226617218540681241}
   - {fileID: 3085149019569301923}
@@ -8193,7 +8193,7 @@ RectTransform:
   - {fileID: 3630231379495525065}
   - {fileID: 8271061238499652996}
   m_Father: {fileID: 3085149017861888054}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
@@ -18602,7 +18602,7 @@ RectTransform:
   m_Children:
   - {fileID: 1918404094670938548}
   m_Father: {fileID: 3085149017861888054}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}

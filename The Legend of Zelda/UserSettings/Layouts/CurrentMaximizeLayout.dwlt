@@ -224,9 +224,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: e81c0200
-      m_LastClickedID: 0
-      m_ExpandedIDs: 940efbff2e32fbffa237fbffaa3bfbff3a53ffff1455ffff1443010022450100c2140200fe1502002c180200601b0200741c0200e81c020094200200
+      m_SelectedIDs: 2e1c0200
+      m_LastClickedID: 138286
+      m_ExpandedIDs: 940efbff2e32fbffa237fbffaa3bfbff3a53ffff1455ffff1443010022450100c2140200fe1502002c180200601b02003e1c02006a1c0200741c0200e81c0200061d0200d01d0200181e0200ea1f0200942002000a210200282102002c210200
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -242,7 +242,7 @@ MonoBehaviour:
         m_IsRenaming: 0
         m_OriginalEventType: 11
         m_IsRenamingFilename: 0
-        m_ClientGUIView: {fileID: 0}
+        m_ClientGUIView: {fileID: 5}
       m_SearchString: 
     m_ExpandedScenes: []
     m_CurrenRootInstanceID: 0
@@ -503,9 +503,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 350, y: 305.09265, z: -0.000061035156}
+    m_Target: {x: 71.81649, y: 299.59567, z: 80.57049}
     speed: 2
-    m_Value: {x: 350, y: 305.09265, z: -0.000061035156}
+    m_Value: {x: 71.81649, y: 299.59567, z: 80.57049}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -552,17 +552,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0, y: 0, z: 0, w: 1}
+    m_Target: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
     speed: 2
-    m_Value: {x: 0, y: 0, z: 0, w: 1}
+    m_Value: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_Size:
-    m_Target: 198.80042
+    m_Target: 25.505133
     speed: 2
-    m_Value: 198.80042
+    m_Value: 25.505133
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 1
     m_SpeedNormalized: 0.5
@@ -1021,4 +1021,4 @@ MonoBehaviour:
     m_SaveData: []
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: 138472
+  m_LastSelectedObjectID: 138286
