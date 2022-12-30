@@ -18,7 +18,7 @@ public class SettingController : MonoBehaviour
     public void GoToAssetsCredits()
     {
         //Debug.Log("to assets credits");
-        //SceneManager.LoadScene("Credits");
+        SceneManager.LoadScene("Assets Credits");
     }
 
 }

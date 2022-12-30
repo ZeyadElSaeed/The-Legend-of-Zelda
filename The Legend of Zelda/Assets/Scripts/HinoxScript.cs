@@ -22,6 +22,10 @@ public class HinoxScript : MonoBehaviour
     public GameObject projectile;
     private GameObject player;
     [SerializeField] float offsetY;
+    [SerializeField] AudioSource BossMove;
+    [SerializeField] AudioSource BossHit;
+    [SerializeField] AudioSource BossHitWeakness;
+    [SerializeField] AudioSource BossDies;
     public bool isHit;
 
     void Start()
@@ -38,6 +42,9 @@ public class HinoxScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        string state = anim.GetCurrentAnimatorClipInfo(0)[0].clip.name;
+        if((state == "Running" || state == "PatrollingWithCover" || state == "WalkWithTree" || state == "PatrolWOCover") && !BossMove.isPlaying && Time.timeScale != 0)
+            AudioManager.PlayEffect(BossMove);
         HealthBar.value = health;
         HealthValue.text = "Hinox "+health;
         if(health<0)
@@ -75,12 +82,19 @@ public class HinoxScript : MonoBehaviour
     }
 
     public void TakeDamage(float damage){
+        if(damage == 25){
+            AudioManager.PlayEffect(BossHitWeakness);
+        }
+        else{
+            AudioManager.PlayEffect(BossHit);
+        }
         health -= damage;
         anim.SetBool("isChasing", true);
         isHit = true;
         if (health <= 0){
             anim.SetTrigger("Die");
             GetComponent<Collider>().enabled = false;
+            AudioManager.PlayEffect(BossDies);
             StartCoroutine(dieWaitTime());
         }if(health <= 100 && treeIndex < 7){
             anim.SetBool("Phase1idle",false);

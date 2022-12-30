@@ -15,7 +15,7 @@ public class HealthSystem : MonoBehaviour
     private bool isInvincible;
 
     [Header("Hearts")]
-    [SerializeField] Image[] hearts;
+    [SerializeField] GameObject[] hearts;
     Animator animator;
     [Header("Audio")]
     public AudioSource HitShield;
@@ -123,18 +123,31 @@ public class HealthSystem : MonoBehaviour
             AudioManager.PlayEffect(DieLink);
         }
     }
+    private List<Image> expandHearts(){
+        List<Image> halfHearts = new List<Image>();
+
+        for(int i =0; i< hearts.Length; i++){
+            halfHearts.Add(hearts[i].transform.GetChild(0).GetComponent<Image>());
+            halfHearts.Add(hearts[i].transform.GetChild(1).GetComponent<Image>());
+        }
+        return halfHearts;
+    }
 
     private void UpdateHearts()
     {
-        for ( int i=0; i< hearts.Length; i++)
+        List<Image> halfHearts = expandHearts();
+        for ( int i=0; i< halfHearts.Count; i++)
         {
             if ( i < healthPoints)
             {
-                hearts[i].enabled = true;
+                halfHearts[i].enabled = true;
             }
             else
             {
-                hearts[i].enabled = false;
+                Debug.Log(i);
+                Debug.Log("max health:"+ maxHealth);
+                Debug.Log("count"+ halfHearts.Count);
+                halfHearts[i].enabled = false;
             }
         }
     }

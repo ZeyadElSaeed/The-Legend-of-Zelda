@@ -1,6 +1,8 @@
 using System;
 using UnityEngine.Audio;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+
 
 public class AudioManager : MonoBehaviour
 {
@@ -9,10 +11,11 @@ public class AudioManager : MonoBehaviour
     private AudioSource currentSound;
     private string currentSoundName;
     public static AudioManager instance;
+    // public AudioSource PauseAudio;
 
-    void Start(){
-        StartTheme("Theme");
-    }
+    // void Start(){
+    //     StartTheme("Theme");
+    // }
     private void Awake()
     {
         if (instance == null)
@@ -31,7 +34,8 @@ public class AudioManager : MonoBehaviour
             s.source.pitch = s.pitch;
             s.source.loop = s.loop;
         }
-        StartTheme("Theme");
+        Debug.Log(SceneManager.GetActiveScene().name);
+        StartTheme(SceneManager.GetActiveScene().name);
     }
     public void Play( string name)
     {
@@ -94,4 +98,12 @@ public class AudioManager : MonoBehaviour
         audio.volume = MusicEffects.MusicLevel;
         audio.Play();
     }
+    // public static void onPausePlay(){
+    //     Sound s = Array.Find(sounds, sound => sound.name == "PauseMenu");
+    //     PauseAudio = s.source;
+    //     PlayMusic(PauseAudio);
+    // }
+    // public static void onResumeStop(){
+    //     PauseAudio.Stop();
+    // }
 }
