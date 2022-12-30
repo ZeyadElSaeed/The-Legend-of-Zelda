@@ -12,6 +12,7 @@ public class PauseResume : MonoBehaviour
     public bool paused = false;
     KeyCode pauseKey = KeyCode.Escape;
     AudioSource [] audios;
+    public AudioSource PauseAudio;
     // Start is called before the first frame update
 
 
@@ -31,21 +32,24 @@ public class PauseResume : MonoBehaviour
         Time.timeScale = 0;
         paused = true;
         Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
         audios = FindObjectsOfType<AudioSource>();
         audios = Array.FindAll(audios, audio=>audio.isPlaying == true);
         foreach (AudioSource audio in audios){
             audio.Pause();
-            //Debug.Log("xD");
         }
+        AudioManager.PlayMusic(PauseAudio);
     }
     public void resumeGame(){
         PauseResumePanel.SetActive(false);
         Time.timeScale = 1;
         paused = false;
         Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
         foreach (AudioSource audio in audios){
             audio.Play();
         }
+        PauseAudio.Stop();
     }
     public void goToMainMenu(){
         Time.timeScale = 1;

@@ -13,6 +13,8 @@ public class MainMenuController : MonoBehaviour
     {
         LevelButtons.SetActive(false);
         MainButtons.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
+        Cursor.visible = true;
     }
 
     public void NewGame()

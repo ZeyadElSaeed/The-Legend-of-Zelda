@@ -2827,7 +2827,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Hinix
+  m_text: Hinox
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 80efccaf5e28586498080ad3c9ccd082, type: 2}
   m_sharedMaterial: {fileID: -3013685777862699912, guid: 80efccaf5e28586498080ad3c9ccd082, type: 2}

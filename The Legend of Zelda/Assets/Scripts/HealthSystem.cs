@@ -144,9 +144,6 @@ public class HealthSystem : MonoBehaviour
             }
             else
             {
-                Debug.Log(i);
-                Debug.Log("max health:"+ maxHealth);
-                Debug.Log("count"+ halfHearts.Count);
                 halfHearts[i].enabled = false;
             }
         }
