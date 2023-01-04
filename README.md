@@ -1,67 +1,21 @@
-# The-Legend-of-Zelda
-ACL Project: The Legend of Zelda
+The Legend of Zelda: Breath of the Wild
+
+The main aim of this project is to test our skills in using Unity to create a fully
+functioning game as a part of a gaming studio. This project was done in a group of 8 students.
+
+The Legend of Zelda: Breath of the Wild is an open-world action-adventure game.
+Players are tasked with exploring the kingdom of Hyrule while controlling Link. Link
+is an agile explorer, a master fighter, and a capable rune user. Throughout his journey,
+Link utilizes these skills to reach his destination. Link can use his navigation abilities to
+freely explore a large mass of land. He can also fight enemies both in close quarters and
+in ranged battles. Additionally, with the help of rune abilities, can manipulate objects
+in the environment to solve puzzles and circumvent obstacles. Finally, Link must fight
+powerful foes and exploit their weaknesses to defeat them.
+
+The team has implemented Remote Bomb, Cryonis and Stasis as Link's rune abilities. In addition to Fireblight Ganon and Hinox as the bosses in the game.
+
+The game starts with main menu and by pressing "New Game", the first level "OverWorld" starts. After killing all the enemies and entering the Shrine, The player has 
+to use the runes to solve the puzzles and proceed to the next level which is fighting "Fireblight Ganon". After defeating him, the player is moved automatically to the second boss "Hinox". After Hinox, The game credits show then the main menu screen.
 
 
-## Team-Link:
-• Link Model: https://www.models-resource.com/3ds/supersmashbrosfornintendo3ds/model/36853/
-
-• Idle animation: Maximo
-
-• Walking animation: Maximo
-
-• Sprinting animation:  Maximo
-
-• Jumping animation: Maximo
-
-• Gliding animation: Maximo
-
-• Climbing animation: Maximo
-
-• Drawing Bow animation:
-
-• Releasing Bow animation:
-
-• Swinging Sword animation:
-
-• Blocking with Shield animation:
-
-• Throwing Bomb animation:
-
-• Hit Reaction animation:
-
-• Dying animation:
-
-
-## Team-Enemies:
-• Bokoblin Model: https://www.models-resource.com/wii_u/thelegendofzeldabreathofthewild/model/22293/?source=genre
-• Boko Club Model: https://www.models-resource.com/wii_u/thelegendofzeldabreathofthewild/model/43490/?source=genre
-
-• Standing W_Briefcase Idle animation --> Enemy_Standing_Idle
-• standing melee attack
-• Standing React Large From Front
-• Stable Sword Outward Slash
-• Sword And Shield Death
-• Sword and Shield Power Up
-
-• Walking animation --> Enemy_walking
-
-• Sprinting animation:
-
-• Jumping animation:
-
-• Gliding animation:
-
-• Drawing Bow animation:
-
-• Releasing Bow animation:
-
-• Swinging Sword animation:
-
-• Blocking with Sword/Shield animation:
-
-• Throwing Bomb animation:
-
-• Hit Reaction animation:
-
-• Dying animation:
-
+![MainMenu](https://user-images.githubusercontent.com/70777445/210664083-5eaf955e-e82d-4a8e-b053-791f325aecf2.png)
